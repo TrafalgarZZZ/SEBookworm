@@ -6,4 +6,5 @@
 
     <string name="action_settings">设置</string>
     <string name="username">HamburgerLover</string>
+    <string name="title_activity_position">PositionActivity</string>
 </resources>

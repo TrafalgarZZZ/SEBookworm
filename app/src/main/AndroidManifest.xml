@@ -18,7 +18,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WalletActivity"></activity>
+        <activity
+            android:name=".WalletActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".PositionActivity"
+            android:label="@string/title_activity_position"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
     </application>
 
 </manifest>

@@ -88,6 +88,8 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_position) {
+            Intent intent = new Intent(MainActivity.this,PositionActivity.class);
+            startActivity(intent);
 
         }
 
