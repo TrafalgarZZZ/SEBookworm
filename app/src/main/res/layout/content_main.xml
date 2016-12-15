@@ -223,6 +223,7 @@
                         </LinearLayout>
 
                         <CheckBox
+                            android:id="@+id/first_favor_checkbox"
                             android:clickable="true"
                             android:layout_alignParentEnd="true"
                             android:layout_alignBottom="@+id/line1"

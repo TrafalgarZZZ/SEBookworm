@@ -35,7 +35,7 @@ public class LauncherActivity extends AppCompatActivity {
 
         Timer timer = new Timer();
 
-        timer.schedule(task,3000);
+        timer.schedule(task,3200);
 
         iv_animation = new AlphaAnimation(0.0f,1.0f);
         txt1_animation = new AlphaAnimation(0.0f,1.0f);

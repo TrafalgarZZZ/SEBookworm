@@ -13,9 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CheckBox;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private CheckBox checkBox1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +27,14 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        checkBox1 = (CheckBox) findViewById(R.id.first_favor_checkbox);
+        checkBox1.setOnClickListener(new FavorCheckBoxOnClickListener());
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action",null).show();
+                //todo search page needed
             }
         });
 
@@ -84,11 +89,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_orders) {
 
         } else if (id == R.id.nav_wallet) {
-            Intent intent = new Intent(MainActivity.this,WalletActivity.class);
+            Intent intent = new Intent(MainActivity.this, WalletActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_position) {
-            Intent intent = new Intent(MainActivity.this,PositionActivity.class);
+            Intent intent = new Intent(MainActivity.this, PositionActivity.class);
             startActivity(intent);
 
         }
@@ -96,5 +101,19 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    class FavorCheckBoxOnClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            if (!((CheckBox) view).isChecked()) {
+                Snackbar.make(view, "已从收藏中移除该商家", Snackbar.LENGTH_SHORT)
+                        .setAction("Action",null).show();
+
+            }else{
+                Snackbar.make(view, "已收藏该商家", Snackbar.LENGTH_SHORT)
+                        .setAction("Action",null).show();
+            }
+        }
     }
 }
