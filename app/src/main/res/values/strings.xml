@@ -6,9 +6,7 @@
 
     <string name="action_settings">设置</string>
     <string name="username">HamburgerLover</string>
-    <string name="title_activity_position">PositionActivity</string>
+    <string name="title_activity_position">我的位置</string>
 
     <string name="title_activity_launcher">LauncherActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

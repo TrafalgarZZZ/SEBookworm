@@ -11,28 +11,33 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:label="我的钱包"
             android:name=".WalletActivity"
+            android:label="我的钱包"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".PositionActivity"
-            android:label="@string/title_activity_position"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-        <activity
             android:name=".LauncherActivity"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".OrdersActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="我的订单"/>
+        <activity
+            android:name=".PositionActivity"
+            android:label="@string/title_activity_position"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fxdsse.gui_design_homework.MainActivity" />
         </activity>
     </application>
 

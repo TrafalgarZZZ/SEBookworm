@@ -2,6 +2,7 @@ package com.fxdsse.gui_design_homework;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -14,11 +15,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private CheckBox checkBox1;
+    private long backPressedTimeAtMills = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +57,17 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            if(backPressedTimeAtMills == 0){
+                backPressedTimeAtMills = System.currentTimeMillis();
+                Toast.makeText(MainActivity.this,"再按一次返回退出",Toast.LENGTH_SHORT).show();
+            }else if(System.currentTimeMillis() - backPressedTimeAtMills <= 3000){
+                super.onBackPressed();
+            }else{
+                backPressedTimeAtMills = System.currentTimeMillis();
+                Toast.makeText(MainActivity.this,"再按一次返回退出",Toast.LENGTH_SHORT).show();
+
+            }
+
         }
     }
 
@@ -87,7 +100,8 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_favorites) {
             // Handle the camera action
         } else if (id == R.id.nav_orders) {
-
+            Intent intent = new Intent(MainActivity.this, OrdersActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_wallet) {
             Intent intent = new Intent(MainActivity.this, WalletActivity.class);
             startActivity(intent);
