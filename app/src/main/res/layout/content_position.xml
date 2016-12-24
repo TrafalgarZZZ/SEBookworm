@@ -58,6 +58,7 @@
       </LinearLayout>
 
         <ImageView
+            android:clickable="true"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:src="@drawable/edit1"
@@ -114,6 +115,7 @@
         </LinearLayout>
 
         <ImageView
+            android:clickable="true"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:src="@drawable/edit1"
