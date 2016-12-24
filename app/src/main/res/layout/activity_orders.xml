@@ -493,6 +493,7 @@
                             android:textSize="12sp" />
 
                         <LinearLayout
+                            android:id="@+id/enterinto_food1"
                             android:clickable="true"
                             android:gravity="right|bottom"
                             android:layout_weight="1"

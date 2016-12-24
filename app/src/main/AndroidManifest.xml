@@ -48,6 +48,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fxdsse.gui_design_homework.MainActivity" />
         </activity>
+        <activity
+            android:name=".ShopActivity"
+            android:label="@string/title_activity_shop"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fxdsse.gui_design_homework.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
