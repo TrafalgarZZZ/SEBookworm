@@ -57,6 +57,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fxdsse.gui_design_homework.MainActivity" />
         </activity>
+        <activity android:name=".FavorActivity"></activity>
     </application>
 
 </manifest>

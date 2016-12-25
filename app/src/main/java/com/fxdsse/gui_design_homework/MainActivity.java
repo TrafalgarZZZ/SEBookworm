@@ -110,7 +110,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_favorites) {
-            // Handle the camera action
+            Intent intent = new Intent(MainActivity.this, FavorActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_orders) {
             Intent intent = new Intent(MainActivity.this, OrdersActivity.class);
             startActivity(intent);
