@@ -29,7 +29,7 @@
     <Button
         android:paddingTop="20dp"
         android:background="@color/white"
-        android:text="Java"
+        android:text="C++"
         android:drawableTop="@drawable/ic_menu_gallery"
         android:layout_width="100dp"
         android:layout_height="100dp"
