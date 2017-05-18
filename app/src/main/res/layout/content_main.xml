@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tzztzt.bookworm.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/category_tablayout"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white_trans"
+        app:tabIndicatorColor="@color/white"
+        android:background="@color/colorPrimary"
+        app:tabMode="scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab_1"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="dasdsa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab_2"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="dasdsa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab_3"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="dasdsa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab_4"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="dasdsa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.TabLayout>
+
+    <FrameLayout
+        android:id="@+id/ba_container"
+        android:layout_below="@id/category_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</RelativeLayout>
