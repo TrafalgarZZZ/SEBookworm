@@ -10,30 +10,55 @@
     tools:context="com.tzztzt.bookworm.BlankFragment">
 
     <Button
-        android:paddingTop="20dp"
-        android:background="@color/white"
         android:id="@+id/category_kotlin"
-        android:drawableTop="@drawable/ic_menu_camera"
         android:text="Kotlin"
-        android:layout_width="100dp"
+        android:drawableTop="@drawable/ic_menu_camera"
+        android:background="@color/white"
+        android:paddingTop="20dp"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_width="90dp"
         android:layout_height="100dp" />
     <Button
+        android:id="@+id/category_java"
+        android:text="Java"
         android:background="@color/white"
         android:paddingTop="20dp"
-        android:text="Java"
         android:drawableTop="@drawable/ic_menu_gallery"
-        android:layout_width="100dp"
+        android:layout_width="90dp"
         android:layout_height="100dp"
-        android:layout_alignParentTop="true"
+        android:layout_alignTop="@id/category_kotlin"
         android:layout_toEndOf="@+id/category_kotlin" />
     <Button
+        android:id="@+id/category_python"
+        android:text="python"
+        android:background="@color/white"
+        android:paddingTop="20dp"
+        android:drawableTop="@drawable/ic_menu_gallery"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@id/category_kotlin"
+        android:layout_toEndOf="@+id/category_java" />
+    <Button
+        android:id="@+id/category_php"
+        android:text="php"
+        android:background="@color/white"
+        android:paddingTop="20dp"
+        android:drawableTop="@drawable/ic_menu_gallery"
+        android:layout_width="95dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@id/category_kotlin"
+        android:layout_toEndOf="@+id/category_python" />
+    <Button
+        android:id="@+id/category_cpp"
         android:paddingTop="20dp"
         android:background="@color/white"
         android:text="C++"
         android:drawableTop="@drawable/ic_menu_gallery"
-        android:layout_width="100dp"
+        android:layout_width="90dp"
         android:layout_height="100dp"
-        android:layout_below="@+id/category_kotlin" />
+        android:layout_below="@+id/category_kotlin"
+        android:layout_alignLeft="@id/category_kotlin"/>
 
 
 </RelativeLayout>
