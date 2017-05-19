@@ -2,13 +2,10 @@ package com.tzztzt.bookworm;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -21,7 +18,7 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements
         NavigationView.OnNavigationItemSelectedListener,
-        BlankFragment.OnFragmentInteractionListener{
+        CategoryFragment.OnFragmentInteractionListener{
 
     TabLayout tabLayout;
     Fragment current_fragment;
@@ -48,7 +45,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void prepareTabLayout(){
-        final Fragment fragment_category = BlankFragment.newInstance("","");
+        final Fragment fragment_category = CategoryFragment.newInstance("","");
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {

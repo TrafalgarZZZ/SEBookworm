@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:animateLayoutChanges="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -21,33 +23,34 @@
         <android.support.design.widget.TabItem
             android:id="@+id/tab_1"
             android:backgroundTint="@color/colorPrimary"
-            android:text="dasdsa"
+            android:text="首页"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <android.support.design.widget.TabItem
             android:id="@+id/tab_2"
             android:backgroundTint="@color/colorPrimary"
-            android:text="dasdsa"
+            android:text="分类"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <android.support.design.widget.TabItem
             android:id="@+id/tab_3"
             android:backgroundTint="@color/colorPrimary"
-            android:text="dasdsa"
+            android:text="关注"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <android.support.design.widget.TabItem
             android:id="@+id/tab_4"
             android:backgroundTint="@color/colorPrimary"
-            android:text="dasdsa"
+            android:text="社区"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
     </android.support.design.widget.TabLayout>
 
     <FrameLayout
+        android:animateLayoutChanges="true"
         android:id="@+id/ba_container"
         android:layout_below="@id/category_tablayout"
         android:layout_width="match_parent"
