@@ -1,6 +1,7 @@
 package com.tzztzt.bookworm.Layout;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.tzztzt.bookworm.BookDetailActivity;
+import com.tzztzt.bookworm.MainActivity;
 import com.tzztzt.bookworm.R;
 import com.tzztzt.bookworm.Util.AeolosPicassoImageLoader;
 import com.youth.banner.Banner;
@@ -33,6 +36,7 @@ public class HomeFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    private LinearLayout newbooks1;
     private CardView cardView_banner;
     private Banner banner;
     private List<String> images;
@@ -76,11 +80,21 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         cardView_banner = (CardView) view.findViewById(R.id.bc_banner_card);
         banner = (Banner) view.findViewById(R.id.bc_banner_banner);
+        newbooks1 = (LinearLayout) view.findViewById(R.id.new_books_1);
+
+        newbooks1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(inflater.getContext(), BookDetailActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         LinearLayout.LayoutParams l = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         l.bottomMargin = 20;

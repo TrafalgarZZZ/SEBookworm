@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/bd_img"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_toRightOf="@+id/bd_img"
                 android:text="深入浅出C#"
                 android:textColor="@android:color/black"
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/bd_subtitle"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="2dp"
                 android:layout_toRightOf="@id/bd_img"
                 android:text="Stellman, Greene 著" />
 
@@ -63,18 +63,17 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/bd_author"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="2dp"
                 android:layout_toRightOf="@id/bd_img"
                 android:text="林琪，刘晓兵等 译" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/bd_translator"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:layout_toRightOf="@id/bd_img"
-                android:text=" 4.7 / 5.0  (1273)" />
+                android:text=" 4.7 / 5.0  (1273)"
+                android:layout_toRightOf="@+id/bd_img"
+                android:layout_above="@+id/bd_price" />
 
             <Button
                 android:id="@+id/bd_buy"
@@ -87,10 +86,11 @@
                 android:text="购买" />
 
             <TextView
+                android:id="@+id/bd_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@id/bd_buy"
-                android:layout_marginBottom="5dp"
+                android:layout_above="@+id/bd_buy"
+                android:layout_marginBottom="2dp"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/bd_img"
                 android:text="¥ 68.5"
