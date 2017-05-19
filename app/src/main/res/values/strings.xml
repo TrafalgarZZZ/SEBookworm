@@ -8,4 +8,5 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="head_first_c_sharp_intro">《Head First C#（第三版）》《Head First C#（第三版）》是学习使用C#、XAML、.NET Framework和Visual Studio编程的jue佳途径，会让你有全新的学习体验。这专门针对你的大脑特别制作，从第1章开始就会把你牢牢吸引住，你会在第1章中构建一个功能完备的视频游戏。接下来，你会学习类和面向对象编程、绘制图形和动画、用LINQ查询数据，还可以串行化到文件。所有这些都是通过构建游戏、解决谜题和动手建立工程获得的。学完所有这些内容之后，你将成为一个高水平的C#程序员，而且这将是一个轻松愉悦的学习过程！</string>
 </resources>
