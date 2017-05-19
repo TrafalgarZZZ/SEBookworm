@@ -15,6 +15,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.tzztzt.bookworm.Layout.CategoryFragment;
+import com.tzztzt.bookworm.Layout.HomeFragment;
+
 
 public class MainActivity extends AppCompatActivity
         implements

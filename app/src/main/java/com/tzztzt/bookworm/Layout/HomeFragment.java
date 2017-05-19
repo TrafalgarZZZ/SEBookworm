@@ -1,4 +1,4 @@
-package com.tzztzt.bookworm;
+package com.tzztzt.bookworm.Layout;
 
 import android.content.Context;
 import android.net.Uri;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.tzztzt.bookworm.R;
 import com.tzztzt.bookworm.Util.AeolosPicassoImageLoader;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
