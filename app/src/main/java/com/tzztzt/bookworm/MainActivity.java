@@ -15,14 +15,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+
 public class MainActivity extends AppCompatActivity
         implements
         NavigationView.OnNavigationItemSelectedListener,
-        CategoryFragment.OnFragmentInteractionListener{
+        CategoryFragment.OnFragmentInteractionListener,
+        HomeFragment.OnFragmentInteractionListener{
 
-    TabLayout tabLayout;
-    Fragment current_fragment;
-    FragmentManager fragmentManager;
+    private TabLayout tabLayout;
+    private Fragment current_fragment;
+    private FragmentManager fragmentManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,13 +48,15 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void prepareTabLayout(){
+        final Fragment fragment_home = HomeFragment.newInstance("","");
         final Fragment fragment_category = CategoryFragment.newInstance("","");
+        switch_fragment(fragment_home);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 switch (tab.getPosition()){
                     case 0:
-                        switch_fragment(fragment_category);
+                        switch_fragment(fragment_home);
                         break;
                     case 1:
                         switch_fragment(fragment_category);
