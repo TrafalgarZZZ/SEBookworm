@@ -1,5 +1,6 @@
 package com.tzztzt.bookworm;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -14,6 +15,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.tzztzt.bookworm.Layout.CategoryFragment;
 import com.tzztzt.bookworm.Layout.HomeFragment;
@@ -157,4 +160,9 @@ public class MainActivity extends AppCompatActivity
     public void onFragmentInteraction(Uri uri) {
 
     }
+    public void inLog(View view) {
+        Intent intent = new Intent(this,login.class);
+        startActivity(intent);
+    }
+
 }
