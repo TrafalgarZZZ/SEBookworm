@@ -3,530 +3,203 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_favorites"
+    android:background="#e7e0e0"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.fxdsse.gui_design_homework.OrdersActivity">
+    tools:context="com.fxdsse.SEhomework.OrdersActivity">
+
 
     <LinearLayout
-        android:id="@+id/detail_ll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/favor_card1"
-        android:orientation="vertical"
-        android:paddingLeft="7dp"
-        android:paddingRight="7dp">
-
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="0dp">
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="6dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp">
-
-                <LinearLayout
-                    android:id="@+id/order1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:paddingBottom="5dp"
-                    android:paddingTop="10dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="日本金枪鱼寿司+大杯红豆奶茶等三件商品"
-                            android:textColor="@android:color/black"
-                            android:textSize="15sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="2016-12-11"
-                            android:textColor="@android:color/black"
-                            android:textStyle="italic" />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="end"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical|end"
-                        android:text="¥ 17"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="20sp" />
-                </LinearLayout>
-
-                <View
-                    android:id="@+id/view1"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_below="@+id/order1"
-                    android:background="@android:color/darker_gray" />
-
-                <LinearLayout
-                    android:id="@+id/order2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/view1"
-                    android:clickable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:paddingBottom="5dp"
-                    android:paddingTop="5dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="培根肉松寿司+双皮奶"
-                            android:textColor="@android:color/black"
-                            android:textSize="15sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="2016-12-08"
-                            android:textColor="@android:color/black"
-                            android:textStyle="italic" />
-
-                    </LinearLayout>
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="end"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical|end"
-                        android:text="¥ 14"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="20sp" />
-                </LinearLayout>
-
-                <View
-                    android:id="@+id/view2"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_below="@+id/order2"
-                    android:background="@android:color/darker_gray" />
-
-                <TextView
-                    android:id="@+id/etc_card1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/view2"
-                    android:clickable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:paddingTop="3dp"
-                    android:text="······"
-                    android:textColor="@android:color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="15dp"
-                    android:layout_below="@+id/etc_card1"
-                    android:src="@drawable/double_up" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-    </LinearLayout>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/favor_card2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/detail_ll"
-        android:layout_marginTop="8dp"
-        android:clickable="true"
-        android:foreground="?attr/selectableItemBackground"
-        app:cardCornerRadius="6dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingBottom="10dp"
-            android:paddingEnd="8dp"
-            android:paddingStart="8dp"
-            android:paddingTop="10dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="70dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/food4" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:paddingEnd="5dp"
-                    android:paddingStart="5dp">
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:text="背包客汉堡"
-                            android:textColor="@android:color/black"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical|end"
-                            android:gravity="end"
-                            android:text="512m"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-
-
-                        <ImageView
-                            android:layout_width="12dp"
-
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom"
-                            android:src="@drawable/ratingselected" />
-
-                        <ImageView
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom"
-                            android:src="@drawable/ratingselected" />
-
-                        <ImageView
-                            android:layout_width="12dp"
-
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom"
-                            android:src="@drawable/ratingselected" />
-
-                        <ImageView
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom"
-                            android:src="@drawable/ratingselected" />
-
-                        <ImageView
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom"
-                            android:src="@drawable/ratingunselected" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:paddingStart="5dp"
-                            android:text="月售 187 份"
-                            android:textSize="10sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="top"
-                            android:gravity="end"
-                            android:text="23分钟"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_weight="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:text="起送 ¥7 | 配送 ¥0"
-                            android:textSize="12sp" />
-
-                        <LinearLayout
-                            android:clickable="true"
-                            android:gravity="right|bottom"
-                            android:layout_weight="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                android:textStyle="bold"
-                                android:textColor="@color/colorAccent"
-                                android:layout_gravity="bottom"
-                                android:text="进入店铺"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
-                            <ImageView
-                                android:layout_gravity="bottom"
-                                android:src="@drawable/more_detail"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/favor_card2"
-        android:paddingLeft="7dp"
-        android:paddingRight="7dp">
-
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="15dp"
-            app:cardCornerRadius="0dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/unfold1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:src="@drawable/double_down" />
-            </RelativeLayout>
-
-
-        </android.support.v7.widget.CardView>
-    </LinearLayout>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/favor_card1"
+        android:background="#fcf8f8"
+        android:id="@+id/order_card1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="true"
         android:foreground="?attr/selectableItemBackground"
-        app:cardCornerRadius="6dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingBottom="10dp"
-            android:paddingEnd="8dp"
-            android:paddingStart="8dp"
-            android:paddingTop="10dp">
+            android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/order1_store"
+                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="30dp">
 
                 <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="70dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/food1" />
+                    android:src="@mipmap/store"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+                <TextView
+                    android:layout_marginLeft="8dp"
+                    android:text="三联书店 >"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:paddingEnd="5dp"
-                    android:paddingStart="5dp">
+            <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:text="正在配送中"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
+            <RelativeLayout
+                android:id="@+id/order1_content"
+                android:background="#fcf8f8"
+                android:padding="4dp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/order1_store"
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/order1_pic"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/headfirst"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp" />
+                <TextView
+                    android:id="@+id/order1_title"
+                    android:layout_toRightOf="@+id/order1_pic"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="top"
+                    android:text="深入浅出C# (Head First C#)"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="8sp"
+                    android:text="Head First系列最新作品"
+                    android:layout_below="@+id/order1_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/order1_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
 
+            <LinearLayout
+                android:paddingEnd="8dp"
+                android:gravity="end|center_vertical"
+                android:layout_below="@+id/order1_content"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:text="日本寿司屋（西电店）"
-                            android:textColor="@android:color/black"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                <TextView
+                    android:text="共1本图书 实付款: ¥89.50"
 
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical|end"
-                            android:gravity="end"
-                            android:text="697m"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-
-
-                        <ImageView
-                            android:layout_width="12dp"
-
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom"
-                            android:src="@drawable/ratingselected" />
-
-                        <ImageView
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom"
-                            android:src="@drawable/ratingselected" />
-
-                        <ImageView
-                            android:layout_width="12dp"
-
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom"
-                            android:src="@drawable/ratingselected" />
-
-                        <ImageView
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom"
-                            android:src="@drawable/ratingselected" />
-
-                        <ImageView
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:layout_gravity="bottom"
-                            android:src="@drawable/ratingunselected" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:paddingStart="5dp"
-                            android:text="月售 125 份"
-                            android:textSize="10sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="top"
-                            android:gravity="end"
-                            android:text="30分钟"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <LinearLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:layout_weight="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:text="起送 ¥0 | 配送 ¥0"
-                            android:textSize="12sp" />
-
-                        <LinearLayout
-                            android:id="@+id/enterinto_food1"
-                            android:clickable="true"
-                            android:gravity="right|bottom"
-                            android:layout_weight="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                android:textStyle="bold"
-                                android:textColor="@color/colorAccent"
-                                android:layout_gravity="center_vertical"
-                                android:text="进入店铺"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
-                            <ImageView
-                                android:layout_gravity="bottom"
-                                android:src="@drawable/more_detail"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-
-                </LinearLayout>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
 
+        </RelativeLayout>
 
-        </LinearLayout>
+    </LinearLayout>
 
-    </android.support.v7.widget.CardView>
+    <LinearLayout
+        android:background="#fcf8f8"
+
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/order_card1"
+        android:id="@+id/order_card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/order2_store"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <ImageView
+                    android:src="@mipmap/store"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+                <TextView
+                    android:layout_marginLeft="8dp"
+                    android:text="理想国(imaginist) >"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:textColor="@color/colorAccent"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:text="已送达"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/order2_content"
+                android:padding="4dp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/order2_store"
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <ImageView
+                    android:id="@+id/order2_pic"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/introalgorithms"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp" />
+                <TextView
+                    android:id="@+id/order2_title"
+                    android:layout_toRightOf="@+id/order2_pic"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="top"
+                    android:text="算法导论（原书第三版）"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="8sp"
+                    android:text="超过50万人阅读的算法圣经!算法标准教材"
+                    android:layout_below="@+id/order2_title"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/order2_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:paddingEnd="8dp"
+                android:gravity="end|center_vertical"
+                android:layout_below="@+id/order2_content"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <TextView
+                    android:text="共1本图书 实付款: ¥105.60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 
 </RelativeLayout>

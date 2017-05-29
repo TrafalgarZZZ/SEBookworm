@@ -1,0 +1,18 @@
+package com.fxdsse.SEhomework;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+
+public class WalletActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_wallet);
+
+        getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+
+
+    }
+}

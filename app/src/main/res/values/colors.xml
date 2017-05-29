@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="white">#FFFFFF</color>
+    <color name="white_trans">#88FFFFFF</color>
     <color name="colorPrimary">#47A6A5</color>
     <color name="colorPrimaryDark">#4394A0</color>
     <color name="colorAccent">#FBC02D</color>
@@ -7,6 +9,8 @@
     <color name="colorselectedbgd">#4394A0</color>
     <color name="colorunselectedtext">#4394A0</color>
     <color name="colorselectedtext">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="default_txt">#FF808080</color>
 
     <color name="black_overlay">#66000000</color>
 </resources>

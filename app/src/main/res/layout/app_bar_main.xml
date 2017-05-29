@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.fxdsse.gui_design_homework.MainActivity">
+    tools:context="com.fxdsse.SEhomework.MainActivity">
 
     <android.support.design.widget.AppBarLayout
+        app:elevation="0dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
@@ -19,9 +20,44 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
+        <android.support.design.widget.TabLayout
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/category_tablayout"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/white_trans"
+            app:tabIndicatorColor="@color/white"
+            android:background="@color/colorPrimary"
+            app:tabMode="fixed"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tab_1"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="首页"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tab_2"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="分类"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tab_4"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="店铺"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </android.support.design.widget.TabLayout>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+
+
+    <include layout="@layout/fragment_container" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

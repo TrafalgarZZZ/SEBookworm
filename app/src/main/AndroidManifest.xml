@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.fxdsse.gui_design_homework">
+    package="com.fxdsse.SEhomework">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -9,16 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.fxdsse.SEhomework.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".WalletActivity"
+            android:name="com.fxdsse.SEhomework.WalletActivity"
             android:label="我的钱包"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName="com.fxdsse.SEhomework.MainActivity" />
         <activity
-            android:name=".LauncherActivity"
-            android:parentActivityName=".MainActivity"
+            android:name="com.fxdsse.SEhomework.LauncherActivity"
+            android:parentActivityName="com.fxdsse.SEhomework.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,37 +29,43 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".OrdersActivity"
+            android:name="com.fxdsse.SEhomework.BookDetailActivity" />
+        <activity
+            android:name="com.fxdsse.SEhomework.OrdersActivity"
             android:label="我的订单"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName="com.fxdsse.SEhomework.MainActivity" />
         <activity
-            android:name=".PositionActivity"
+            android:name="com.fxdsse.SEhomework.PositionActivity"
             android:label="@string/title_activity_position"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.fxdsse.SEhomework.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.fxdsse.gui_design_homework.MainActivity" />
+                android:value="com.fxdsse.SEhomework.MainActivity" />
         </activity>
         <activity
-            android:name=".SearchActivity"
+            android:name="com.fxdsse.SEhomework.SearchActivity"
             android:label="@string/title_activity_search"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.fxdsse.SEhomework.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.fxdsse.gui_design_homework.MainActivity" />
+                android:value="com.fxdsse.SEhomework.MainActivity" />
         </activity>
         <activity
-            android:name=".ShopActivity"
+            android:name="com.fxdsse.SEhomework.ShopActivity"
             android:label="@string/title_activity_shop"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.fxdsse.SEhomework.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.fxdsse.gui_design_homework.MainActivity" />
+                android:value="com.fxdsse.SEhomework.MainActivity" />
         </activity>
-        <activity android:name=".FavorActivity"></activity>
+        <activity android:name="com.fxdsse.SEhomework.FavorActivity"/>
+
+        <activity
+            android:name="com.fxdsse.SEhomework.PayActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
