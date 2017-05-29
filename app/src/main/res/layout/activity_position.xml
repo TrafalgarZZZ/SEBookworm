@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.fxdsse.gui_design_homework.PositionActivity">
+    tools:context="com.fxdsse.SEhomework.PositionActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

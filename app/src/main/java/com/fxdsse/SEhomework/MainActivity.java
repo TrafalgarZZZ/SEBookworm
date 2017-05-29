@@ -1,11 +1,14 @@
-package com.fxdsse.gui_design_homework;
+package com.fxdsse.SEhomework;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.widget.CardView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,21 +21,32 @@ import android.view.MenuItem;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
+import com.fxdsse.SEhomework.Fragments.CategoryFragment;
+import com.fxdsse.SEhomework.Fragments.HomeFragment;
+import com.fxdsse.SEhomework.Fragments.StoreFragment;
+
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        CategoryFragment.OnFragmentInteractionListener,
+        HomeFragment.OnFragmentInteractionListener,
+        StoreFragment.OnFragmentInteractionListener{
 
-    private CheckBox checkBox1;
     private long backPressedTimeAtMills = 0;
-
+    private TabLayout tabLayout;
+    private Fragment current_fragment;
+    private FragmentManager fragmentManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        tabLayout = (TabLayout) findViewById(R.id.category_tablayout);
+        fragmentManager = getSupportFragmentManager();
         setSupportActionBar(toolbar);
 
-        checkBox1 = (CheckBox) findViewById(R.id.first_favor_checkbox);
-        checkBox1.setOnClickListener(new FavorCheckBoxOnClickListener());
+        getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+
+        prepareTabLayout();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -52,15 +66,57 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        CardView cardView = (CardView)findViewById(R.id.shop1);
-        cardView.setOnClickListener(new View.OnClickListener() {
+
+    }
+
+    private void prepareTabLayout(){
+        final Fragment fragment_home = HomeFragment.newInstance("","");
+        final Fragment fragment_category = CategoryFragment.newInstance("","");
+        final Fragment fragment_store = StoreFragment.newInstance("","");
+        switch_fragment(fragment_home);
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,ShopActivity.class);
-                startActivity(intent);
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tab.getPosition()){
+                    case 0:
+                        switch_fragment(fragment_home);
+                        break;
+                    case 1:
+                        switch_fragment(fragment_category);
+                        break;
+                    case 2:
+                        switch_fragment(fragment_store);
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
             }
         });
+    }
 
+    private void switch_fragment(Fragment to_fragment) {
+        if (current_fragment != to_fragment) {
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+            if (current_fragment != null)
+                fragmentTransaction.hide(current_fragment);
+
+            if (!to_fragment.isAdded())
+                fragmentTransaction.add(R.id.frag_container, to_fragment);
+            else
+                fragmentTransaction.show(to_fragment);
+
+            fragmentTransaction.commit();
+            current_fragment = to_fragment;
+        }
     }
 
     @Override
@@ -128,6 +184,11 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 
     class FavorCheckBoxOnClickListener implements View.OnClickListener {

@@ -1,7 +1,6 @@
-package com.fxdsse.gui_design_homework;
+package com.fxdsse.SEhomework;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.animation.AlphaAnimation;

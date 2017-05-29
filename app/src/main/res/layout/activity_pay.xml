@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fxdsse.SEhomework.PayActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_marginStart="10dp"
+            android:src="@mipmap/if10"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交订单"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="校内区域 / 楼栋"/>
+            <TextView
+                android:text="丁香 / 00号楼"
+                android:textColor="@color/default_txt"
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="详细位置 (可选)"/>
+            <TextView
+                android:text="Ⅷ区 / 1031 / 中室"
+                android:textColor="@color/default_txt"
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预约送出时间"/>
+            <TextView
+                android:text="今日 14:35"
+                android:textColor="@color/colorPrimary"
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付方式"/>
+            <TextView
+                android:text="餐到付款 (校园卡)"
+                android:textColor="@color/colorPrimary"
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="优惠信息"/>
+            <TextView
+                android:text="无"
+                android:textColor="@color/default_txt"
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="配送商家"/>
+            <TextView
+                android:text="万龙洲海鲜(西电店)"
+                android:textColor="@color/default_txt"
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+            android:layout_marginEnd="10dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="折"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="某种鱼"/>
+
+            <TextView
+                android:text="x1"
+                android:textColor="@color/default_txt"
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginEnd="10dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@color/default_txt"
+                android:gravity="center"
+                android:text="无"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="看起来不错的虾"/>
+            <TextView
+                android:text="x9"
+                android:textColor="@color/default_txt"
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+            android:layout_marginEnd="10dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="折"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="同样不错的蛤 :)"/>
+
+            <TextView
+                android:text="x2"
+                android:textColor="@color/default_txt"
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100">
+
+    <TextView
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="确认并支付     ¥ 1997.00"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/tv7" />
+    </LinearLayout>
+</LinearLayout>

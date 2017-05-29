@@ -5,7 +5,7 @@
         <item
             android:id="@+id/nav_favorites"
             android:icon="@drawable/favorite"
-            android:title="收藏商家" />
+            android:title="店铺关注" />
         <item
             android:id="@+id/nav_orders"
             android:icon="@drawable/orders"
@@ -17,7 +17,7 @@
         <item
             android:id="@+id/nav_position"
             android:icon="@drawable/map"
-            android:title="我的位置"/>
+            android:title="送货位置"/>
 
          <item
             android:id="@+id/nav_settings"

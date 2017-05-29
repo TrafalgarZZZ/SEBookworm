@@ -1,4 +1,4 @@
-package com.fxdsse.gui_design_homework;
+package com.fxdsse.SEhomework;
 
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;

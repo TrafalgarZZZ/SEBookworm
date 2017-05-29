@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.fxdsse.SEhomework.BookDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:id="@+id/bd_img"
+                android:layout_width="160dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/headfirst" />
+
+            <TextView
+                android:id="@+id/bd_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/bd_img"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/bd_img"
+                android:text="深入浅出C#"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/bd_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bd_title"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/bd_img"
+                android:text="（Head First系列最新作品）"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/bd_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bd_subtitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/bd_img"
+                android:text="Stellman, Greene 著" />
+
+            <TextView
+                android:id="@+id/bd_translator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bd_author"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/bd_img"
+                android:text="林琪，刘晓兵等 译" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text=" 4.7 / 5.0  (1273)"
+                android:layout_toRightOf="@+id/bd_img"
+                android:layout_above="@+id/bd_price" />
+
+            <Button
+                android:id="@+id/bd_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bd_img"
+                android:layout_marginStart="20dp"
+                android:layout_toRightOf="@id/bd_img"
+                android:backgroundTint="@color/white_trans"
+                android:text="购买" />
+
+            <TextView
+                android:id="@+id/bd_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/bd_buy"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/bd_img"
+                android:text="¥ 68.5"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+
+
+            <TextView
+                android:id="@+id/bd_intro_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bd_img"
+                android:layout_marginTop="10dp"
+                android:text="简介"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/bd_intro_splitter"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/bd_intro_title"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:text="@string/head_first_c_sharp_intro"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/bd_intro_splitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</FrameLayout>

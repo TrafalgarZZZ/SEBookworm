@@ -1,4 +1,4 @@
-package com.fxdsse.gui_design_homework;
+package com.fxdsse.SEhomework;
 
 import org.junit.Test;
 
