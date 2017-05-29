@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:background="@mipmap/ic_launcher"
         android:layout_gravity="center_horizontal"
-        android:onClick="inLog"/>
+        android:onClick="onClickLogin"/>
 
     <TextView
         android:layout_width="match_parent"

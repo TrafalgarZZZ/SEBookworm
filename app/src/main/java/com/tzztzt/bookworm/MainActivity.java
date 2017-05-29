@@ -160,8 +160,8 @@ public class MainActivity extends AppCompatActivity
     public void onFragmentInteraction(Uri uri) {
 
     }
-    public void inLog(View view) {
-        Intent intent = new Intent(this,login.class);
+    public void onClickLogin(View view) {
+        Intent intent = new Intent(this,LoginActivity.class);
         startActivity(intent);
     }
 
