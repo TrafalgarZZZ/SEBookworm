@@ -8,6 +8,7 @@ import android.widget.Button;
 
 public class BookDetailActivity extends AppCompatActivity {
     private Button btn_buy;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

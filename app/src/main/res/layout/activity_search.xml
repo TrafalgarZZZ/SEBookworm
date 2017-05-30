@@ -20,49 +20,49 @@
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <RelativeLayout
-                android:paddingRight="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingRight="10dp">
 
                 <ImageView
-                    android:foreground="?attr/selectableItemBackgroundBorderless"
                     android:id="@+id/search_activity_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:clickable="true"
-                    android:src="@drawable/left_arrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/left_arrow" />
 
                 <LinearLayout
-                    android:layout_marginRight="10dp"
                     android:id="@+id/search_ll"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:background="@drawable/search_shape"
                     android:layout_width="300dp"
                     android:layout_height="35dp"
+                    android:layout_centerVertical="true"
                     android:layout_marginLeft="50dp"
-                    android:layout_centerVertical="true">
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/search_shape"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="5dp">
 
                     <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/search"
                         android:layout_width="20dp"
-                        android:layout_height="20dp" />
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/search" />
 
                     <EditText
-                        android:cursorVisible="false"
-                        android:textColorHint="@android:color/tertiary_text_dark"
-                        android:background="@null"
-                        android:layout_marginLeft="10dp"
-                        android:textSize="15sp"
-                        android:textColor="@android:color/black"
-                        android:hint="搜索周边商家"
+                        android:id="@+id/editText"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/editText" />
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:hint="搜索周边商家"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/tertiary_text_dark"
+                        android:textSize="15sp" />
 
                 </LinearLayout>
             </RelativeLayout>

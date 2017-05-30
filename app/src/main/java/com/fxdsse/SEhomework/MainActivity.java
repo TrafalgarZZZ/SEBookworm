@@ -4,13 +4,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -18,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
@@ -29,12 +29,13 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         CategoryFragment.OnFragmentInteractionListener,
         HomeFragment.OnFragmentInteractionListener,
-        StoreFragment.OnFragmentInteractionListener{
+        StoreFragment.OnFragmentInteractionListener {
 
     private long backPressedTimeAtMills = 0;
     private TabLayout tabLayout;
     private Fragment current_fragment;
     private FragmentManager fragmentManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,15 +70,15 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    private void prepareTabLayout(){
-        final Fragment fragment_home = HomeFragment.newInstance("","");
-        final Fragment fragment_category = CategoryFragment.newInstance("","");
-        final Fragment fragment_store = StoreFragment.newInstance("","");
+    private void prepareTabLayout() {
+        final Fragment fragment_home = HomeFragment.newInstance("", "");
+        final Fragment fragment_category = CategoryFragment.newInstance("", "");
+        final Fragment fragment_store = StoreFragment.newInstance("", "");
         switch_fragment(fragment_home);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                switch (tab.getPosition()){
+                switch (tab.getPosition()) {
                     case 0:
                         switch_fragment(fragment_home);
                         break;
@@ -125,14 +126,14 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            if(backPressedTimeAtMills == 0){
+            if (backPressedTimeAtMills == 0) {
                 backPressedTimeAtMills = System.currentTimeMillis();
-                Toast.makeText(MainActivity.this,"再按一次返回退出",Toast.LENGTH_SHORT).show();
-            }else if(System.currentTimeMillis() - backPressedTimeAtMills <= 3000){
+                Toast.makeText(MainActivity.this, "再按一次返回退出", Toast.LENGTH_SHORT).show();
+            } else if (System.currentTimeMillis() - backPressedTimeAtMills <= 3000) {
                 super.onBackPressed();
-            }else{
+            } else {
                 backPressedTimeAtMills = System.currentTimeMillis();
-                Toast.makeText(MainActivity.this,"再按一次返回退出",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "再按一次返回退出", Toast.LENGTH_SHORT).show();
 
             }
 
@@ -196,11 +197,11 @@ public class MainActivity extends AppCompatActivity
         public void onClick(View view) {
             if (!((CheckBox) view).isChecked()) {
                 Snackbar.make(view, "已从收藏中移除该商家", Snackbar.LENGTH_SHORT)
-                        .setAction("Action",null).show();
+                        .setAction("Action", null).show();
 
-            }else{
+            } else {
                 Snackbar.make(view, "已收藏该商家", Snackbar.LENGTH_SHORT)
-                        .setAction("Action",null).show();
+                        .setAction("Action", null).show();
             }
         }
     }

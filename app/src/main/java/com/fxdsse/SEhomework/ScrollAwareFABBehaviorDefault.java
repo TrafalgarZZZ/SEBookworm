@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 
-public class ScrollAwareFABBehaviorDefault  extends FloatingActionButton.Behavior{
+public class ScrollAwareFABBehaviorDefault extends FloatingActionButton.Behavior {
 
     public ScrollAwareFABBehaviorDefault(Context context, AttributeSet attrs) {
         super();

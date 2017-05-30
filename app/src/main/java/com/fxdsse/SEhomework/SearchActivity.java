@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 public class SearchActivity extends AppCompatActivity {
     ImageView back_img;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,12 +20,12 @@ public class SearchActivity extends AppCompatActivity {
         getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
 
 
-        back_img = (ImageView)findViewById(R.id.search_activity_back);
+        back_img = (ImageView) findViewById(R.id.search_activity_back);
 
         back_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SearchActivity.this,MainActivity.class);
+                Intent intent = new Intent(SearchActivity.this, MainActivity.class);
                 startActivity(intent);
                 finishActivity(0);
             }

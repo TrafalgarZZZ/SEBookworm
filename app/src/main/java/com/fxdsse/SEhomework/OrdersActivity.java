@@ -1,7 +1,7 @@
 package com.fxdsse.SEhomework;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 public class OrdersActivity extends AppCompatActivity {
 
