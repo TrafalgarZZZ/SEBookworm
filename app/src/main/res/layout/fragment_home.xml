@@ -8,15 +8,15 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <LinearLayout
-            android:paddingEnd="5dp"
-            android:paddingStart="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp">
 
             <include layout="@layout/banner_card" />
 
@@ -27,11 +27,11 @@
                 android:orientation="vertical" />
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
-                android:text="新品上架"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:text="新品上架" />
 
             <RelativeLayout
                 android:id="@+id/newbook1"
@@ -73,12 +73,12 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:maxLines="1"
                     android:id="@+id/new_book1_author"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/new_book1_description"
                     android:layout_toRightOf="@+id/new_book1_pic"
+                    android:maxLines="1"
                     android:text="Stellman &amp; Greene 著"
                     android:textSize="12sp" />
 
@@ -102,9 +102,9 @@
             </RelativeLayout>
 
             <View
-                android:background="@android:color/darker_gray"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"/>
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
 
             <RelativeLayout
                 android:id="@+id/newbook2"
@@ -115,10 +115,10 @@
                 android:padding="8dp">
 
                 <ImageView
-                    android:layout_marginRight="16dp"
                     android:id="@+id/new_book2_pic"
                     android:layout_width="90dp"
                     android:layout_height="100dp"
+                    android:layout_marginRight="16dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/introalgorithms" />
 
@@ -127,8 +127,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/new_book2_pic"
-                    android:text="算法导论（原书第3版）"
                     android:maxLines="1"
+                    android:text="算法导论（原书第3版）"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
@@ -145,37 +145,38 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:maxLines="1"
-                    android:textSize="12sp"
                     android:id="@+id/new_book2_author"
-                    android:text="[美]Thomas H.Cormen &amp; [美]Charles E.Leisers 著"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_below="@id/new_book2_description"
                     android:layout_toRightOf="@+id/new_book2_pic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:maxLines="1"
+                    android:text="[美]Thomas H.Cormen &amp; [美]Charles E.Leisers 著"
+                    android:textSize="12sp" />
 
                 <TextView
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
                     android:id="@+id/new_book2_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
                     android:text="¥105.60"
                     android:textColor="@color/colorPrimary"
                     android:textSize="14sp" />
+
                 <TextView
                     android:id="@+id/new_book2_evalue"
-                    android:text="43502人评价  97%好评"
-                    android:layout_toRightOf="@+id/new_book2_pic"
-                    android:layout_alignParentBottom="true"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/new_book2_pic"
+                    android:text="43502人评价  97%好评" />
             </RelativeLayout>
 
             <View
-                android:background="@android:color/darker_gray"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"/>
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
 
             <RelativeLayout
                 android:id="@+id/newbook3"
@@ -186,12 +187,12 @@
                 android:padding="8dp">
 
                 <ImageView
-                    android:paddingStart="5dp"
-                    android:paddingEnd="5dp"
-                    android:layout_marginRight="16dp"
                     android:id="@+id/new_book3_pic"
                     android:layout_width="90dp"
                     android:layout_height="100dp"
+                    android:layout_marginRight="16dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/machinelearning" />
 
@@ -200,8 +201,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/new_book3_pic"
-                    android:text="机器学习"
                     android:maxLines="1"
+                    android:text="机器学习"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
@@ -218,37 +219,38 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:maxLines="1"
-                    android:textSize="12sp"
                     android:id="@+id/new_book3_author"
-                    android:text="周志华 著"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_below="@id/new_book3_description"
                     android:layout_toRightOf="@+id/new_book3_pic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:maxLines="1"
+                    android:text="周志华 著"
+                    android:textSize="12sp" />
 
                 <TextView
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
                     android:id="@+id/new_book3_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
                     android:text="¥77.00"
                     android:textColor="@color/colorPrimary"
                     android:textSize="14sp" />
+
                 <TextView
                     android:id="@+id/new_book3_evalue"
-                    android:text="26032人评价  97%好评"
-                    android:layout_toRightOf="@+id/new_book3_pic"
-                    android:layout_alignParentBottom="true"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/new_book3_pic"
+                    android:text="26032人评价  97%好评" />
             </RelativeLayout>
 
             <View
-                android:background="@android:color/darker_gray"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"/>
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
 
             <RelativeLayout
                 android:id="@+id/newbook4"
@@ -259,10 +261,10 @@
                 android:padding="8dp">
 
                 <ImageView
-                    android:layout_marginRight="16dp"
                     android:id="@+id/new_book4_pic"
                     android:layout_width="90dp"
                     android:layout_height="100dp"
+                    android:layout_marginRight="16dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/headfirst" />
 
@@ -271,8 +273,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/new_book4_pic"
-                    android:text="深入浅出C#"
                     android:maxLines="1"
+                    android:text="深入浅出C#"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
@@ -289,37 +291,38 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:maxLines="1"
-                    android:textSize="12sp"
                     android:id="@+id/new_book4_author"
-                    android:text="Stellman &amp; Greene 著"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_below="@id/new_book4_description"
                     android:layout_toRightOf="@+id/new_book4_pic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:maxLines="1"
+                    android:text="Stellman &amp; Greene 著"
+                    android:textSize="12sp" />
 
                 <TextView
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
                     android:id="@+id/new_book4_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
                     android:text="¥89.5"
                     android:textColor="@color/colorPrimary"
                     android:textSize="14sp" />
+
                 <TextView
                     android:id="@+id/new_book4_evalue"
-                    android:text="26540人评价  95%好评"
-                    android:layout_toRightOf="@+id/new_book4_pic"
-                    android:layout_alignParentBottom="true"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/new_book4_pic"
+                    android:text="26540人评价  95%好评" />
             </RelativeLayout>
 
             <View
-                android:background="@android:color/darker_gray"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"/>
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
 
 
         </LinearLayout>

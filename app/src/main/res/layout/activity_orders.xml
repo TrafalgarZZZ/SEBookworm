@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_favorites"
-    android:background="#e7e0e0"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e7e0e0"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -14,14 +13,14 @@
 
 
     <LinearLayout
-        android:background="#fcf8f8"
         android:id="@+id/order_card1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:foreground="?attr/selectableItemBackground"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:background="#fcf8f8"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -29,77 +28,80 @@
 
             <LinearLayout
                 android:id="@+id/order1_store"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="30dp">
+                android:layout_height="30dp"
+                android:gravity="center_vertical">
 
                 <ImageView
-                    android:src="@mipmap/store"
                     android:layout_width="25dp"
-                    android:layout_height="25dp" />
+                    android:layout_height="25dp"
+                    android:src="@mipmap/store" />
+
                 <TextView
-                    android:layout_marginLeft="8dp"
-                    android:text="三联书店 >"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="三联书店 >" />
             </LinearLayout>
 
             <TextView
-                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="5dp"
-                android:layout_alignParentEnd="true"
                 android:text="正在配送中"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <RelativeLayout
                 android:id="@+id/order1_content"
-                android:background="#fcf8f8"
-                android:padding="4dp"
-                android:gravity="center_vertical"
-                android:layout_below="@+id/order1_store"
                 android:layout_width="match_parent"
-                android:layout_height="80dp">
+                android:layout_height="80dp"
+                android:layout_below="@+id/order1_store"
+                android:background="#fcf8f8"
+                android:gravity="center_vertical"
+                android:padding="4dp">
 
                 <ImageView
                     android:id="@+id/order1_pic"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/headfirst"
                     android:layout_width="60dp"
-                    android:layout_height="60dp" />
+                    android:layout_height="60dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/headfirst" />
+
                 <TextView
                     android:id="@+id/order1_title"
-                    android:layout_toRightOf="@+id/order1_pic"
-                    android:layout_marginTop="8dp"
-                    android:layout_gravity="top"
-                    android:text="深入浅出C# (Head First C#)"
-                    android:layout_marginLeft="20dp"
-                    android:textSize="10sp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/order1_pic"
+                    android:text="深入浅出C# (Head First C#)"
+                    android:textSize="10sp" />
+
                 <TextView
-                    android:textSize="8sp"
-                    android:text="Head First系列最新作品"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/order1_title"
                     android:layout_marginLeft="20dp"
                     android:layout_toRightOf="@+id/order1_pic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:text="Head First系列最新作品"
+                    android:textSize="8sp" />
             </RelativeLayout>
 
             <LinearLayout
-                android:paddingEnd="8dp"
-                android:gravity="end|center_vertical"
-                android:layout_below="@+id/order1_content"
                 android:layout_width="match_parent"
-                android:layout_height="30dp">
+                android:layout_height="30dp"
+                android:layout_below="@+id/order1_content"
+                android:gravity="end|center_vertical"
+                android:paddingEnd="8dp">
 
                 <TextView
-                    android:text="共1本图书 实付款: ¥89.50"
-
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+
+                    android:layout_height="wrap_content"
+                    android:text="共1本图书 实付款: ¥89.50" />
 
             </LinearLayout>
 
@@ -108,16 +110,16 @@
     </LinearLayout>
 
     <LinearLayout
-        android:background="#fcf8f8"
-
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/order_card1"
         android:id="@+id/order_card2"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/order_card1"
+        android:layout_marginTop="5dp"
+        android:background="#fcf8f8"
         android:clickable="true"
-        android:foreground="?attr/selectableItemBackground"
-        android:layout_alignParentStart="true">
+        android:foreground="?attr/selectableItemBackground">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -125,75 +127,78 @@
 
             <LinearLayout
                 android:id="@+id/order2_store"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="30dp">
+                android:layout_height="30dp"
+                android:gravity="center_vertical">
 
                 <ImageView
-                    android:src="@mipmap/store"
                     android:layout_width="25dp"
-                    android:layout_height="25dp" />
+                    android:layout_height="25dp"
+                    android:src="@mipmap/store" />
+
                 <TextView
-                    android:layout_marginLeft="8dp"
-                    android:text="理想国(imaginist) >"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="理想国(imaginist) >" />
             </LinearLayout>
 
             <TextView
-                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="5dp"
-                android:layout_alignParentEnd="true"
                 android:text="已送达"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textColor="@color/colorAccent" />
 
             <RelativeLayout
                 android:id="@+id/order2_content"
-                android:padding="4dp"
-                android:gravity="center_vertical"
-                android:layout_below="@+id/order2_store"
                 android:layout_width="match_parent"
-                android:layout_height="80dp">
+                android:layout_height="80dp"
+                android:layout_below="@+id/order2_store"
+                android:gravity="center_vertical"
+                android:padding="4dp">
 
                 <ImageView
                     android:id="@+id/order2_pic"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/introalgorithms"
                     android:layout_width="60dp"
-                    android:layout_height="60dp" />
+                    android:layout_height="60dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/introalgorithms" />
+
                 <TextView
                     android:id="@+id/order2_title"
-                    android:layout_toRightOf="@+id/order2_pic"
-                    android:layout_marginTop="8dp"
-                    android:layout_gravity="top"
-                    android:text="算法导论（原书第三版）"
-                    android:layout_marginLeft="20dp"
-                    android:textSize="10sp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/order2_pic"
+                    android:text="算法导论（原书第三版）"
+                    android:textSize="10sp" />
+
                 <TextView
-                    android:textSize="8sp"
-                    android:text="超过50万人阅读的算法圣经!算法标准教材"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/order2_title"
                     android:layout_marginLeft="20dp"
                     android:layout_toRightOf="@+id/order2_pic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:text="超过50万人阅读的算法圣经!算法标准教材"
+                    android:textSize="8sp" />
             </RelativeLayout>
 
             <LinearLayout
-                android:paddingEnd="8dp"
-                android:gravity="end|center_vertical"
-                android:layout_below="@+id/order2_content"
                 android:layout_width="match_parent"
-                android:layout_height="30dp">
+                android:layout_height="30dp"
+                android:layout_below="@+id/order2_content"
+                android:gravity="end|center_vertical"
+                android:paddingEnd="8dp">
 
                 <TextView
-                    android:text="共1本图书 实付款: ¥105.60"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="共1本图书 实付款: ¥105.60" />
 
             </LinearLayout>
 

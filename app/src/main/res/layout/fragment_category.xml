@@ -6,42 +6,44 @@
     tools:context="com.fxdsse.SEhomework.Fragments.CategoryFragment">
 
     <LinearLayout
-        android:orientation="vertical"
-
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
                 android:background="@color/white"
                 android:drawableTop="@mipmap/logo_java"
-                android:text="Java"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="Java" />
+
             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/white"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:text="PHP"
                 android:drawableTop="@mipmap/logo_php"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="PHP" />
+
             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/white"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:text="JavaScript"
                 android:drawableTop="@mipmap/logo_js"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="JavaScript" />
 
 
         </LinearLayout>
@@ -51,32 +53,34 @@
             android:layout_height="match_parent">
 
             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:paddingBottom="20dp"
-                android:paddingTop="20dp"
                 android:background="@color/white"
                 android:drawableTop="@mipmap/logo_csharp"
-                android:text="C#"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <Button
-                android:layout_weight="1"
-                android:background="@color/white"
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
-                android:text="SWIFT"
+                android:text="C#" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
                 android:drawableTop="@mipmap/logo_swift"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <Button
-                android:layout_weight="1"
-                android:background="@color/white"
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
-                android:text="Python"
-                android:drawableTop="@mipmap/logo_py"
+                android:text="SWIFT" />
+
+            <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawableTop="@mipmap/logo_py"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="Python" />
 
 
         </LinearLayout>
@@ -97,24 +101,25 @@
                 android:text="HTML" />
 
             <Button
-                android:layout_weight="1"
-                android:paddingBottom="20dp"
-                android:paddingTop="20dp"
-                android:background="@color/white"
                 android:id="@+id/category_kotlin"
-                android:drawableTop="@mipmap/logo_ruby"
-                android:text="Ruby"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <Button
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/white"
+                android:drawableTop="@mipmap/logo_ruby"
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
-                android:text="Perl"
-                android:drawableTop="@mipmap/logo_perl"
+                android:text="Ruby" />
+
+            <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawableTop="@mipmap/logo_perl"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="Perl" />
 
 
         </LinearLayout>
@@ -122,40 +127,39 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <Button
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:text="C++"
-                android:drawableTop="@mipmap/logo_cpp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
 
             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/white"
+                android:drawableTop="@mipmap/logo_cpp"
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
-                android:text="AI"
-                android:drawableTop="@mipmap/logo_ai"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:text="C++" />
+
             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/white"
+                android:drawableTop="@mipmap/logo_ai"
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
-                android:text="VR"
-                android:drawableTop="@mipmap/logo_vr"
+                android:text="AI" />
+
+            <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:drawableTop="@mipmap/logo_vr"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="VR" />
         </LinearLayout>
 
     </LinearLayout>
-
-
-
 
 
 </RelativeLayout>

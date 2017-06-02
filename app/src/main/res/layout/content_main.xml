@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_main"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -19,33 +18,33 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/shop1"
-                android:foreground = "?attr/selectableItemBackground"
-                android:clickable="true"
-                app:cardCornerRadius="6dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="6dp">
 
                 <LinearLayout
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp">
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="90dp"
@@ -54,186 +53,195 @@
                             android:src="@drawable/food1" />
 
                         <LinearLayout
-                            android:paddingEnd="5dp"
-                            android:paddingStart="5dp"
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingEnd="5dp"
+                            android:paddingStart="5dp">
 
 
                             <LinearLayout
-                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
 
 
                                 <TextView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textColor="@android:color/black"
-                                    android:textStyle="bold"
+                                    android:layout_gravity="center_vertical"
                                     android:text="日本寿司屋（西电店）"
-                                    android:textSize="18sp"/>
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
 
                                 <TextView
 
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|end"
+                                    android:gravity="end"
                                     android:text="697m"
                                     android:textSize="14sp"
-                                    android:textStyle="bold"
-                                    android:layout_gravity="center_vertical|end"
-                                    android:gravity="end"/>
+                                    android:textStyle="bold" />
 
 
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
 
 
                                 <ImageView
-                                    android:layout_gravity="bottom"
+                                    android:layout_width="12dp"
 
-                                    android:src="@drawable/ratingselected"
-                                    android:layout_width="12dp"
-                                    android:layout_height="12dp" />
-                                <ImageView
+                                    android:layout_height="12dp"
                                     android:layout_gravity="bottom"
-                                    android:src="@drawable/ratingselected"
-                                    android:layout_width="12dp"
-                                    android:layout_height="12dp" />
-                                <ImageView
-                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
 
-                                    android:src="@drawable/ratingselected"
-                                    android:layout_width="12dp"
-                                    android:layout_height="12dp" />
                                 <ImageView
-                                    android:layout_gravity="bottom"
-                                    android:src="@drawable/ratingselected"
                                     android:layout_width="12dp"
-                                    android:layout_height="12dp" />
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
+
                                 <ImageView
-                                    android:layout_gravity="bottom"
-                                    android:src="@drawable/ratingunselected"
                                     android:layout_width="12dp"
-                                    android:layout_height="12dp" />
+
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingunselected" />
 
                                 <TextView
-                                    android:paddingStart="5dp"
-                                    android:text="月售 125 份"
-                                    android:textSize="10sp"
-                                    android:layout_gravity="bottom"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
-                                <TextView
-                                    android:gravity="end"
-                                    android:layout_gravity="top"
-                                    android:text="30分钟"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_weight="1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-
-                                <TextView
-                                    android:layout_gravity="bottom"
-                                    android:textSize="12sp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="起送 ¥0 | 配送 ¥0" />
+                                    android:layout_gravity="bottom"
+                                    android:paddingStart="5dp"
+                                    android:text="月售 125 份"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:gravity="end"
+                                    android:text="30分钟"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:text="起送 ¥0 | 配送 ¥0"
+                                    android:textSize="12sp" />
                             </LinearLayout>
                         </LinearLayout>
 
                     </LinearLayout>
 
                     <RelativeLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
 
                         <LinearLayout
                             android:id="@+id/line1"
-                            android:orientation="vertical"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
                             <LinearLayout
-                                android:paddingTop="5dp"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp">
 
                                 <ImageView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="10dp"
                                     android:layout_height="10dp"
-                                    android:src="@drawable/red"/>
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/red" />
+
                                 <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:paddingStart="10dp"
                                     android:text="满10减1，满20减3，满40减6"
-                                    android:textSize="12sp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
+                                    android:textSize="12sp" />
                             </LinearLayout>
+
                             <LinearLayout
-                                android:paddingTop="2dp"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2dp">
 
                                 <ImageView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="10dp"
                                     android:layout_height="10dp"
-                                    android:src="@drawable/orange"/>
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/orange" />
+
                                 <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:paddingStart="10dp"
                                     android:text="6.3折抢购金枪鱼寿司+大杯红豆奶茶等商品"
-                                    android:textSize="12sp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
                             <LinearLayout
-                                android:paddingTop="2dp"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2dp">
 
                                 <ImageView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="10dp"
                                     android:layout_height="10dp"
-                                    android:src="@drawable/blue"/>
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/blue" />
+
                                 <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:paddingStart="10dp"
                                     android:text="新用户首单立减10元（限钱包支付，其他支付立减7元）"
-                                    android:textSize="12sp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <CheckBox
                             android:id="@+id/first_favor_checkbox"
-                            android:clickable="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignBottom="@+id/line1"
-                            android:scaleType="centerInside"
-                            android:background="@drawable/favor_selector"
-                            android:layout_gravity="bottom"
-                            android:button="@null"
                             android:layout_width="25dp"
-                            android:layout_height="25dp" />
+                            android:layout_height="25dp"
+                            android:layout_alignBottom="@+id/line1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/favor_selector"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:scaleType="centerInside" />
 
                     </RelativeLayout>
 
@@ -242,26 +250,26 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:foreground = "?attr/selectableItemBackground"
-                android:clickable="true"
-                android:layout_marginTop="8dp"
-                app:cardCornerRadius="6dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="6dp">
 
                 <LinearLayout
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp">
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="90dp"
@@ -270,169 +278,176 @@
                             android:src="@drawable/food2" />
 
                         <LinearLayout
-                            android:paddingEnd="5dp"
-                            android:paddingStart="5dp"
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingEnd="5dp"
+                            android:paddingStart="5dp">
 
 
                             <LinearLayout
-                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
 
 
                                 <TextView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textColor="@android:color/black"
-                                    android:textStyle="bold"
+                                    android:layout_gravity="center_vertical"
                                     android:text="优麦西点"
-                                    android:textSize="18sp"/>
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
 
                                 <TextView
 
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|end"
+                                    android:gravity="end"
                                     android:text="1.3km"
                                     android:textSize="14sp"
-                                    android:textStyle="bold"
-                                    android:layout_gravity="center_vertical|end"
-                                    android:gravity="end"/>
+                                    android:textStyle="bold" />
 
 
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
 
 
                                 <ImageView
-                                    android:layout_gravity="bottom"
+                                    android:layout_width="12dp"
 
-                                    android:src="@drawable/ratingselected"
-                                    android:layout_width="12dp"
-                                    android:layout_height="12dp" />
-                                <ImageView
+                                    android:layout_height="12dp"
                                     android:layout_gravity="bottom"
-                                    android:src="@drawable/ratingselected"
-                                    android:layout_width="12dp"
-                                    android:layout_height="12dp" />
-                                <ImageView
-                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
 
-                                    android:src="@drawable/ratingselected"
-                                    android:layout_width="12dp"
-                                    android:layout_height="12dp" />
                                 <ImageView
-                                    android:layout_gravity="bottom"
-                                    android:src="@drawable/ratingselected"
                                     android:layout_width="12dp"
-                                    android:layout_height="12dp" />
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
+
                                 <ImageView
-                                    android:layout_gravity="bottom"
-                                    android:src="@drawable/ratingselected"
                                     android:layout_width="12dp"
-                                    android:layout_height="12dp" />
+
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
 
                                 <TextView
-                                    android:paddingStart="5dp"
-                                    android:text="月售 451 份"
-                                    android:textSize="10sp"
-                                    android:layout_gravity="bottom"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
-                                <TextView
-                                    android:gravity="end"
-                                    android:layout_gravity="top"
-                                    android:text="45分钟"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_weight="1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-
-                                <TextView
-                                    android:layout_gravity="bottom"
-                                    android:textSize="12sp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="起送 ¥10 | 配送 ¥0" />
+                                    android:layout_gravity="bottom"
+                                    android:paddingStart="5dp"
+                                    android:text="月售 451 份"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:gravity="end"
+                                    android:text="45分钟"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:text="起送 ¥10 | 配送 ¥0"
+                                    android:textSize="12sp" />
                             </LinearLayout>
                         </LinearLayout>
 
                     </LinearLayout>
 
                     <RelativeLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
 
                         <LinearLayout
                             android:id="@+id/line1"
-                            android:orientation="vertical"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
                             <LinearLayout
-                                android:paddingTop="5dp"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp">
 
                                 <ImageView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="10dp"
                                     android:layout_height="10dp"
-                                    android:src="@drawable/red"/>
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/red" />
+
                                 <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:paddingStart="10dp"
                                     android:text="满10减3，满20减5，满50减15"
-                                    android:textSize="12sp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
 
                             <LinearLayout
-                                android:paddingTop="2dp"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2dp">
 
                                 <ImageView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="10dp"
                                     android:layout_height="10dp"
-                                    android:src="@drawable/blue"/>
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/blue" />
+
                                 <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:paddingStart="10dp"
                                     android:text="新用户首单立减10元（限钱包支付，其他支付立减7元）"
-                                    android:textSize="12sp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <CheckBox
-                            android:clickable="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignBottom="@+id/line1"
-                            android:scaleType="centerInside"
-                            android:background="@drawable/favor_selector"
-                            android:layout_gravity="bottom"
-                            android:button="@null"
                             android:layout_width="25dp"
-                            android:layout_height="25dp" />
+                            android:layout_height="25dp"
+                            android:layout_alignBottom="@+id/line1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/favor_selector"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:scaleType="centerInside" />
 
                     </RelativeLayout>
 
@@ -441,26 +456,26 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:foreground = "?attr/selectableItemBackground"
-                android:clickable="true"
-                android:layout_marginTop="8dp"
-                app:cardCornerRadius="6dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="6dp">
 
                 <LinearLayout
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp">
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="90dp"
@@ -469,171 +484,177 @@
                             android:src="@drawable/food3" />
 
                         <LinearLayout
-                            android:paddingEnd="5dp"
-                            android:paddingStart="5dp"
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingEnd="5dp"
+                            android:paddingStart="5dp">
 
 
                             <LinearLayout
-                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
 
 
                                 <TextView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textColor="@android:color/black"
-                                    android:textStyle="bold"
+                                    android:layout_gravity="center_vertical"
                                     android:text="四川家常菜"
-                                    android:textSize="18sp"/>
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
 
                                 <TextView
 
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|end"
+                                    android:gravity="end"
                                     android:text="326m"
                                     android:textSize="14sp"
-                                    android:textStyle="bold"
-                                    android:layout_gravity="center_vertical|end"
-                                    android:gravity="end"/>
+                                    android:textStyle="bold" />
 
 
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
 
 
                                 <ImageView
-                                    android:layout_gravity="bottom"
+                                    android:layout_width="12dp"
 
-                                    android:src="@drawable/ratingselected"
-                                    android:layout_width="12dp"
-                                    android:layout_height="12dp" />
-                                <ImageView
+                                    android:layout_height="12dp"
                                     android:layout_gravity="bottom"
-                                    android:src="@drawable/ratingselected"
-                                    android:layout_width="12dp"
-                                    android:layout_height="12dp" />
-                                <ImageView
-                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
 
-                                    android:src="@drawable/ratingselected"
-                                    android:layout_width="12dp"
-                                    android:layout_height="12dp" />
                                 <ImageView
-                                    android:layout_gravity="bottom"
-                                    android:src="@drawable/ratingselected"
                                     android:layout_width="12dp"
-                                    android:layout_height="12dp" />
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
+
                                 <ImageView
-                                    android:layout_gravity="bottom"
-                                    android:src="@drawable/ratingselected"
                                     android:layout_width="12dp"
-                                    android:layout_height="12dp" />
+
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
 
                                 <TextView
-                                    android:paddingStart="5dp"
-                                    android:text="月售 987 份"
-                                    android:textSize="10sp"
-                                    android:layout_gravity="bottom"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
-                                <TextView
-                                    android:gravity="end"
-                                    android:layout_gravity="top"
-                                    android:text="15分钟"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_weight="1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-
-                                <TextView
-                                    android:layout_gravity="bottom"
-                                    android:textSize="12sp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="起送 ¥10 | 配送 ¥0" />
+                                    android:layout_gravity="bottom"
+                                    android:paddingStart="5dp"
+                                    android:text="月售 987 份"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:gravity="end"
+                                    android:text="15分钟"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:text="起送 ¥10 | 配送 ¥0"
+                                    android:textSize="12sp" />
                             </LinearLayout>
                         </LinearLayout>
 
                     </LinearLayout>
 
                     <RelativeLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
 
                         <LinearLayout
                             android:id="@+id/line1"
-                            android:orientation="vertical"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
 
                             <LinearLayout
-                                android:paddingTop="2dp"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2dp">
 
                                 <ImageView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="10dp"
                                     android:layout_height="10dp"
-                                    android:src="@drawable/orange"/>
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/orange" />
+
                                 <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:paddingStart="10dp"
                                     android:text="8折抢购水煮肉片+米饭+冰红茶等商品"
-                                    android:textSize="12sp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
 
                             <LinearLayout
-                                android:paddingTop="2dp"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2dp">
 
                                 <ImageView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="10dp"
                                     android:layout_height="10dp"
-                                    android:src="@drawable/blue"/>
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/blue" />
+
                                 <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:paddingStart="10dp"
                                     android:text="新用户首单立减10元（限钱包支付，其他支付立减7元）"
-                                    android:textSize="12sp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <CheckBox
-                            android:clickable="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignBottom="@+id/line1"
-                            android:scaleType="centerInside"
-                            android:background="@drawable/favor_selector"
-                            android:layout_gravity="bottom"
-                            android:button="@null"
                             android:layout_width="25dp"
-                            android:layout_height="25dp" />
+                            android:layout_height="25dp"
+                            android:layout_alignBottom="@+id/line1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/favor_selector"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:scaleType="centerInside" />
 
                     </RelativeLayout>
 
@@ -642,26 +663,26 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:foreground = "?attr/selectableItemBackground"
-                android:clickable="true"
-                android:layout_marginTop="8dp"
-                app:cardCornerRadius="6dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="6dp">
 
                 <LinearLayout
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp">
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="90dp"
@@ -670,190 +691,196 @@
                             android:src="@drawable/food4" />
 
                         <LinearLayout
-                            android:paddingEnd="5dp"
-                            android:paddingStart="5dp"
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingEnd="5dp"
+                            android:paddingStart="5dp">
 
 
                             <LinearLayout
-                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
 
 
                                 <TextView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textColor="@android:color/black"
-                                    android:textStyle="bold"
+                                    android:layout_gravity="center_vertical"
                                     android:text="背包客汉堡"
-                                    android:textSize="18sp"/>
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
 
                                 <TextView
 
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|end"
+                                    android:gravity="end"
                                     android:text="512m"
                                     android:textSize="14sp"
-                                    android:textStyle="bold"
-                                    android:layout_gravity="center_vertical|end"
-                                    android:gravity="end"/>
+                                    android:textStyle="bold" />
 
 
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
 
 
                                 <ImageView
-                                    android:layout_gravity="bottom"
-
-                                    android:src="@drawable/ratingselected"
                                     android:layout_width="12dp"
-                                    android:layout_height="12dp" />
-                                <ImageView
+
+                                    android:layout_height="12dp"
                                     android:layout_gravity="bottom"
-                                    android:src="@drawable/ratingselected"
-                                    android:layout_width="12dp"
-                                    android:layout_height="12dp" />
+                                    android:src="@drawable/ratingselected" />
 
                                 <ImageView
-                                    android:layout_gravity="bottom"
-
-                                    android:src="@drawable/ratingselected"
                                     android:layout_width="12dp"
                                     android:layout_height="12dp"
-                                    android:id="@+id/imageView2" />
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
 
                                 <ImageView
-                                    android:layout_gravity="bottom"
-                                    android:src="@drawable/ratingselected"
+                                    android:id="@+id/imageView2"
+
                                     android:layout_width="12dp"
-                                    android:layout_height="12dp" />
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
+
                                 <ImageView
-                                    android:layout_gravity="bottom"
-                                    android:src="@drawable/ratingunselected"
                                     android:layout_width="12dp"
-                                    android:layout_height="12dp" />
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingselected" />
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingunselected" />
 
                                 <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
                                     android:paddingStart="5dp"
                                     android:text="月售 187 份"
-                                    android:textSize="10sp"
-                                    android:layout_gravity="bottom"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
+                                    android:textSize="10sp" />
+
                                 <TextView
-                                    android:gravity="end"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:layout_gravity="top"
+                                    android:gravity="end"
                                     android:text="23分钟"
                                     android:textSize="14sp"
-                                    android:textStyle="bold"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
+                                    android:textStyle="bold" />
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
 
                                 <TextView
-                                    android:layout_gravity="bottom"
-                                    android:textSize="12sp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="起送 ¥7 | 配送 ¥0" />
+                                    android:layout_gravity="bottom"
+                                    android:text="起送 ¥7 | 配送 ¥0"
+                                    android:textSize="12sp" />
                             </LinearLayout>
                         </LinearLayout>
 
                     </LinearLayout>
 
                     <RelativeLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
 
                         <LinearLayout
                             android:id="@+id/line1"
-                            android:orientation="vertical"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
                             <LinearLayout
-                                android:paddingTop="5dp"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp">
 
                                 <ImageView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="10dp"
                                     android:layout_height="10dp"
-                                    android:src="@drawable/red"/>
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/red" />
+
                                 <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:paddingStart="10dp"
                                     android:text="满10减3，满20减5，满50减15"
-                                    android:textSize="12sp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
                             <LinearLayout
-                                android:paddingTop="2dp"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2dp">
 
                                 <ImageView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="10dp"
                                     android:layout_height="10dp"
-                                    android:src="@drawable/orange"/>
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/orange" />
+
                                 <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:paddingStart="10dp"
                                     android:text="7.5折抢购鸡肉卷套餐A等商品"
-                                    android:textSize="12sp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
 
                             <LinearLayout
-                                android:paddingTop="2dp"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2dp">
 
                                 <ImageView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="10dp"
                                     android:layout_height="10dp"
-                                    android:src="@drawable/blue"/>
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/blue" />
+
                                 <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:paddingStart="10dp"
                                     android:text="新用户首单立减10元（限钱包支付，其他支付立减7元）"
-                                    android:textSize="12sp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <CheckBox
-                            android:clickable="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignBottom="@+id/line1"
-                            android:scaleType="centerInside"
-                            android:background="@drawable/favor_selector"
-                            android:layout_gravity="bottom"
-                            android:button="@null"
                             android:layout_width="25dp"
-                            android:layout_height="25dp" />
+                            android:layout_height="25dp"
+                            android:layout_alignBottom="@+id/line1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/favor_selector"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:scaleType="centerInside" />
 
                     </RelativeLayout>
 
@@ -862,26 +889,26 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:layout_marginTop="8dp"
-                android:foreground = "?attr/selectableItemBackground"
-                android:clickable="true"
-                app:cardCornerRadius="6dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="6dp">
 
                 <LinearLayout
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp">
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="90dp"
@@ -890,186 +917,195 @@
                             android:src="@android:color/darker_gray" />
 
                         <LinearLayout
-                            android:paddingEnd="5dp"
-                            android:paddingStart="5dp"
-                            android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingEnd="5dp"
+                            android:paddingStart="5dp">
 
 
                             <LinearLayout
-                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
 
 
                                 <TextView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:textColor="@android:color/black"
-                                    android:textStyle="bold"
+                                    android:layout_gravity="center_vertical"
                                     android:text="其他商家"
-                                    android:textSize="18sp"/>
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
 
                                 <TextView
 
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|end"
+                                    android:gravity="end"
                                     android:text="\?\?\?m"
                                     android:textSize="14sp"
-                                    android:textStyle="bold"
-                                    android:layout_gravity="center_vertical|end"
-                                    android:gravity="end"/>
+                                    android:textStyle="bold" />
 
 
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_weight="1"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
 
 
                                 <ImageView
-                                    android:layout_gravity="bottom"
+                                    android:layout_width="12dp"
 
-                                    android:src="@drawable/ratingunselected"
-                                    android:layout_width="12dp"
-                                    android:layout_height="12dp" />
-                                <ImageView
+                                    android:layout_height="12dp"
                                     android:layout_gravity="bottom"
-                                    android:src="@drawable/ratingunselected"
-                                    android:layout_width="12dp"
-                                    android:layout_height="12dp" />
-                                <ImageView
-                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingunselected" />
 
-                                    android:src="@drawable/ratingunselected"
-                                    android:layout_width="12dp"
-                                    android:layout_height="12dp" />
                                 <ImageView
-                                    android:layout_gravity="bottom"
-                                    android:src="@drawable/ratingunselected"
                                     android:layout_width="12dp"
-                                    android:layout_height="12dp" />
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingunselected" />
+
                                 <ImageView
-                                    android:layout_gravity="bottom"
-                                    android:src="@drawable/ratingunselected"
                                     android:layout_width="12dp"
-                                    android:layout_height="12dp" />
+
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingunselected" />
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingunselected" />
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="bottom"
+                                    android:src="@drawable/ratingunselected" />
 
                                 <TextView
-                                    android:paddingStart="5dp"
-                                    android:text="月售 \?\?\? 份"
-                                    android:textSize="10sp"
-                                    android:layout_gravity="bottom"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
-                                <TextView
-                                    android:gravity="end"
-                                    android:layout_gravity="top"
-                                    android:text="\?\?分钟"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_weight="1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-
-                                <TextView
-                                    android:layout_gravity="bottom"
-                                    android:textSize="12sp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="起送 ¥\? | 配送 ¥\?" />
+                                    android:layout_gravity="bottom"
+                                    android:paddingStart="5dp"
+                                    android:text="月售 \?\?\? 份"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:gravity="end"
+                                    android:text="\?\?分钟"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:text="起送 ¥\? | 配送 ¥\?"
+                                    android:textSize="12sp" />
                             </LinearLayout>
                         </LinearLayout>
 
                     </LinearLayout>
 
                     <RelativeLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
 
                         <LinearLayout
                             android:id="@+id/line1"
-                            android:orientation="vertical"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
                             <LinearLayout
-                                android:paddingTop="5dp"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp">
 
                                 <ImageView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="10dp"
                                     android:layout_height="10dp"
-                                    android:src="@drawable/red"/>
-                                <TextView
-                                    android:paddingStart="10dp"
-                                    android:text="...................."
-                                    android:textSize="12sp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:paddingTop="2dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/red" />
 
-                                <ImageView
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_width="10dp"
-                                    android:layout_height="10dp"
-                                    android:src="@drawable/orange"/>
                                 <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:paddingStart="10dp"
                                     android:text="...................."
-                                    android:textSize="12sp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
                             <LinearLayout
-                                android:paddingTop="2dp"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2dp">
 
                                 <ImageView
-                                    android:layout_gravity="center_vertical"
                                     android:layout_width="10dp"
                                     android:layout_height="10dp"
-                                    android:src="@drawable/blue"/>
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/orange" />
+
                                 <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:paddingStart="10dp"
                                     android:text="...................."
-                                    android:textSize="12sp"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="2dp">
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/blue" />
+
+                                <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:text="...................."
+                                    android:textSize="12sp" />
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <CheckBox
                             android:id="@+id/first_favor_checkbox"
-                            android:clickable="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignBottom="@+id/line1"
-                            android:scaleType="centerInside"
-                            android:background="@drawable/favor_selector"
-                            android:layout_gravity="bottom"
-                            android:button="@null"
                             android:layout_width="25dp"
-                            android:layout_height="25dp" />
+                            android:layout_height="25dp"
+                            android:layout_alignBottom="@+id/line1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/favor_selector"
+                            android:button="@null"
+                            android:clickable="true"
+                            android:scaleType="centerInside" />
 
                     </RelativeLayout>
 

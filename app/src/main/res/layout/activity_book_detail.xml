@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context="com.fxdsse.SEhomework.BookDetailActivity">
 
     <ScrollView
@@ -70,10 +69,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_above="@+id/bd_price"
                 android:layout_marginLeft="20dp"
-                android:text=" 4.7 / 5.0  (1273)"
                 android:layout_toRightOf="@+id/bd_img"
-                android:layout_above="@+id/bd_price" />
+                android:text=" 4.7 / 5.0  (1273)" />
 
             <Button
                 android:id="@+id/bd_buy"
@@ -98,7 +97,6 @@
                 android:textSize="14sp" />
 
 
-
             <TextView
                 android:id="@+id/bd_intro_title"
                 android:layout_width="wrap_content"
@@ -110,18 +108,18 @@
 
             <View
                 android:id="@+id/bd_intro_splitter"
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_below="@id/bd_intro_title"
+                android:layout_marginTop="5dp"
                 android:background="@android:color/darker_gray" />
 
             <TextView
-                android:text="@string/head_first_c_sharp_intro"
-                android:layout_marginTop="5dp"
-                android:layout_below="@id/bd_intro_splitter"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bd_intro_splitter"
+                android:layout_marginTop="5dp"
+                android:text="@string/head_first_c_sharp_intro" />
 
             <LinearLayout
 

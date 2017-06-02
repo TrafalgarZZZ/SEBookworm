@@ -20,9 +20,9 @@ public class ShopActivity extends AppCompatActivity {
 
         getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
 
-        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout)findViewById(R.id.toolbar_layout);
+        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
 
-        RadioButton radioButton_all = (RadioButton)findViewById(R.id.radiobtn_all);
+        RadioButton radioButton_all = (RadioButton) findViewById(R.id.radiobtn_all);
         radioButton_all.setChecked(true);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

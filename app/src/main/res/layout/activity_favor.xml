@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_favor"
@@ -15,23 +14,23 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/favor_card1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
-                app:cardCornerRadius="6dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true">
+                app:cardCornerRadius="6dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -77,12 +76,12 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:textColor="@color/colorPrimary"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical|end"
                                     android:gravity="end"
                                     android:text="点过 11 次"
+                                    android:textColor="@color/colorPrimary"
                                     android:textSize="15sp"
                                     android:textStyle="bold" />
 
@@ -136,34 +135,34 @@
                                 android:layout_weight="1">
 
                                 <TextView
-                                    android:layout_weight="1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="bottom"
+                                    android:layout_weight="1"
                                     android:text="有 146 位用户也收藏了该店"
                                     android:textSize="12sp" />
 
                                 <LinearLayout
                                     android:id="@+id/enterinto_favor_food1"
-                                    android:clickable="true"
-                                    android:gravity="right|bottom"
-                                    android:layout_weight="1"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="match_parent">
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:gravity="right|bottom">
 
                                     <TextView
-                                        android:textStyle="bold"
-                                        android:textColor="@color/colorAccent"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:layout_gravity="center_vertical"
                                         android:text="进入店铺"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content" />
+                                        android:textColor="@color/colorAccent"
+                                        android:textStyle="bold" />
 
                                     <ImageView
-                                        android:layout_gravity="bottom"
-                                        android:src="@drawable/more_detail"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content" />
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:src="@drawable/more_detail" />
 
 
                                 </LinearLayout>
@@ -233,12 +232,12 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:textColor="@color/colorPrimary"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical|end"
                                     android:gravity="end"
                                     android:text="点过 8 次"
+                                    android:textColor="@color/colorPrimary"
                                     android:textSize="15sp"
                                     android:textStyle="bold" />
 
@@ -291,33 +290,33 @@
                                 android:layout_weight="1">
 
                                 <TextView
-                                    android:layout_weight="1"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="bottom"
+                                    android:layout_weight="1"
                                     android:text="共有 217 位用户也收藏了该店"
                                     android:textSize="12sp" />
 
                                 <LinearLayout
-                                    android:clickable="true"
-                                    android:gravity="right|bottom"
-                                    android:layout_weight="1"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="match_parent">
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:gravity="right|bottom">
 
                                     <TextView
-                                        android:textStyle="bold"
-                                        android:textColor="@color/colorAccent"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:layout_gravity="bottom"
                                         android:text="进入店铺"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content" />
+                                        android:textColor="@color/colorAccent"
+                                        android:textStyle="bold" />
 
                                     <ImageView
-                                        android:layout_gravity="bottom"
-                                        android:src="@drawable/more_detail"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content" />
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:src="@drawable/more_detail" />
 
 
                                 </LinearLayout>

@@ -24,11 +24,11 @@
             android:orientation="vertical">
 
             <android.support.v7.widget.CardView
-                android:elevation="0dp"
                 android:id="@+id/shop1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
+                android:elevation="0dp"
                 android:foreground="?attr/selectableItemBackground"
                 app:cardCornerRadius="0dp">
 
@@ -47,9 +47,9 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -60,9 +60,9 @@
                                 android:textStyle="bold" />
 
                             <LinearLayout
-                                android:gravity="center_vertical"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
 
 
                                 <ImageView
@@ -93,25 +93,25 @@
                                     android:src="@drawable/ratingunselected" />
 
                                 <TextView
-                                    android:layout_marginLeft="8dp"
-                                    android:text="(1378)"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="(1378)" />
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_gravity="end"
-                            android:gravity="end"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:gravity="end">
 
                             <ImageView
-                                android:alpha="0.7"
                                 android:layout_width="140dp"
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_vertical|end"
+                                android:alpha="0.7"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/bookstore1" />
 
@@ -119,12 +119,10 @@
                         </LinearLayout>
 
 
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1">
-                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"></LinearLayout>
 
                     </LinearLayout>
 
@@ -135,10 +133,10 @@
 
 
                         <LinearLayout
-                            android:layout_marginTop="10dp"
                             android:id="@+id/line1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
                             android:orientation="vertical">
 
                             <LinearLayout
@@ -188,12 +186,12 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:elevation="0dp"
-                android:layout_marginTop="10dp"
                 android:id="@+id/shop1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:clickable="true"
+                android:elevation="0dp"
                 android:foreground="?attr/selectableItemBackground"
                 app:cardCornerRadius="0dp">
 
@@ -212,9 +210,9 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -225,9 +223,9 @@
                                 android:textStyle="bold" />
 
                             <LinearLayout
-                                android:gravity="center_vertical"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
 
 
                                 <ImageView
@@ -258,26 +256,26 @@
                                     android:src="@drawable/ratingunselected" />
 
                                 <TextView
-                                    android:layout_marginLeft="8dp"
-                                    android:text="(1798)"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="(1798)" />
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_gravity="end"
-                            android:gravity="end"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:gravity="end">
 
                             <ImageView
-                                android:padding="10dp"
-                                android:alpha="0.7"
                                 android:layout_width="140dp"
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_vertical|end"
+                                android:alpha="0.7"
+                                android:padding="10dp"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/bookstore3" />
 
@@ -285,12 +283,10 @@
                         </LinearLayout>
 
 
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
-                        </LinearLayout>
+                            android:layout_weight="1"></LinearLayout>
 
                     </LinearLayout>
 
@@ -301,10 +297,10 @@
 
 
                         <LinearLayout
-                            android:layout_marginTop="10dp"
                             android:id="@+id/line1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
                             android:orientation="vertical">
 
                             <LinearLayout
@@ -354,12 +350,12 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:elevation="0dp"
-                android:layout_marginTop="10dp"
                 android:id="@+id/shop1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:clickable="true"
+                android:elevation="0dp"
                 android:foreground="?attr/selectableItemBackground"
                 app:cardCornerRadius="0dp">
 
@@ -378,9 +374,9 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -391,9 +387,9 @@
                                 android:textStyle="bold" />
 
                             <LinearLayout
-                                android:gravity="center_vertical"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
 
 
                                 <ImageView
@@ -424,26 +420,26 @@
                                     android:src="@drawable/ratingselected" />
 
                                 <TextView
-                                    android:layout_marginLeft="8dp"
-                                    android:text="(2450)"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="(2450)" />
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_gravity="end"
-                            android:gravity="end"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:gravity="end">
 
                             <ImageView
-                                android:padding="5dp"
-                                android:alpha="0.7"
                                 android:layout_width="140dp"
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_vertical|end"
+                                android:alpha="0.7"
+                                android:padding="5dp"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/bookstore2" />
 
@@ -451,12 +447,10 @@
                         </LinearLayout>
 
 
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
-                        </LinearLayout>
+                            android:layout_weight="1"></LinearLayout>
 
                     </LinearLayout>
 
@@ -466,10 +460,10 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_marginTop="10dp"
                             android:id="@+id/line1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
                             android:orientation="vertical">
 
                             <LinearLayout
@@ -520,12 +514,12 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:elevation="0dp"
-                android:layout_marginTop="10dp"
                 android:id="@+id/shop1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:clickable="true"
+                android:elevation="0dp"
                 android:foreground="?attr/selectableItemBackground"
                 app:cardCornerRadius="0dp">
 
@@ -544,9 +538,9 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -557,9 +551,9 @@
                                 android:textStyle="bold" />
 
                             <LinearLayout
-                                android:gravity="center_vertical"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical">
 
 
                                 <ImageView
@@ -590,25 +584,25 @@
                                     android:src="@drawable/ratingselected" />
 
                                 <TextView
-                                    android:layout_marginLeft="8dp"
-                                    android:text="(2450)"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="(2450)" />
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_gravity="end"
-                            android:gravity="end"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:gravity="end">
 
                             <ImageView
-                                android:alpha="0.7"
                                 android:layout_width="140dp"
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_vertical|end"
+                                android:alpha="0.7"
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/bookstore4" />
 
@@ -616,12 +610,10 @@
                         </LinearLayout>
 
 
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
-                        </LinearLayout>
+                            android:layout_weight="1"></LinearLayout>
 
                     </LinearLayout>
 
@@ -631,10 +623,10 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_marginTop="10dp"
                             android:id="@+id/line1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
                             android:orientation="vertical">
 
                             <LinearLayout
