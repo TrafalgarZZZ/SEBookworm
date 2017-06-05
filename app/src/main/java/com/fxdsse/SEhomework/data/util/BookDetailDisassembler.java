@@ -12,7 +12,7 @@ import java.util.List;
 public class BookDetailDisassembler {
 
     public static BookDetail disassembleDetail(String detailsString) {
-        String[] details = detailsString.split(" | ");
+        String[] details = detailsString.split(" \\| ");
 
         return new BookDetail()
                 .setAuthors(readAuthors(details[0]))
@@ -24,7 +24,7 @@ public class BookDetailDisassembler {
 
     private static List<String> readAuthors(String authorsString) {
         String authorsStringFormatted = authorsString
-                .substring(0, authorsString.indexOf(" （"));
+                .substring(0, authorsString.lastIndexOf(" （"));
         return Arrays.asList(authorsStringFormatted.split("、"));
     }
 
