@@ -131,24 +131,23 @@ public class HomeFragment extends Fragment {
         List<Book> newBookList = bookDao.queryBuilder().list();
         for (Book book : newBookList) {
             RelativeLayout bookItem = (RelativeLayout) LayoutInflater.from(getActivity()).inflate(R.layout.book_item, null);
-            bookItem.setTag(0, book.getId());
+            bookItem.setTag(book.getId());
             ImageView imgBook = (ImageView) bookItem.findViewById(R.id.book_pic);
             TextView txtName = (TextView) bookItem.findViewById(R.id.book_name);
             TextView txtDescrption = (TextView) bookItem.findViewById(R.id.book_description);
             TextView txtPrice = (TextView) bookItem.findViewById(R.id.book_price);
-
             Picasso.with(getActivity()).load(book.getImageURL()).into(imgBook);
             txtName.setText(book.getName());
             txtDescrption.setText(book.getDetail());
             txtPrice.setText(book.getPrice());
 
+
             bookItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getActivity(), BookDetailActivity.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putLong("book_id", (Long) v.getTag(0));
-                    startActivity(intent, bundle);
+                    intent.putExtra("book_id", (Long) v.getTag());
+                    startActivity(intent);
                 }
             });
 

@@ -66,13 +66,6 @@
                 android:layout_toRightOf="@id/bd_img"
                 android:text="林琪，刘晓兵等 译" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/bd_price"
-                android:layout_marginLeft="20dp"
-                android:layout_toRightOf="@+id/bd_img"
-                android:text=" 4.7 / 5.0  (1273)" />
 
             <Button
                 android:id="@+id/bd_buy"
@@ -96,30 +89,6 @@
                 android:textColor="@android:color/black"
                 android:textSize="14sp" />
 
-
-            <TextView
-                android:id="@+id/bd_intro_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/bd_img"
-                android:layout_marginTop="10dp"
-                android:text="简介"
-                android:textSize="16sp" />
-
-            <View
-                android:id="@+id/bd_intro_splitter"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@id/bd_intro_title"
-                android:layout_marginTop="5dp"
-                android:background="@android:color/darker_gray" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/bd_intro_splitter"
-                android:layout_marginTop="5dp"
-                android:text="@string/head_first_c_sharp_intro" />
 
             <LinearLayout
 
