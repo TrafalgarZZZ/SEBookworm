@@ -13,4 +13,15 @@
     tools:context="com.fxdsse.SEhomework.SearchActivity"
     tools:showIn="@layout/activity_search">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/search_result_ll"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
