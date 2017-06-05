@@ -9,12 +9,19 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+import com.fxdsse.SEhomework.App;
 import com.fxdsse.SEhomework.BookDetailActivity;
 import com.fxdsse.SEhomework.R;
 import com.fxdsse.SEhomework.Util.AeolosPicassoImageLoader;
+import com.fxdsse.SEhomework.data.model.Book;
+import com.fxdsse.SEhomework.data.model.BookDao;
+import com.fxdsse.SEhomework.data.model.DaoSession;
+import com.squareup.picasso.Picasso;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 
@@ -36,12 +43,13 @@ public class HomeFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    private RelativeLayout newbooks1;
     private CardView cardView_banner;
     private Banner banner;
     private List<String> images;
     private List<String> titles;
-
+    private LinearLayout homeContainerLinearLayout;
+    private BookDao bookDao;
+    private DaoSession daoSession;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -82,20 +90,15 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        daoSession = ((App) (getActivity().getApplication())).getDaoSession();
+        bookDao = daoSession.getBookDao();
+
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         cardView_banner = (CardView) view.findViewById(R.id.bc_banner_card);
         banner = (Banner) view.findViewById(R.id.bc_banner_banner);
-        newbooks1 = (RelativeLayout) view.findViewById(R.id.newbook1);
+        homeContainerLinearLayout = (LinearLayout) view.findViewById(R.id.home_ll);
 
-        newbooks1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(inflater.getContext(), BookDetailActivity.class);
-                startActivity(intent);
-
-            }
-        });
 
         //prepare banner
         LinearLayout.LayoutParams l = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -125,6 +128,32 @@ public class HomeFragment extends Fragment {
         banner.setDelayTime(5000);
         banner.start();
 
+        List<Book> newBookList = bookDao.queryBuilder().list();
+        for (Book book : newBookList) {
+            RelativeLayout bookItem = (RelativeLayout) LayoutInflater.from(getActivity()).inflate(R.layout.book_item, null);
+            bookItem.setTag(0, book.getId());
+            ImageView imgBook = (ImageView) bookItem.findViewById(R.id.book_pic);
+            TextView txtName = (TextView) bookItem.findViewById(R.id.book_name);
+            TextView txtDescrption = (TextView) bookItem.findViewById(R.id.book_description);
+            TextView txtPrice = (TextView) bookItem.findViewById(R.id.book_price);
+
+            Picasso.with(getActivity()).load(book.getImageURL()).into(imgBook);
+            txtName.setText(book.getName());
+            txtDescrption.setText(book.getDetail());
+            txtPrice.setText(book.getPrice());
+
+            bookItem.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(), BookDetailActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putLong("book_id", (Long) v.getTag(0));
+                    startActivity(intent, bundle);
+                }
+            });
+
+            homeContainerLinearLayout.addView(bookItem);
+        }
         return view;
     }
 
