@@ -7,6 +7,7 @@ import com.fxdsse.SEhomework.data.model.DaoSession;
 import com.fxdsse.SEhomework.data.model.User;
 import com.fxdsse.SEhomework.data.model.UserDao;
 
+import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
 
 /**
@@ -23,11 +24,11 @@ public class UserSessionManager {
         UserDao userDao = daoSession.getUserDao();
         return userDao.queryBuilder()
                 .where(UserDao.Properties.Username.eq(username))
-                .where(UserDao.Properties.PasswordHash.eq(DigestUtils.md5Hex(password)))
+                .where(UserDao.Properties.PasswordHash.eq(new String(Hex.encodeHex(DigestUtils.md5(password)))))
                 .build().unique();
     }
 
-    public static User signup(
+    public static User signUp(
             String username,
             String password,
             Context context) {
@@ -39,7 +40,7 @@ public class UserSessionManager {
                 .unique() == null) {
             User user = new User();
             user.setUsername(username);
-            user.setPasswordHash(DigestUtils.md5Hex(password));
+            user.setPasswordHash(new String(Hex.encodeHex(DigestUtils.md5(password))));
             userDao.save(user);
 
             return user;

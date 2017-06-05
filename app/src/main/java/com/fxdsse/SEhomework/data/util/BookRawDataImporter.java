@@ -53,11 +53,9 @@ public class BookRawDataImporter {
                                 .setPrice(thisBook.getString("price"))
                 );
             }
-
             sharedPreferences.edit().putString("version", version).apply();
             return true;
         }
-
         return false;
     }
 }
