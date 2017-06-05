@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -19,23 +18,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.fxdsse.SEhomework.Fragments.CategoryFragment;
 import com.fxdsse.SEhomework.Fragments.HomeFragment;
-import com.fxdsse.SEhomework.Fragments.StoreFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         CategoryFragment.OnFragmentInteractionListener,
-        HomeFragment.OnFragmentInteractionListener,
-        StoreFragment.OnFragmentInteractionListener {
+        HomeFragment.OnFragmentInteractionListener {
 
     private long backPressedTimeAtMills = 0;
     private TabLayout tabLayout;
     private Fragment current_fragment;
     private FragmentManager fragmentManager;
-
+    private ImageView imageViewUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +56,9 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+
+
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -67,13 +68,21 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        imageViewUser = (ImageView) navigationView.getHeaderView(0).findViewById(R.id.img_user);
+
+        imageViewUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //// TODO: 2017/6/5 Login
+
+            }
+        });
 
     }
 
     private void prepareTabLayout() {
         final Fragment fragment_home = HomeFragment.newInstance("", "");
         final Fragment fragment_category = CategoryFragment.newInstance("", "");
-        final Fragment fragment_store = StoreFragment.newInstance("", "");
         switch_fragment(fragment_home);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -84,9 +93,6 @@ public class MainActivity extends AppCompatActivity
                         break;
                     case 1:
                         switch_fragment(fragment_category);
-                        break;
-                    case 2:
-                        switch_fragment(fragment_store);
                         break;
                 }
             }
@@ -190,19 +196,5 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onFragmentInteraction(Uri uri) {
 
-    }
-
-    class FavorCheckBoxOnClickListener implements View.OnClickListener {
-        @Override
-        public void onClick(View view) {
-            if (!((CheckBox) view).isChecked()) {
-                Snackbar.make(view, "已从收藏中移除该商家", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
-
-            } else {
-                Snackbar.make(view, "已收藏该商家", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
-            }
-        }
     }
 }
