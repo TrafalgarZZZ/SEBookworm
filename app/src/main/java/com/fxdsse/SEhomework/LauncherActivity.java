@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.fxdsse.SEhomework.dao.BookRawDataImporter;
+import com.fxdsse.SEhomework.data.util.BookRawDataImporter;
 
 import java.util.Timer;
 import java.util.TimerTask;

@@ -2,8 +2,8 @@ package com.fxdsse.SEhomework;
 
 import android.app.Application;
 
-import com.fxdsse.SEhomework.dao.model.DaoMaster;
-import com.fxdsse.SEhomework.dao.model.DaoSession;
+import com.fxdsse.SEhomework.data.model.DaoMaster;
+import com.fxdsse.SEhomework.data.model.DaoSession;
 
 import org.greenrobot.greendao.database.Database;
 

@@ -7,11 +7,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.fxdsse.SEhomework.dao.model.Book;
-import com.fxdsse.SEhomework.dao.model.BookDao;
-import com.fxdsse.SEhomework.dao.model.DaoSession;
-import com.fxdsse.SEhomework.dao.model.Order;
-import com.fxdsse.SEhomework.dao.model.OrderDao;
+import com.fxdsse.SEhomework.data.model.Book;
+import com.fxdsse.SEhomework.data.model.BookDao;
+import com.fxdsse.SEhomework.data.model.DaoSession;
+import com.fxdsse.SEhomework.data.model.Order;
+import com.fxdsse.SEhomework.data.model.OrderDao;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

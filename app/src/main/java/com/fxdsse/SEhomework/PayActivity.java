@@ -5,11 +5,11 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.fxdsse.SEhomework.dao.model.Book;
-import com.fxdsse.SEhomework.dao.model.BookDao;
-import com.fxdsse.SEhomework.dao.model.DaoSession;
-import com.fxdsse.SEhomework.dao.model.Order;
-import com.fxdsse.SEhomework.dao.model.OrderDao;
+import com.fxdsse.SEhomework.data.model.Book;
+import com.fxdsse.SEhomework.data.model.BookDao;
+import com.fxdsse.SEhomework.data.model.DaoSession;
+import com.fxdsse.SEhomework.data.model.Order;
+import com.fxdsse.SEhomework.data.model.OrderDao;
 
 import java.util.Date;
 import java.util.List;
