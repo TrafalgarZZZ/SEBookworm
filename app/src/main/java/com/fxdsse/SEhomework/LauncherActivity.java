@@ -23,9 +23,13 @@ public class LauncherActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.txt);
 
         try {
-            BookRawDataImporter.importToDatabase(this);
-            progressBar.setVisibility(View.GONE);
-            textView.setText("数据导入成功");
+            if (BookRawDataImporter.importToDatabase(this)) {
+                progressBar.setVisibility(View.GONE);
+                textView.setText("数据更新成功");
+            } else {
+                progressBar.setVisibility(View.GONE);
+                textView.setText("数据已是最新版本");
+            }
             new Timer().schedule(new TimerTask() {
                 @Override
                 public void run() {
@@ -33,7 +37,7 @@ public class LauncherActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }
-            }, 2000);
+            }, 3000);
         } catch (Exception e) {
             progressBar.setVisibility(View.GONE);
             textView.setText("数据导入失败");
