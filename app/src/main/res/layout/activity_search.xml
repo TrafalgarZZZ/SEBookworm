@@ -59,7 +59,9 @@
                         android:layout_marginLeft="10dp"
                         android:background="@null"
                         android:cursorVisible="false"
-                        android:hint="搜索周边商家"
+                        android:hint="搜索图书名"
+                        android:imeOptions="actionSearch"
+                        android:singleLine="true"
                         android:textColor="@android:color/black"
                         android:textColorHint="@android:color/tertiary_text_dark"
                         android:textSize="15sp" />
