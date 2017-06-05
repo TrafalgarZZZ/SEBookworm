@@ -34,5 +34,6 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'org.greenrobot:greendao:3.2.2'
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.10'
     testCompile 'junit:junit:4.12'
 }
