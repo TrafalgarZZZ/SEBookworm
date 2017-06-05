@@ -1,4 +1,4 @@
-package com.fxdsse.SEhomework.dao.model;
+package com.fxdsse.SEhomework.data.model;
 
 import org.greenrobot.greendao.DaoException;
 import org.greenrobot.greendao.annotation.Entity;
@@ -7,28 +7,31 @@ import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.NotNull;
 import org.greenrobot.greendao.annotation.ToMany;
 
-import java.util.Date;
 import java.util.List;
 
 /**
- * Created by hwding on 6/3/17.
+ * Created by hwding on 6/5/17.
  */
 
 @Entity
-public class Order {
+public class User {
     @Id
     @Generated
-    private Long id;
+    Long id;
 
     @NotNull
-    private Date date;
+    String username;
+
+    @NotNull
+    String passwordHash;
 
     @NotNull
     @ToMany(referencedJoinProperty = "id")
-    private List<Book> books;
+    List<Order> orders;
 
     @NotNull
-    private String address;
+    @ToMany(referencedJoinProperty = "id")
+    List<Book> books;
 
     /**
      * Used to resolve relations
@@ -39,18 +42,18 @@ public class Order {
     /**
      * Used for active entity operations.
      */
-    @Generated(hash = 949219203)
-    private transient OrderDao myDao;
+    @Generated(hash = 1507654846)
+    private transient UserDao myDao;
 
-    @Generated(hash = 2114493204)
-    public Order(Long id, @NotNull Date date, @NotNull String address) {
+    @Generated(hash = 128954706)
+    public User(Long id, @NotNull String username, @NotNull String passwordHash) {
         this.id = id;
-        this.date = date;
-        this.address = address;
+        this.username = username;
+        this.passwordHash = passwordHash;
     }
 
-    @Generated(hash = 1105174599)
-    public Order() {
+    @Generated(hash = 586692638)
+    public User() {
     }
 
     public Long getId() {
@@ -61,27 +64,57 @@ public class Order {
         this.id = id;
     }
 
-    public Date getDate() {
-        return this.date;
+    public String getUsername() {
+        return this.username;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getAddress() {
-        return this.address;
+    public String getPasswordHash() {
+        return this.passwordHash;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
     }
 
     /**
      * To-many relationship, resolved on first access (and after reset).
      * Changes to to-many relations are not persisted, make changes to the target entity.
      */
-    @Generated(hash = 160600800)
+    @Generated(hash = 1238409544)
+    public List<Order> getOrders() {
+        if (orders == null) {
+            final DaoSession daoSession = this.daoSession;
+            if (daoSession == null) {
+                throw new DaoException("Entity is detached from DAO context");
+            }
+            OrderDao targetDao = daoSession.getOrderDao();
+            List<Order> ordersNew = targetDao._queryUser_Orders(id);
+            synchronized (this) {
+                if (orders == null) {
+                    orders = ordersNew;
+                }
+            }
+        }
+        return orders;
+    }
+
+    /**
+     * Resets a to-many relationship, making the next get call to query for a fresh result.
+     */
+    @Generated(hash = 1446109810)
+    public synchronized void resetOrders() {
+        orders = null;
+    }
+
+    /**
+     * To-many relationship, resolved on first access (and after reset).
+     * Changes to to-many relations are not persisted, make changes to the target entity.
+     */
+    @Generated(hash = 1080278060)
     public List<Book> getBooks() {
         if (books == null) {
             final DaoSession daoSession = this.daoSession;
@@ -89,7 +122,7 @@ public class Order {
                 throw new DaoException("Entity is detached from DAO context");
             }
             BookDao targetDao = daoSession.getBookDao();
-            List<Book> booksNew = targetDao._queryOrder_Books(id);
+            List<Book> booksNew = targetDao._queryUser_Books(id);
             synchronized (this) {
                 if (books == null) {
                     books = booksNew;
@@ -144,9 +177,9 @@ public class Order {
     }
 
     /** called by internal mechanisms, do not call yourself. */
-    @Generated(hash = 965731666)
+    @Generated(hash = 2059241980)
     public void __setDaoSession(DaoSession daoSession) {
         this.daoSession = daoSession;
-        myDao = daoSession != null ? daoSession.getOrderDao() : null;
+        myDao = daoSession != null ? daoSession.getUserDao() : null;
     }
 }

@@ -1,11 +1,11 @@
-package com.fxdsse.SEhomework.dao;
+package com.fxdsse.SEhomework.data.util;
 
 import android.content.Context;
 
 import com.fxdsse.SEhomework.App;
-import com.fxdsse.SEhomework.dao.model.DaoSession;
-import com.fxdsse.SEhomework.dao.model.User;
-import com.fxdsse.SEhomework.dao.model.UserDao;
+import com.fxdsse.SEhomework.data.model.DaoSession;
+import com.fxdsse.SEhomework.data.model.User;
+import com.fxdsse.SEhomework.data.model.UserDao;
 
 import org.apache.commons.codec.digest.DigestUtils;
 

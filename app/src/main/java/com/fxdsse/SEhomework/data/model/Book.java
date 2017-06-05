@@ -1,4 +1,4 @@
-package com.fxdsse.SEhomework.dao.model;
+package com.fxdsse.SEhomework.data.model;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
