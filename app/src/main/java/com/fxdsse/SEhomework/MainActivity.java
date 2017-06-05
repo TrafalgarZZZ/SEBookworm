@@ -18,21 +18,27 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fxdsse.SEhomework.Fragments.CategoryFragment;
 import com.fxdsse.SEhomework.Fragments.HomeFragment;
+import com.fxdsse.SEhomework.data.model.DaoSession;
+import com.fxdsse.SEhomework.data.model.User;
+import com.fxdsse.SEhomework.data.model.UserDao;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         CategoryFragment.OnFragmentInteractionListener,
         HomeFragment.OnFragmentInteractionListener {
-
     private long backPressedTimeAtMills = 0;
     private TabLayout tabLayout;
     private Fragment current_fragment;
     private FragmentManager fragmentManager;
     private ImageView imageViewUser;
+    private TextView txtUser;
+    private DaoSession daoSession;
+    private UserDao userDao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,16 +70,36 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        daoSession = ((App) getApplication()).getDaoSession();
+        userDao = daoSession.getUserDao();
+
         imageViewUser = (ImageView) navigationView.getHeaderView(0).findViewById(R.id.img_user);
+        txtUser = (TextView) navigationView.getHeaderView(0).findViewById(R.id.txt_user);
 
         imageViewUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //// TODO: 2017/6/5 Login
-
+                Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivityForResult(loginIntent, 0);
             }
         });
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case 0:
+                if (resultCode == 1) {
+                    Long userId = data.getLongExtra("userId", -1);
+                    if (userId != -1) {
+                        ((App) getApplication()).setUserId(userId);
+                        User user = userDao.queryBuilder().where(UserDao.Properties.Id.eq(userId)).unique();
+                        txtUser.setText(user.getUsername());
+                    }
+
+                }
+        }
     }
 
     private void prepareTabLayout() {

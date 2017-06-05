@@ -15,7 +15,6 @@ import org.apache.commons.codec.digest.DigestUtils;
  */
 
 public class UserSessionManager {
-
     public static User login(
             String username,
             String password,

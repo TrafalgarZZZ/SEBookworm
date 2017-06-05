@@ -12,15 +12,16 @@ import org.greenrobot.greendao.database.Database;
  */
 
 public class App extends Application {
-    private DaoSession daoSession;
-    private boolean isLogin = false;
 
-    public boolean isLogin() {
-        return isLogin;
+    private DaoSession daoSession;
+    private Long userId = -1l;
+
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setLogin(boolean login) {
-        isLogin = login;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     @Override
