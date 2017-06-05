@@ -1,6 +1,7 @@
 package com.fxdsse.SEhomework.data.util;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 
 import com.fxdsse.SEhomework.App;
 import com.fxdsse.SEhomework.data.model.Book;
@@ -21,7 +22,7 @@ import java.io.InputStreamReader;
 
 public class BookRawDataImporter {
 
-    public static void importToDatabase(Context context) throws Exception {
+    public static boolean importToDatabase(Context context) throws Exception {
         InputStream inputStream =
                 context.getApplicationContext().getAssets().open("rawData.json");
         BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);
@@ -32,19 +33,29 @@ public class BookRawDataImporter {
         while ((thisString = bufferedReader.readLine()) != null)
             jsonString += thisString;
 
-        JSONArray jsonArray = new JSONArray(jsonString);
-        DaoSession daoSession = ((App) context.getApplicationContext()).getDaoSession();
-        BookDao bookDao = daoSession.getBookDao();
+        JSONObject jsonObject = new JSONObject(jsonString);
+        String version = jsonObject.getString("version");
+        SharedPreferences sharedPreferences = context.getApplicationContext().getSharedPreferences("rawDataVersion", Context.MODE_PRIVATE);
 
-        for (int i = 0; i < jsonArray.length(); i++) {
-            JSONObject thisBook = (JSONObject) jsonArray.get(i);
-            bookDao.insert(
-                    new Book()
-                            .setDetail(thisBook.getString("details"))
-                            .setImageURL(thisBook.getString("img"))
-                            .setName(thisBook.getString("name"))
-                            .setPrice(thisBook.getString("price"))
-            );
+        if (!version.equals(sharedPreferences.getString("version", ""))) {
+            JSONArray jsonArray = jsonObject.getJSONArray("books");
+            DaoSession daoSession = ((App) context.getApplicationContext()).getDaoSession();
+            BookDao bookDao = daoSession.getBookDao();
+
+            bookDao.deleteAll();
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject thisBook = (JSONObject) jsonArray.get(i);
+                bookDao.insert(
+                        new Book()
+                                .setDetail(thisBook.getString("details"))
+                                .setImageURL(thisBook.getString("img"))
+                                .setName(thisBook.getString("name"))
+                                .setPrice(thisBook.getString("price"))
+                );
+            }
+            return true;
         }
+
+        return false;
     }
 }

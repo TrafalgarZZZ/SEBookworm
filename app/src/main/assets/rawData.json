@@ -1,123 +1,125 @@
-[
-  {
-    "img": "http://images.china-pub.com/ebook5005001-5010000/5006987/zcover.jpg",
-    "price": "￥129.00",
-    "name": "(特价书)C++程序设计：基础、编程抽象与算法策略 即时配发",
-    "details": "（美）埃里克 S.罗伯茨（Eric S. Roberts） （著） | 机械工业出版社 | 9787111546962 | 2016-11-1出版 | 2017-4-17 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5005001-5010000/5007983/zcover.jpg",
-    "price": "￥79.00",
-    "name": "(特价书)可变目标C编译器：设计与实现 即时配发",
-    "details": "（美）克里斯多夫W.弗雷泽（Christopher W. Fraser）;（美）戴维R.汉森（David R. Hanson） （著） | 机械工业出版社 | 9787111552581 | 2016-11-1出版 | 2017-4-17 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5560001-5565000/5560942/zcover.jpg",
-    "price": "￥89.00",
-    "name": "HTML5动画制作神器 Adobe Edge Animate CC 2015一本通（全彩）（含DVD光盘1张） 即时配发",
-    "details": "张晓景 （著） | 电子工业出版社 | 9787121311376 | 2017-4-1出版 | 2017-4-15 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5550001-5555000/5552912/zcover.jpg",
-    "price": "￥79.00",
-    "name": "Android移动性能实战",
-    "details": "腾讯SNG专项测试团队 （著） | 电子工业出版社 | 9787121310645 | 2017-4-1出版 | 2017-4-14 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5550001-5555000/5552917/zcover.jpg",
-    "price": "￥59.00",
-    "name": "精通Spring MVC 4",
-    "details": "[美]Geoffroy Warin （著） | 人民邮电出版社 | 9787115447586 | 2017-3-1出版 | 2017-4-14 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5550001-5555000/5552919/zcover.jpg",
-    "price": "￥59.00",
-    "name": "Docker容器：利用Kubernetes、Flannel、Cockpit和Atomic构建和部署",
-    "details": "[美] 克里斯托弗・尼格斯（Christopher Negus） （著） | 人民邮电出版社 | 9787115451057 | 2017-3-1出版 | 2017-4-14 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5545001-5550000/5548850/zcover.jpg",
-    "price": "￥58.00",
-    "name": "R语言在商务分析中的应用",
-    "details": "奥赫里 （著） | 西安交大 | 9787560583037 | 出版 | 2017-4-13 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5545001-5550000/5549141/zcover.jpg",
-    "price": "￥32.00",
-    "name": "JAVA开发实用技术",
-    "details": "梁勇强 （著） | 西南交大1 | 9787564352684 | 出版 | 2017-4-13 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5540001-5545000/5540400/zcover.jpg",
-    "price": "￥59.00",
-    "name": "零起点 Python 机器学习快速入门",
-    "details": "何海群 （著） | 电子工业出版社 | 9787121311413 | 2017-5-1出版 | 2017-4-11 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5540001-5545000/5540401/zcover.jpg",
-    "price": "￥99.00",
-    "name": "零起点Python足彩大数据与机器学习实盘分析 即时配发",
-    "details": "何海群 （著） | 电子工业出版社 | 9787121310744 | 2017-5-1出版 | 2017-4-11 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5530001-5535000/5533053/zcover.jpg",
-    "price": "￥89.00",
-    "name": "高性能iOS应用开发 即时配发",
-    "details": "[美] Gaurav Vaish （著） | 人民邮电出版社 | 9787115451200 | 2017-4-1出版 | 2017-4-10 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5530001-5535000/5533288/zcover.jpg",
-    "price": "￥109.00",
-    "name": "Angular权威教程",
-    "details": "[美] Ari Lerner　[巴西] Felipe Coury　[美] Nate Murray　[巴西] Carlos （著） | 人民邮电出版社 | 9787115451583 | 2017-4-1出版 | 2017-4-10 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5515001-5520000/5517444/zcover.jpg",
-    "price": "￥69.00",
-    "name": "Python极客项目编程 即时配发",
-    "details": "[美] Mahesh Venkitachalam （著） | 人民邮电出版社 | 9787115449764 | 2017-3-1出版 | 2017-4-8 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5520001-5525000/5523856/zcover.jpg",
-    "price": "￥65.00",
-    "name": "ASP.NET Core跨平台开发从入门到实战 即时配发",
-    "details": "张剑桥 （著） | 电子工业出版社 | 9787121311451 | 2017-4-1出版 | 2017-4-8 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5505001-5510000/5509325/zcover.jpg",
-    "price": "￥79.00",
-    "name": "H5+移动营销设计宝典 即时配发",
-    "details": "苏杭(小呆) （著） | 清华大学出版社 | 9787302468554 | 2017-4-1出版 | 2017-4-7 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5500001-5505000/5502950/zcover.jpg",
-    "price": "￥37.00",
-    "name": "Java程序设计项目开发教程（高职高专计算机任务驱动模式教材）",
-    "details": "汤春华、孙晓范、袁哲、王威、石春菊 （著） | 清华大学出版社 | 9787302464068 | 2017-4-1出版 | 2017-4-6 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5500001-5505000/5502957/zcover.jpg",
-    "price": "￥158.00",
-    "name": "VisualC++2013从入门到精通（视频教学版）（配光盘）",
-    "details": "朱文伟 （著） | 清华大学出版社 | 9787302465034 | 2017-4-1出版 | 2017-4-6 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5500001-5505000/5502962/zcover.jpg",
-    "price": "￥49.00",
-    "name": "ThinkPHP实战 即时配发",
-    "details": "夏磊 （著） | 清华大学出版社 | 9787302466529 | 2017-4-1出版 | 2017-4-6 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5500001-5505000/5502971/zcover.jpg",
-    "price": "￥89.00",
-    "name": "Python新手使用Django架站的16堂课 即时配发",
-    "details": "何敏煌 （著） | 清华大学出版社 | 9787302467410 | 2017-4-1出版 | 2017-4-6 上架"
-  },
-  {
-    "img": "http://images.china-pub.com/ebook5500001-5505000/5503051/zcover.jpg",
-    "price": "￥79.00",
-    "name": "Go并发编程实战（第2版） 即时配发",
-    "details": "郝林 （著） | 人民邮电出版社 | 9787115452511 | 2017-1-1出版 | 2017-4-6 上架"
-  }
-]
-
+{
+  "version": "1.0",
+  "books": [
+    {
+      "img": "http://images.china-pub.com/ebook5005001-5010000/5006987/zcover.jpg",
+      "price": "￥129.00",
+      "name": "(特价书)C++程序设计：基础、编程抽象与算法策略 即时配发",
+      "details": "（美）埃里克 S.罗伯茨（Eric S. Roberts） （著） | 机械工业出版社 | 9787111546962 | 2016-11-1出版 | 2017-4-17 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5005001-5010000/5007983/zcover.jpg",
+      "price": "￥79.00",
+      "name": "(特价书)可变目标C编译器：设计与实现 即时配发",
+      "details": "（美）克里斯多夫W.弗雷泽（Christopher W. Fraser）;（美）戴维R.汉森（David R. Hanson） （著） | 机械工业出版社 | 9787111552581 | 2016-11-1出版 | 2017-4-17 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5560001-5565000/5560942/zcover.jpg",
+      "price": "￥89.00",
+      "name": "HTML5动画制作神器 Adobe Edge Animate CC 2015一本通（全彩）（含DVD光盘1张） 即时配发",
+      "details": "张晓景 （著） | 电子工业出版社 | 9787121311376 | 2017-4-1出版 | 2017-4-15 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5550001-5555000/5552912/zcover.jpg",
+      "price": "￥79.00",
+      "name": "Android移动性能实战",
+      "details": "腾讯SNG专项测试团队 （著） | 电子工业出版社 | 9787121310645 | 2017-4-1出版 | 2017-4-14 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5550001-5555000/5552917/zcover.jpg",
+      "price": "￥59.00",
+      "name": "精通Spring MVC 4",
+      "details": "[美]Geoffroy Warin （著） | 人民邮电出版社 | 9787115447586 | 2017-3-1出版 | 2017-4-14 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5550001-5555000/5552919/zcover.jpg",
+      "price": "￥59.00",
+      "name": "Docker容器：利用Kubernetes、Flannel、Cockpit和Atomic构建和部署",
+      "details": "[美] 克里斯托弗・尼格斯（Christopher Negus） （著） | 人民邮电出版社 | 9787115451057 | 2017-3-1出版 | 2017-4-14 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5545001-5550000/5548850/zcover.jpg",
+      "price": "￥58.00",
+      "name": "R语言在商务分析中的应用",
+      "details": "奥赫里 （著） | 西安交大 | 9787560583037 | 出版 | 2017-4-13 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5545001-5550000/5549141/zcover.jpg",
+      "price": "￥32.00",
+      "name": "JAVA开发实用技术",
+      "details": "梁勇强 （著） | 西南交大1 | 9787564352684 | 出版 | 2017-4-13 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5540001-5545000/5540400/zcover.jpg",
+      "price": "￥59.00",
+      "name": "零起点 Python 机器学习快速入门",
+      "details": "何海群 （著） | 电子工业出版社 | 9787121311413 | 2017-5-1出版 | 2017-4-11 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5540001-5545000/5540401/zcover.jpg",
+      "price": "￥99.00",
+      "name": "零起点Python足彩大数据与机器学习实盘分析 即时配发",
+      "details": "何海群 （著） | 电子工业出版社 | 9787121310744 | 2017-5-1出版 | 2017-4-11 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5530001-5535000/5533053/zcover.jpg",
+      "price": "￥89.00",
+      "name": "高性能iOS应用开发 即时配发",
+      "details": "[美] Gaurav Vaish （著） | 人民邮电出版社 | 9787115451200 | 2017-4-1出版 | 2017-4-10 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5530001-5535000/5533288/zcover.jpg",
+      "price": "￥109.00",
+      "name": "Angular权威教程",
+      "details": "[美] Ari Lerner　[巴西] Felipe Coury　[美] Nate Murray　[巴西] Carlos （著） | 人民邮电出版社 | 9787115451583 | 2017-4-1出版 | 2017-4-10 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5515001-5520000/5517444/zcover.jpg",
+      "price": "￥69.00",
+      "name": "Python极客项目编程 即时配发",
+      "details": "[美] Mahesh Venkitachalam （著） | 人民邮电出版社 | 9787115449764 | 2017-3-1出版 | 2017-4-8 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5520001-5525000/5523856/zcover.jpg",
+      "price": "￥65.00",
+      "name": "ASP.NET Core跨平台开发从入门到实战 即时配发",
+      "details": "张剑桥 （著） | 电子工业出版社 | 9787121311451 | 2017-4-1出版 | 2017-4-8 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5505001-5510000/5509325/zcover.jpg",
+      "price": "￥79.00",
+      "name": "H5+移动营销设计宝典 即时配发",
+      "details": "苏杭(小呆) （著） | 清华大学出版社 | 9787302468554 | 2017-4-1出版 | 2017-4-7 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5500001-5505000/5502950/zcover.jpg",
+      "price": "￥37.00",
+      "name": "Java程序设计项目开发教程（高职高专计算机任务驱动模式教材）",
+      "details": "汤春华、孙晓范、袁哲、王威、石春菊 （著） | 清华大学出版社 | 9787302464068 | 2017-4-1出版 | 2017-4-6 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5500001-5505000/5502957/zcover.jpg",
+      "price": "￥158.00",
+      "name": "VisualC++2013从入门到精通（视频教学版）（配光盘）",
+      "details": "朱文伟 （著） | 清华大学出版社 | 9787302465034 | 2017-4-1出版 | 2017-4-6 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5500001-5505000/5502962/zcover.jpg",
+      "price": "￥49.00",
+      "name": "ThinkPHP实战 即时配发",
+      "details": "夏磊 （著） | 清华大学出版社 | 9787302466529 | 2017-4-1出版 | 2017-4-6 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5500001-5505000/5502971/zcover.jpg",
+      "price": "￥89.00",
+      "name": "Python新手使用Django架站的16堂课 即时配发",
+      "details": "何敏煌 （著） | 清华大学出版社 | 9787302467410 | 2017-4-1出版 | 2017-4-6 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5500001-5505000/5503051/zcover.jpg",
+      "price": "￥79.00",
+      "name": "Go并发编程实战（第2版） 即时配发",
+      "details": "郝林 （著） | 人民邮电出版社 | 9787115452511 | 2017-1-1出版 | 2017-4-6 上架"
+    }
+  ]
+}
