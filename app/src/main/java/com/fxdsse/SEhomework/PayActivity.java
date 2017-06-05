@@ -5,12 +5,14 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.fxdsse.SEhomework.dao.model.Book;
 import com.fxdsse.SEhomework.dao.model.BookDao;
 import com.fxdsse.SEhomework.dao.model.DaoSession;
 import com.fxdsse.SEhomework.dao.model.Order;
 import com.fxdsse.SEhomework.dao.model.OrderDao;
 
 import java.util.Date;
+import java.util.List;
 
 public class PayActivity extends AppCompatActivity {
     DaoSession daoSession;
@@ -32,7 +34,7 @@ public class PayActivity extends AppCompatActivity {
                 Order order = new Order();
                 order.setDate(new Date());
                 order.setAddress("陕西省西安市长安区123号XX小区");
-                //// TODO: 2017/6/4 complete it
+                List<Book> list = order.getBooks();
 
                 new AlertDialog.Builder(PayActivity.this)
                         .setView(R.layout.dialog_succ)
