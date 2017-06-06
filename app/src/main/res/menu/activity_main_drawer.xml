@@ -3,9 +3,9 @@
 
 
     <item
-        android:id="@+id/nav_favorites"
+        android:id="@+id/nav_cart"
         android:icon="@drawable/favorite"
-        android:title="店铺关注" />
+        android:title="购物车" />
     <item
         android:id="@+id/nav_orders"
         android:icon="@drawable/orders"

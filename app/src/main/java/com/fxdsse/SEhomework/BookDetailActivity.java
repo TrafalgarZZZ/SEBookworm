@@ -1,6 +1,5 @@
 package com.fxdsse.SEhomework;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,6 +11,8 @@ import com.fxdsse.SEhomework.data.model.Book;
 import com.fxdsse.SEhomework.data.model.BookDao;
 import com.fxdsse.SEhomework.data.model.BookDetail;
 import com.fxdsse.SEhomework.data.model.DaoSession;
+import com.fxdsse.SEhomework.data.model.User;
+import com.fxdsse.SEhomework.data.model.UserDao;
 import com.fxdsse.SEhomework.data.util.BookDetailDisassembler;
 import com.squareup.picasso.Picasso;
 
@@ -21,6 +22,8 @@ public class BookDetailActivity extends AppCompatActivity {
     private Button btn_buy;
     private DaoSession daoSession;
     private BookDao bookDao;
+    private UserDao userDao;
+    private User user = null;
     private long bookId;
     private TextView txtTitle;
     private TextView txtAuthor;
@@ -39,6 +42,10 @@ public class BookDetailActivity extends AppCompatActivity {
 
         daoSession = ((BMApplication) getApplication()).getDaoSession();
         bookDao = daoSession.getBookDao();
+        userDao = daoSession.getUserDao();
+        if (((BMApplication) getApplication()).getUserId() >= 0) {
+            user = userDao.queryBuilder().where(UserDao.Properties.Id.eq(((BMApplication) getApplication()).getUserId())).unique();
+        }
         bookId = getIntent().getLongExtra("book_id", -1);
         Book book = bookDao.queryBuilder().where(BookDao.Properties.Id.eq(bookId)).unique();
         txtTitle.setText(book.getName());
@@ -57,8 +64,10 @@ public class BookDetailActivity extends AppCompatActivity {
         btn_buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BookDetailActivity.this, PayActivity.class);
-                startActivity(intent);
+                if (user != null) {
+                    List<Book> cart_books = user.getBooks();
+
+                }
             }
         });
     }

@@ -8,10 +8,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.fxdsse.SEhomework.data.model.Book;
-import com.fxdsse.SEhomework.data.model.BookDao;
 import com.fxdsse.SEhomework.data.model.DaoSession;
 import com.fxdsse.SEhomework.data.model.Order;
-import com.fxdsse.SEhomework.data.model.OrderDao;
+import com.fxdsse.SEhomework.data.model.User;
+import com.fxdsse.SEhomework.data.model.UserDao;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -19,9 +19,9 @@ import java.util.Locale;
 
 public class OrdersActivity extends AppCompatActivity {
     private DaoSession daoSession;
-    private OrderDao orderDao;
-    private BookDao bookDao;
+    private UserDao userDao;
     private LinearLayout orderList;
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +31,9 @@ public class OrdersActivity extends AppCompatActivity {
 
         orderList = (LinearLayout) findViewById(R.id.orders_list_ll);
         daoSession = ((BMApplication) getApplication()).getDaoSession();
-        orderDao = daoSession.getOrderDao();
-        List<Order> list = orderDao.queryBuilder().list();
+        userDao = daoSession.getUserDao();
+        user = userDao.queryBuilder().where(UserDao.Properties.Id.eq(((BMApplication) getApplication()).getUserId())).unique();
+        List<Order> list = user.getOrders();
         for (Order order : list) {
             LinearLayout orderItem = (LinearLayout) LayoutInflater.from(OrdersActivity.this).inflate(R.layout.order_item, null);
 

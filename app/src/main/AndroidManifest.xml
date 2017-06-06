@@ -64,7 +64,7 @@
                 android:value="com.fxdsse.SEhomework.MainActivity" />
         </activity>
         <activity
-            android:name=".FavorActivity"
+            android:name=".CartActivity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".PayActivity"

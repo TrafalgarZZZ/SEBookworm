@@ -1,6 +1,7 @@
 package com.fxdsse.SEhomework;
 
 import android.app.Application;
+import android.content.SharedPreferences;
 
 import com.fxdsse.SEhomework.data.model.DaoMaster;
 import com.fxdsse.SEhomework.data.model.DaoSession;
@@ -32,6 +33,13 @@ public class BMApplication extends Application {
         );
         Database database = devOpenHelper.getWritableDb();
         daoSession = new DaoMaster(database).newSession();
+
+        SharedPreferences userLoginStatus = getSharedPreferences("user", MODE_PRIVATE);
+        if (userLoginStatus.getLong("userId", -2l) == -2l) {
+            userLoginStatus.edit().putLong("userId", -1l).apply();
+        } else {
+            userId = userLoginStatus.getLong("userId", -1l);
+        }
     }
 
     public DaoSession getDaoSession() {
