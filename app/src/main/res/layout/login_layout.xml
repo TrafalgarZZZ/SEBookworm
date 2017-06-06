@@ -6,10 +6,6 @@
     android:focusableInTouchMode="true"
     android:orientation="vertical">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -121,7 +117,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="30dp"
-            android:background="@drawable/btn_login"
+            android:background="#FFFFFF"
             android:enabled="false"
             android:gravity="center"
             android:padding="10dp"
@@ -152,7 +148,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="0dp"
-            android:background="@drawable/btn_login"
+            android:background="#ffffff"
             android:enabled="false"
             android:gravity="center"
             android:padding="10dp"
@@ -188,6 +184,5 @@
         android:textColor="@color/black" />
 </LinearLayout>
 
-    </FrameLayout>
 
-    </LinearLayout>
+
