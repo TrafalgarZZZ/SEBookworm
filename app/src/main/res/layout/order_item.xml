@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/order_card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,8 +8,7 @@
     android:layout_marginTop="5dp"
     android:background="#fcf8f8"
     android:clickable="true"
-    android:foreground="?attr/selectableItemBackground"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:foreground="?attr/selectableItemBackground">
 
     <RelativeLayout
         android:layout_width="match_parent"

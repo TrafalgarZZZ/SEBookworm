@@ -35,6 +35,5 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'org.greenrobot:greendao:3.2.2'
     compile 'commons-codec:commons-codec:1.10'
-    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.8.9'
     testCompile 'junit:junit:4.12'
 }

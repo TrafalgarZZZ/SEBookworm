@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity
     private Fragment current_fragment;
     private FragmentManager fragmentManager;
     private ImageView imageViewUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

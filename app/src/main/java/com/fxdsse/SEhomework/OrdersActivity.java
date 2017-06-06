@@ -30,11 +30,11 @@ public class OrdersActivity extends AppCompatActivity {
 
 
         orderList = (LinearLayout) findViewById(R.id.orders_list_ll);
-        daoSession = ((App)getApplication()).getDaoSession();
+        daoSession = ((BMApplication) getApplication()).getDaoSession();
         orderDao = daoSession.getOrderDao();
         List<Order> list = orderDao.queryBuilder().list();
-        for(Order order : list){
-            LinearLayout orderItem = (LinearLayout) LayoutInflater.from(OrdersActivity.this).inflate(R.layout.order_item,null);
+        for (Order order : list) {
+            LinearLayout orderItem = (LinearLayout) LayoutInflater.from(OrdersActivity.this).inflate(R.layout.order_item, null);
 
             TextView txtDate = (TextView) orderItem.findViewById(R.id.order_date);
             TextView txtTitle = (TextView) orderItem.findViewById(R.id.book_title);
@@ -46,7 +46,7 @@ public class OrdersActivity extends AppCompatActivity {
             txtDate.setText(order.getDate().toString());
             txtTitle.setText(books.get(0).getName());
             txtBookDetail.setText(books.get(0).getDetail());
-            txtOrderDetail.setText(String.format(Locale.CHINA, "共%d本图书 实付款: %s", books.size(),books.get(0).getPrice()));
+            txtOrderDetail.setText(String.format(Locale.CHINA, "共%d本图书 实付款: %s", books.size(), books.get(0).getPrice()));
             Picasso.with(this).load(books.get(0).getImageURL()).into(imgBook);
 
             orderList.addView(orderItem);

@@ -3,7 +3,7 @@ package com.fxdsse.SEhomework.data.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.fxdsse.SEhomework.App;
+import com.fxdsse.SEhomework.BMApplication;
 import com.fxdsse.SEhomework.data.model.Book;
 import com.fxdsse.SEhomework.data.model.BookDao;
 import com.fxdsse.SEhomework.data.model.DaoSession;
@@ -39,7 +39,7 @@ public class BookRawDataImporter {
 
         if (!version.equals(sharedPreferences.getString("version", ""))) {
             JSONArray jsonArray = jsonObject.getJSONArray("books");
-            DaoSession daoSession = ((App) context.getApplicationContext()).getDaoSession();
+            DaoSession daoSession = ((BMApplication) context.getApplicationContext()).getDaoSession();
             BookDao bookDao = daoSession.getBookDao();
 
             bookDao.deleteAll();

@@ -19,10 +19,10 @@ import org.junit.runner.RunWith;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 @RunWith(AndroidJUnit4.class)
-public class ExampleInstrumentedTest {
+public class BookWormAndroidTest {
 
     @Test
-    public void testUserRegistry() {
+    public void testUserService() {
         String username = "__testUsername";
         String password = "__testPassword";
 
@@ -40,5 +40,19 @@ public class ExampleInstrumentedTest {
         Assert.assertNotNull("user retrieved", retrievedUser);
         Assert.assertEquals("user retrieved username correct", username, retrievedUser.getUsername());
         Assert.assertEquals("user retrieved password hash correct", new String(Hex.encodeHex(DigestUtils.md5(password))), retrievedUser.getPasswordHash());
+
+        User deletedUser = UserSessionManager.delete(username, password, context);
+        Assert.assertNotNull("user deleted", deletedUser);
+
+        User noSuchUser = UserSessionManager.login(username, password, context);
+        Assert.assertNull("no such user", noSuchUser);
+    }
+
+    @Test
+    public void testOrderService() {
+    }
+
+    @Test
+    public void testBookService() {
     }
 }

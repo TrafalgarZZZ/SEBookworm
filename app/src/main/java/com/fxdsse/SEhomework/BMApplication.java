@@ -11,7 +11,7 @@ import org.greenrobot.greendao.database.Database;
  * Created by hwding on 5/30/17.
  */
 
-public class App extends Application {
+public class BMApplication extends Application {
     private DaoSession daoSession;
     private boolean isLogin = false;
 

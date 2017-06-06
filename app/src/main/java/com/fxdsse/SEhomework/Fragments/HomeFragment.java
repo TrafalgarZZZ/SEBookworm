@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.fxdsse.SEhomework.App;
+import com.fxdsse.SEhomework.BMApplication;
 import com.fxdsse.SEhomework.BookDetailActivity;
 import com.fxdsse.SEhomework.R;
 import com.fxdsse.SEhomework.Util.AeolosPicassoImageLoader;
@@ -90,7 +90,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        daoSession = ((App) (getActivity().getApplication())).getDaoSession();
+        daoSession = ((BMApplication) (getActivity().getApplication())).getDaoSession();
         bookDao = daoSession.getBookDao();
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);

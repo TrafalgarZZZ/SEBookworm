@@ -28,6 +28,7 @@ public class SearchActivity extends AppCompatActivity {
     private DaoSession daoSession;
     private BookDao bookDao;
     private LinearLayout searchResultLinearLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +38,7 @@ public class SearchActivity extends AppCompatActivity {
 
         getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
 
-        daoSession = ((App) getApplication()).getDaoSession();
+        daoSession = ((BMApplication) getApplication()).getDaoSession();
         bookDao = daoSession.getBookDao();
 
         searchEditText = (EditText) findViewById(R.id.search_edittxt);

@@ -37,7 +37,7 @@ public class BookDetailActivity extends AppCompatActivity {
         txtAuthor = (TextView) findViewById(R.id.bd_author);
         imgBook = (ImageView) findViewById(R.id.bd_img);
 
-        daoSession = ((App) getApplication()).getDaoSession();
+        daoSession = ((BMApplication) getApplication()).getDaoSession();
         bookDao = daoSession.getBookDao();
         bookId = getIntent().getLongExtra("book_id", -1);
         Book book = bookDao.queryBuilder().where(BookDao.Properties.Id.eq(bookId)).unique();

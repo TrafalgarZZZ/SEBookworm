@@ -18,12 +18,13 @@ public class PayActivity extends AppCompatActivity {
     DaoSession daoSession;
     OrderDao orderDao;
     BookDao bookDao;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pay);
 
-        daoSession = ((App)getApplication()).getDaoSession();
+        daoSession = ((BMApplication) getApplication()).getDaoSession();
         orderDao = daoSession.getOrderDao();
 
         getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
