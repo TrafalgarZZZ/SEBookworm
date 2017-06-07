@@ -58,10 +58,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/book_pic"
-            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/book_author"
             android:text="¥ 89.50"
             android:textColor="@color/colorPrimary"
             android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/book_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/book_pic"
+            android:layout_alignParentEnd="true"
+            android:text=""
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
 
     </RelativeLayout>
 

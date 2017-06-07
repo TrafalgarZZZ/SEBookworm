@@ -22,6 +22,7 @@ import com.mcxtzhang.swipemenulib.SwipeMenuLayout;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.Locale;
 
 public class CartActivity extends AppCompatActivity {
     private LinearLayout cartLinearLayout;
@@ -56,6 +57,7 @@ public class CartActivity extends AppCompatActivity {
             TextView txtName = (TextView) bookItem.findViewById(R.id.book_name);
             TextView txtDescrption = (TextView) bookItem.findViewById(R.id.book_description);
             TextView txtPrice = (TextView) bookItem.findViewById(R.id.book_price);
+            TextView txtQuantity = (TextView) bookItem.findViewById(R.id.book_quantity);
             Button delButton = (Button) bookItem.findViewById(R.id.book_del);
             final RelativeLayout relativeLayout = (RelativeLayout) bookItem.findViewById(R.id.book);
             delButton.setTag(relation.getId());
@@ -63,6 +65,11 @@ public class CartActivity extends AppCompatActivity {
             txtName.setText(book.getName());
             txtDescrption.setText(book.getDetail());
             txtPrice.setText(book.getPrice());
+            if (relation.getQuantity() > 1) {
+                txtQuantity.setText(String.format(Locale.CHINA, "X %d", relation.getQuantity()));
+            } else {
+                txtQuantity.setText("");
+            }
 
             delButton.setOnClickListener(new View.OnClickListener() {
                 @Override

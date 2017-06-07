@@ -86,6 +86,16 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
+                if (username.getText().toString().length() > 10) {
+                    Toast.makeText(LoginActivity.this, "用户名过长", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (password.getText().toString().length() > 10) {
+                    Toast.makeText(LoginActivity.this, "密码过长", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 User user = UserService.signUp(username.getText().toString(), password.getText().toString(), LoginActivity.this);
                 if (user == null) {
                     Toast.makeText(LoginActivity.this, "账户名已经存在", Toast.LENGTH_SHORT).show();

@@ -20,6 +20,8 @@
             android:id="@+id/cart_ll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
+
+        </LinearLayout>
     </ScrollView>
 </RelativeLayout>
