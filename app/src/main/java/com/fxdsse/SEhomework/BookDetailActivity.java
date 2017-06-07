@@ -60,8 +60,12 @@ public class BookDetailActivity extends AppCompatActivity {
         BookDetail bookDetail = BookDetailDisassembler.disassembleDetail(book.getDetail());
         StringBuilder sb = new StringBuilder();
         List<String> listAuthor = bookDetail.getAuthors();
-        for (String str : listAuthor) {
-            sb.append(str + ";");
+        int author_size = listAuthor.size();
+        for (int i = 0; i < author_size; i++) {
+            sb.append(listAuthor.get(i));
+            if (i != author_size - 1) {
+                sb.append(";");
+            }
         }
         txtAuthor.setText(sb);
         txtPrice.setText(book.getPrice());

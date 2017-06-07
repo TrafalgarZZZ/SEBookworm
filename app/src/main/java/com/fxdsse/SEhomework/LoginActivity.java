@@ -51,12 +51,12 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (username.getText().equals("")) {
+                if (username.getText().toString().equals("")) {
                     Toast.makeText(LoginActivity.this, "账户名不能为空", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if (password.getText().equals("")) {
+                if (password.getText().toString().equals("")) {
                     Toast.makeText(LoginActivity.this, "密码不能为空", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -76,12 +76,12 @@ public class LoginActivity extends AppCompatActivity {
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (username.getText().equals("")) {
+                if (username.getText().toString().equals("")) {
                     Toast.makeText(LoginActivity.this, "账户名不能为空", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if (password.getText().equals("")) {
+                if (password.getText().toString().equals("")) {
                     Toast.makeText(LoginActivity.this, "密码不能为空", Toast.LENGTH_SHORT).show();
                     return;
                 }
