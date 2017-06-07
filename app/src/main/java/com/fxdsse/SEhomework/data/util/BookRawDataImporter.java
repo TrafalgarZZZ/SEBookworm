@@ -47,6 +47,7 @@ public class BookRawDataImporter {
                 JSONObject thisBook = (JSONObject) jsonArray.get(i);
                 bookDao.insert(
                         new Book()
+                                .setCategory(thisBook.getString("category"))
                                 .setDetail(thisBook.getString("details"))
                                 .setImageURL(thisBook.getString("img"))
                                 .setName(thisBook.getString("name"))

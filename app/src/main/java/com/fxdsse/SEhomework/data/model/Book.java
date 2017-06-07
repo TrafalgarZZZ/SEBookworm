@@ -19,6 +19,9 @@ public class Book {
     private String name;
 
     @NotNull
+    private String category;
+
+    @NotNull
     private String detail;
 
     @NotNull
@@ -27,11 +30,13 @@ public class Book {
     @NotNull
     private String imageURL;
 
-    @Generated(hash = 1023702191)
-    public Book(Long id, @NotNull String name, @NotNull String detail,
-                @NotNull String price, @NotNull String imageURL) {
+    @Generated(hash = 368920840)
+    public Book(Long id, @NotNull String name, @NotNull String category,
+                @NotNull String detail, @NotNull String price,
+                @NotNull String imageURL) {
         this.id = id;
         this.name = name;
+        this.category = category;
         this.detail = detail;
         this.price = price;
         this.imageURL = imageURL;
@@ -82,6 +87,15 @@ public class Book {
 
     public Book setImageURL(String imageURL) {
         this.imageURL = imageURL;
+        return this;
+    }
+
+    public String getCategory() {
+        return this.category;
+    }
+
+    public Book setCategory(String category) {
+        this.category = category;
         return this;
     }
 }
