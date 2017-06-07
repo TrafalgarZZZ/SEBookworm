@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:gravity="center"
-            android:padding="30dp"
+            android:paddingTop="40dp"
             android:text="SEBookworm"
             android:textColor="@color/white"
             android:textSize="30sp" />
