@@ -1,6 +1,7 @@
 package com.fxdsse.SEhomework;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fxdsse.SEhomework.data.model.User;
@@ -27,6 +29,12 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
+
+        //set fonts.
+        TextView loginLogo = (TextView) findViewById(R.id.logo_login);
+        String fonts = "fonts/logoFonts.ttf";
+        Typeface typeface = Typeface.createFromAsset(getAssets(), fonts);
+        loginLogo.setTypeface(typeface);
 
         username = (EditText) findViewById(R.id.et_username);
         password = (EditText) findViewById(R.id.et_pwd);

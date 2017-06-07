@@ -12,32 +12,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <TextView
+            android:id="@+id/logo_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:gravity="center_vertical">
-
-            <!--<ImageButton-->
-            <!--android:id="@+id/ib_back"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_marginLeft="10dp"-->
-            <!--android:background="@android:color/transparent"-->
-            <!--android:src="@drawable/left_black"-->
-            <!--android:visibility="gone"/>-->
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="用户登录"
-                android:textColor="@android:color/white"
-                android:textStyle="bold|italic"
-                android:textSize="20sp" />
-
-        </RelativeLayout>
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="SEBookworm"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
 
         <LinearLayout
             android:id="@+id/ll_name"
@@ -122,9 +106,9 @@
             android:layout_marginRight="16dp"
             android:gravity="right"
             android:padding="5dp"
-            android:visibility="invisible"
             android:text="忘记密码"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:visibility="invisible" />
 
 
         <Button
