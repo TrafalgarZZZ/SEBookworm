@@ -31,6 +31,9 @@ public class CartActivity extends AppCompatActivity {
     private BookDao bookDao;
     private User user;
     private UserToBookMapperDao userToBookMapperDao;
+    private TextView cartPrice;
+    private TextView cartPay;
+    private float totalPrice = 0.0f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +42,16 @@ public class CartActivity extends AppCompatActivity {
 
         getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
 
+        totalPrice = 0.0f;
+
+        cartPrice = (TextView) findViewById(R.id.pay_price);
+        cartPay = (TextView) findViewById(R.id.pay_btn);
         cartLinearLayout = (LinearLayout) findViewById(R.id.cart_ll);
         daoSession = ((BMApplication) getApplication()).getDaoSession();
         userDao = daoSession.getUserDao();
         bookDao = daoSession.getBookDao();
         userToBookMapperDao = daoSession.getUserToBookMapperDao();
         user = userDao.queryBuilder().where(UserDao.Properties.Id.eq(((BMApplication) getApplication()).getUserId())).unique();
-
-        //// TODO: 2017/6/7  bug to be fixed
 
         List<UserToBookMapper> cartBookRelations = userToBookMapperDao.queryBuilder().where(UserToBookMapperDao.Properties.UserId.eq(user.getId())).list();
         for (UserToBookMapper relation : cartBookRelations) {
@@ -56,7 +61,7 @@ public class CartActivity extends AppCompatActivity {
             ImageView imgBook = (ImageView) bookItem.findViewById(R.id.book_pic);
             TextView txtName = (TextView) bookItem.findViewById(R.id.book_name);
             TextView txtDescrption = (TextView) bookItem.findViewById(R.id.book_description);
-            TextView txtPrice = (TextView) bookItem.findViewById(R.id.book_price);
+            final TextView txtPrice = (TextView) bookItem.findViewById(R.id.book_price);
             TextView txtQuantity = (TextView) bookItem.findViewById(R.id.book_quantity);
             Button delButton = (Button) bookItem.findViewById(R.id.book_del);
             final RelativeLayout relativeLayout = (RelativeLayout) bookItem.findViewById(R.id.book);
@@ -74,6 +79,10 @@ public class CartActivity extends AppCompatActivity {
             delButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    UserToBookMapper relation = userToBookMapperDao.queryBuilder().where(UserToBookMapperDao.Properties.Id.eq(v.getTag())).unique();
+                    Book book = bookDao.queryBuilder().where(BookDao.Properties.Id.eq(relation.getBookId())).unique();
+                    totalPrice -= Float.parseFloat(book.getPrice().replace("￥", "")) * relation.getQuantity();
+                    cartPrice.setText(String.format(Locale.CHINA, "￥ %.2f", totalPrice));
                     userToBookMapperDao.deleteByKey((Long) v.getTag());
                     cartLinearLayout.removeView((SwipeMenuLayout) v.getParent());
 
@@ -89,6 +98,24 @@ public class CartActivity extends AppCompatActivity {
                 }
             });
             cartLinearLayout.addView(bookItem);
+
+            totalPrice += Float.parseFloat(book.getPrice().replace("￥", "")) * relation.getQuantity();
+        }
+        cartPrice.setText(String.format(Locale.CHINA, "￥ %.2f", totalPrice));
+
+        cartPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CartActivity.this, PayActivity.class);
+                startActivityForResult(intent, 9);
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 0) {
+
         }
     }
 }

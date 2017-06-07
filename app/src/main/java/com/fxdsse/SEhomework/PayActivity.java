@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.fxdsse.SEhomework.data.model.Book;
 import com.fxdsse.SEhomework.data.model.BookDao;
@@ -18,12 +20,22 @@ public class PayActivity extends AppCompatActivity {
     DaoSession daoSession;
     OrderDao orderDao;
     BookDao bookDao;
+    private TextView payTime;
+    private TextView payConfirmPrice;
+    private LinearLayout goodsLinearLayout;
+    private LinearLayout payConfirmLinearLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pay);
 
+        payTime = (TextView) findViewById(R.id.pay_time);
+        payConfirmPrice = (TextView) findViewById(R.id.pay_confirm_price);
+        goodsLinearLayout = (LinearLayout) findViewById(R.id.goods_ll);
+        payConfirmLinearLayout = (LinearLayout) findViewById(R.id.pay_confirm_ll);
+
+        //// TODO: 2017/6/8 finish it
         daoSession = ((BMApplication) getApplication()).getDaoSession();
         orderDao = daoSession.getOrderDao();
 
