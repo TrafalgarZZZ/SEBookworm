@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,7 +33,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="用户登录"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
+                android:textStyle="bold|italic"
                 android:textSize="20sp" />
 
         </RelativeLayout>
@@ -55,14 +57,15 @@
                 android:hint="请输入用户名"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
-                android:textColor="#2fa881"
-                android:textCursorDrawable="@drawable/cursor"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@color/white"
                 android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="?attr/colorPrimary" />
+                android:background="@color/white" />
 
         </LinearLayout>
 
@@ -88,14 +91,15 @@
                     android:inputType="textPassword"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
-                    android:textColor="#2fa881"
-                    android:textCursorDrawable="@drawable/cursor"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textCursorDrawable="@color/white"
                     android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="?attr/colorPrimary" />
+                    android:background="@color/white" />
 
             </LinearLayout>
 
@@ -118,23 +122,10 @@
             android:layout_marginRight="16dp"
             android:gravity="right"
             android:padding="5dp"
+            android:visibility="invisible"
             android:text="忘记密码"
             android:textColor="@color/black" />
-        <Button
-            android:id="@+id/btn_inv_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="30dp"
-            android:enabled="false"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="登录"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:visibility="invisible" />
+
 
         <Button
             android:id="@+id/btn_login"
@@ -152,36 +143,19 @@
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/btn_inv_signUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="0dp"
-            android:background="#ffffff"
-            android:enabled="false"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="注册"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:visibility="invisible" />
-
-        <Button
             android:id="@+id/btn_signUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="0dp"
-            android:background="@drawable/btn_login"
+            android:layout_marginTop="5dp"
+            android:background="@null"
             android:gravity="center"
             android:padding="10dp"
-            android:text="注册"
+            android:text="没有账户？注册一个吧"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
     </LinearLayout>
 
