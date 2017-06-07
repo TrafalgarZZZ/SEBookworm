@@ -34,7 +34,8 @@
                 android:layout_toRightOf="@+id/bd_img"
                 android:text="深入浅出C#"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:maxLines="2"/>
 
             <TextView
                 android:id="@+id/bd_subtitle"
@@ -44,7 +45,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@+id/bd_img"
                 android:text="（Head First系列最新作品）"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                android:maxLines="2"/>
 
             <TextView
                 android:id="@+id/bd_author"
@@ -54,7 +56,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="2dp"
                 android:layout_toRightOf="@id/bd_img"
-                android:text="Stellman, Greene 著" />
+                android:text="Stellman, Greene 著"
+                android:maxLines="2"/>
 
             <TextView
                 android:id="@+id/bd_translator"
@@ -64,7 +67,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="2dp"
                 android:layout_toRightOf="@id/bd_img"
-                android:text="林琪，刘晓兵等 译" />
+                android:text="林琪，刘晓兵等 译"
+                android:maxLines="2"/>
 
 
             <Button

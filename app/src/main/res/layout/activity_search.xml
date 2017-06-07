@@ -59,6 +59,7 @@
                         android:layout_marginLeft="10dp"
                         android:background="@null"
                         android:cursorVisible="false"
+                        android:textCursorDrawable="@color/white"
                         android:hint="搜索图书名"
                         android:imeOptions="actionSearch"
                         android:singleLine="true"
