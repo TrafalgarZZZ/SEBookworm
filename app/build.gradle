@@ -36,4 +36,5 @@ dependencies {
     compile 'org.greenrobot:greendao:3.2.2'
     compile 'commons-codec:commons-codec:1.10'
     testCompile 'junit:junit:4.12'
+    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.5'
 }
