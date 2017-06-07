@@ -7,9 +7,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.fxdsse.SEhomework.data.BookDetail;
 import com.fxdsse.SEhomework.data.model.Book;
 import com.fxdsse.SEhomework.data.model.BookDao;
-import com.fxdsse.SEhomework.data.model.BookDetail;
 import com.fxdsse.SEhomework.data.model.DaoSession;
 import com.fxdsse.SEhomework.data.model.User;
 import com.fxdsse.SEhomework.data.model.UserDao;

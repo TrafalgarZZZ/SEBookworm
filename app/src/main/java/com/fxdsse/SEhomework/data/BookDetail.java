@@ -1,4 +1,4 @@
-package com.fxdsse.SEhomework.data.model;
+package com.fxdsse.SEhomework.data;
 
 import java.util.List;
 

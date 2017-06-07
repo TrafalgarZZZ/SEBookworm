@@ -14,9 +14,9 @@ import org.greenrobot.greendao.database.Database;
 
 public class BMApplication extends Application {
     private DaoSession daoSession;
-    private Long userId = -1l;
+    private long userId = -1L;
 
-    public Long getUserId() {
+    public long getUserId() {
         return userId;
     }
 
@@ -28,17 +28,16 @@ public class BMApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        DaoMaster.DevOpenHelper devOpenHelper = new DaoMaster.DevOpenHelper(
-                this, "DB"
-        );
+        DaoMaster.DevOpenHelper devOpenHelper =
+                new DaoMaster.DevOpenHelper(this, "DB");
         Database database = devOpenHelper.getWritableDb();
         daoSession = new DaoMaster(database).newSession();
 
         SharedPreferences userLoginStatus = getSharedPreferences("user", MODE_PRIVATE);
-        if (userLoginStatus.getLong("userId", -2l) == -2l) {
-            userLoginStatus.edit().putLong("userId", -1l).apply();
+        if (userLoginStatus.getLong("userId", -2L) == -2L) {
+            userLoginStatus.edit().putLong("userId", -1L).apply();
         } else {
-            userId = userLoginStatus.getLong("userId", -1l);
+            userId = userLoginStatus.getLong("userId", -1L);
         }
     }
 

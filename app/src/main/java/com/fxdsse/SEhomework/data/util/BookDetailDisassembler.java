@@ -1,6 +1,6 @@
 package com.fxdsse.SEhomework.data.util;
 
-import com.fxdsse.SEhomework.data.model.BookDetail;
+import com.fxdsse.SEhomework.data.BookDetail;
 
 import java.util.Arrays;
 import java.util.List;

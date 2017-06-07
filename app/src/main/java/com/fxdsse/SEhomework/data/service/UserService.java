@@ -1,4 +1,4 @@
-package com.fxdsse.SEhomework.data.util;
+package com.fxdsse.SEhomework.data.service;
 
 import android.content.Context;
 
@@ -14,7 +14,7 @@ import org.apache.commons.codec.digest.DigestUtils;
  * Created by hwding on 6/5/17.
  */
 
-public class UserSessionManager {
+public class UserService {
     public static User login(
             String username,
             String password,

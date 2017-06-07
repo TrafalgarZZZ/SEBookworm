@@ -120,6 +120,7 @@
             android:padding="5dp"
             android:text="忘记密码"
             android:textColor="@color/black" />
+
         <Button
             android:id="@+id/btn_inv_login"
             android:layout_width="match_parent"

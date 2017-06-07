@@ -4,6 +4,7 @@ import org.greenrobot.greendao.DaoException;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.JoinEntity;
 import org.greenrobot.greendao.annotation.NotNull;
 import org.greenrobot.greendao.annotation.ToMany;
 
@@ -21,10 +22,18 @@ public class Order {
     private Long id;
 
     @NotNull
+    private Long userId;
+
+    @NotNull
     private Date date;
 
     @NotNull
-    @ToMany(referencedJoinProperty = "id")
+    @ToMany
+    @JoinEntity(
+            entity = OrderToBookMapper.class,
+            sourceProperty = "orderId",
+            targetProperty = "bookId"
+    )
     private List<Book> books;
 
     @NotNull
@@ -42,9 +51,10 @@ public class Order {
     @Generated(hash = 949219203)
     private transient OrderDao myDao;
 
-    @Generated(hash = 2114493204)
-    public Order(Long id, @NotNull Date date, @NotNull String address) {
+    @Generated(hash = 1964317435)
+    public Order(Long id, @NotNull Long userId, @NotNull Date date, @NotNull String address) {
         this.id = id;
+        this.userId = userId;
         this.date = date;
         this.address = address;
     }
@@ -75,6 +85,14 @@ public class Order {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public Long getUserId() {
+        return this.userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     /**
@@ -143,7 +161,9 @@ public class Order {
         myDao.update(this);
     }
 
-    /** called by internal mechanisms, do not call yourself. */
+    /**
+     * called by internal mechanisms, do not call yourself.
+     */
     @Generated(hash = 965731666)
     public void __setDaoSession(DaoSession daoSession) {
         this.daoSession = daoSession;

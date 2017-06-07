@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.fxdsse.SEhomework.data.model.User;
-import com.fxdsse.SEhomework.data.util.UserSessionManager;
+import com.fxdsse.SEhomework.data.service.UserService;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                User user = UserSessionManager.login(username.getText().toString(), password.getText().toString(), LoginActivity.this);
+                User user = UserService.login(username.getText().toString(), password.getText().toString(), LoginActivity.this);
                 if (user == null) {
                     Toast.makeText(LoginActivity.this, "账户名或密码错误", Toast.LENGTH_SHORT).show();
                 } else {
@@ -78,7 +78,7 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                User user = UserSessionManager.signUp(username.getText().toString(), password.getText().toString(), LoginActivity.this);
+                User user = UserService.signUp(username.getText().toString(), password.getText().toString(), LoginActivity.this);
                 if (user == null) {
                     Toast.makeText(LoginActivity.this, "账户名已经存在", Toast.LENGTH_SHORT).show();
                 } else {

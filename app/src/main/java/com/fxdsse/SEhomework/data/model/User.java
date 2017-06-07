@@ -4,6 +4,7 @@ import org.greenrobot.greendao.DaoException;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.JoinEntity;
 import org.greenrobot.greendao.annotation.NotNull;
 import org.greenrobot.greendao.annotation.ToMany;
 
@@ -17,21 +18,31 @@ import java.util.List;
 public class User {
     @Id
     @Generated
-    Long id;
+    private Long id;
 
     @NotNull
-    String username;
+    private String username;
 
     @NotNull
-    String passwordHash;
+    private String passwordHash;
 
     @NotNull
-    @ToMany(referencedJoinProperty = "id")
-    List<Order> orders;
+    @ToMany
+    @JoinEntity(
+            entity = UserToOrderMapper.class,
+            sourceProperty = "userId",
+            targetProperty = "orderId"
+    )
+    private List<Order> orders;
 
     @NotNull
-    @ToMany(referencedJoinProperty = "id")
-    List<Book> books;
+    @ToMany
+    @JoinEntity(
+            entity = UserToBookMapper.class,
+            sourceProperty = "userId",
+            targetProperty = "bookId"
+    )
+    private List<Book> books;
 
     /**
      * Used to resolve relations
@@ -176,7 +187,9 @@ public class User {
         myDao.update(this);
     }
 
-    /** called by internal mechanisms, do not call yourself. */
+    /**
+     * called by internal mechanisms, do not call yourself.
+     */
     @Generated(hash = 2059241980)
     public void __setDaoSession(DaoSession daoSession) {
         this.daoSession = daoSession;

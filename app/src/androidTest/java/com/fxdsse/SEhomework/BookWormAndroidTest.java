@@ -5,7 +5,7 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.fxdsse.SEhomework.data.model.User;
-import com.fxdsse.SEhomework.data.util.UserSessionManager;
+import com.fxdsse.SEhomework.data.service.UserService;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -27,24 +27,24 @@ public class BookWormAndroidTest {
         String password = "__testPassword";
 
         Context context = InstrumentationRegistry.getTargetContext();
-        User user = UserSessionManager.signUp(username, password, context);
+        User user = UserService.signUp(username, password, context);
 
         Assert.assertNotNull("user added", user);
         Assert.assertEquals("username saved correct", username, user.getUsername());
         Assert.assertEquals("password saved correct", new String(Hex.encodeHex(DigestUtils.md5(password))), user.getPasswordHash());
 
-        User anotherUser = UserSessionManager.signUp(username, password, context);
+        User anotherUser = UserService.signUp(username, password, context);
         Assert.assertNull("username duplicated", anotherUser);
 
-        User retrievedUser = UserSessionManager.login(username, password, context);
+        User retrievedUser = UserService.login(username, password, context);
         Assert.assertNotNull("user retrieved", retrievedUser);
         Assert.assertEquals("user retrieved username correct", username, retrievedUser.getUsername());
         Assert.assertEquals("user retrieved password hash correct", new String(Hex.encodeHex(DigestUtils.md5(password))), retrievedUser.getPasswordHash());
 
-        User deletedUser = UserSessionManager.delete(username, password, context);
+        User deletedUser = UserService.delete(username, password, context);
         Assert.assertNotNull("user deleted", deletedUser);
 
-        User noSuchUser = UserSessionManager.login(username, password, context);
+        User noSuchUser = UserService.login(username, password, context);
         Assert.assertNull("no such user", noSuchUser);
     }
 

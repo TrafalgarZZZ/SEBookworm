@@ -11,7 +11,6 @@ import org.greenrobot.greendao.annotation.NotNull;
 
 @Entity
 public class Book {
-
     @Id
     @Generated
     private Long id;

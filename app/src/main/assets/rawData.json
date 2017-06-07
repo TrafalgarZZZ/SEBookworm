@@ -1,6 +1,366 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "books": [
+    {
+      "img": "http://images.china-pub.com/ebook5290001-5295000/5294456/zcover.jpg",
+      "price": "￥79.00",
+      "name": "黑客秘渗透测试实用指南（第2版） 即时配发",
+      "details": "[美]皮基姆（PeteKim） （著） | 人民邮电出版社 | 9787115442451 | 2017-2-1出版 | 2017-2-28 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook4970001-4975000/4971073/zcover.jpg",
+      "price": "￥119.00",
+      "name": "漏洞战争：软件漏洞分析精要 即时配发",
+      "details": "林桠泉 （著） | 电子工业出版社 | 9787121289804 | 2016-7-1出版 | 2016-7-1 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5050001-5055000/5053722/zcover.jpg",
+      "price": "￥58.00",
+      "name": "Rootkit隐遁攻击技术及其防范 即时配发",
+      "details": "张瑜 （著） | 电子工业出版社 | 9787121306181 | 2017-1-1出版 | 2016-12-29 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook4805001-4810000/4806394/zcover.jpg",
+      "price": "￥99.00",
+      "name": "安全之路\u2015\u2015Web渗透技术及实战案例解析（第2版） 即时配发",
+      "details": "陈小兵 （著） | 电子工业出版社 | 9787121267741 | 2015-9-1出版 | 2015-8-29 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook4940001-4945000/4942171/zcover.jpg",
+      "price": "￥69.00",
+      "name": "无线电安全攻防大揭秘 即时配发",
+      "details": "360独角兽安全团队(UnicornTeam);杨卿;黄琳 （著） | 电子工业出版社 | 9787121285806 | 2016-5-1出版 | 2016-4-15 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook3770001-3775000/3770791/zcover.jpg",
+      "price": "￥119.00",
+      "name": "黑客大追踪：网络取证核心原理与实践 即时配发",
+      "details": "(美)Sherri Davidoff(雪莉.大卫杜夫);Jonathan Ham(乔纳森.汉姆) （著） | 电子工业出版社 | 9787121245541 | 2015-1-1出版 | 2014-12-5 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook3770001-3775000/3771048/zcover.jpg",
+      "price": "￥128.00",
+      "name": "黑客攻防从入门到精通\u2015\u2015黑客与反黑工具篇+攻防与脚本编程篇 即时配发",
+      "details": "李书梅;天河文化 （著） | 机械工业出版社 | 9787 | 2015-4-1出版 | 2015-4-3 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5005001-5010000/5006988/zcover.jpg",
+      "price": "￥59.00",
+      "name": "软件定义安全：SDN/NFV新型网络的安全揭秘 即时配发",
+      "details": "刘文懋;裘晓峰;王翔 （著） | 机械工业出版社 | 9787111548362 | 2016-9-1出版 | 2016-10-25 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook4980001-4985000/4981034/zcover.jpg",
+      "price": "￥109.00",
+      "name": "黑客攻防技术宝典：浏览器实战篇 即时配发",
+      "details": "[澳] Wade Alcorn　[美] Christian Frichot [意]Michele Orrù （著） | 人民邮电出版社 | 9787115433947 | 2016-9-1出版 | 2016-9-23 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5050001-5055000/5054610/zcover.jpg",
+      "price": "￥39.80",
+      "name": "深网",
+      "details": "匿名者 （著） | 中国友谊出版公司 | 9787505737877 | 2016-10-1出版 | 2016-12-30 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook4730001-4735000/4730878/zcover.jpg",
+      "price": "￥79.00",
+      "name": "揭秘家用路由器0day漏洞挖掘技术 即时配发",
+      "details": "吴少华 ;王炜 赵旭 （著） | 电子工业出版社 | 9787121263927 | 2015-8-1出版 | 2015-7-17 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5005001-5010000/5007484/zcover.jpg",
+      "price": "￥79.00",
+      "name": "智能硬件安全 即时配发",
+      "details": "刘健皓 （著） | 电子工业出版社 | 9787121301032 | 2016-10-1出版 | 2016-11-2 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook4950001-4955000/4952095/zcover.jpg",
+      "price": "￥59.00",
+      "name": "精通Metasploit渗透测试 即时配发",
+      "details": "[英] Nipun Jaswal （著） | 人民邮电出版社 | 9787115423528 | 2016-6-1出版 | 2016-5-13 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook60001-65000/63670/zcover.jpg",
+      "price": "￥49.00",
+      "name": "网络安全基础：应用与标准（第5版） 即时配发",
+      "details": "(美)William Stallings （著） | 清华大学出版社 | 9787302348078 | 2014-5-1出版 | 2014-4-25 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook3020001-3025000/3021901/zcover.jpg",
+      "price": "￥59.00",
+      "name": "Web 前端黑客技术揭秘(国内第一本专注Web前端的黑客书)",
+      "details": "钟晨鸣;徐少培 （著） | 电子工业出版社 | 9787121192036 | 2013-1-1出版 | 2013-1-20 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook3770001-3775000/3770628/zcover.jpg",
+      "price": "￥99.00",
+      "name": "Kali Linux & BackTrack渗透测试实战 即时配发",
+      "details": "(韩)赵�嘣� （著） | 人民邮电出版社 | 9787115370587 | 2014-11-1出版 | 2014-10-16 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5005001-5010000/5006764/zcover.jpg",
+      "price": "￥69.00",
+      "name": "暗渡陈仓：用低功耗设备进行破解和渗透测试 即时配发",
+      "details": "（美）菲利普・布勒斯特拉（Philip Polstra） （著） | 机械工业出版社 | 9787111548799 | 2016-10-1出版 | 2016-10-20 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5350001-5355000/5354786/zcover.jpg",
+      "price": "￥89.00",
+      "name": "网络安全测试实验室搭建指南 即时配发",
+      "details": "[美] 迈克尔・格雷格（Michael Gregg） （著） | 人民邮电出版社 | 9787115447180 | 2017-2-1出版 | 2017-3-11 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook3680001-3685000/3684438/zcover.jpg",
+      "price": "￥79.80",
+      "name": "灰帽黑客:正义黑客的道德规范、渗透测试、攻击方法和漏洞分析技术(第3版)",
+      "details": "[美]Allen Harper;Shon Harris （著） | 清华大学出版社 | 9787302301509 | 2012-11-1出版 | 2012-11-5 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook4730001-4735000/4730711/zcover.jpg",
+      "price": "￥45.00",
+      "name": "黑客秘笈\u2015\u2015渗透测试实用指南 即时配发",
+      "details": "[美]彼得・基姆（Peter Kim） （著） | 人民邮电出版社 | 9787115393685 | 2015-7-1出版 | 2015-7-15 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook4580001-4585000/4582856/zcover.jpg",
+      "price": "￥69.00",
+      "name": "(特价书)人人都是网站分析师：从分析师的视角理解网站和解读数据 即时配发",
+      "details": "王彦平 （著） | 机械工业出版社 | 9787111492702 | 2015-3-1出版 | 2017-4-17 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5540001-5545000/5540868/zcover.jpg",
+      "price": "￥89.00",
+      "name": "大数据时代 数据保护与流动规则 即时配发",
+      "details": "王融 （著） | 人民邮电出版社 | 9787115439192 | 2017-3-1出版 | 2017-4-11 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5540001-5545000/5540869/zcover.jpg",
+      "price": "￥59.00",
+      "name": "全数据时代的炼金师 即时配发",
+      "details": "顾佳峰 （著） | 人民邮电出版社 | 9787115451842 | 2017-3-1出版 | 2017-4-11 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5540001-5545000/5540903/zcover.jpg",
+      "price": "￥39.00",
+      "name": "Spark Streaming：实时流处理入门与精通",
+      "details": "（美）Sumit Gupta（苏密特・古普塔） （著） | 电子工业出版社 | 9787121310492 | 2017-4-1出版 | 2017-4-11 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5515001-5520000/5517453/zcover.jpg",
+      "price": "￥36.00",
+      "name": "数据库技术及应用-Access-(第3版)",
+      "details": "李雁翎 （著） | 高等教育 | 9787040471380 | 出版 | 2017-4-8 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5520001-5525000/5521188/zcover.jpg",
+      "price": "￥48.00",
+      "name": "大数据概论",
+      "details": "崔奇明 （著） | 东北大学 | 9787551714167 | 出版 | 2017-4-8 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5490001-5495000/5490899/zcover.jpg",
+      "price": "￥89.00",
+      "name": "大话存储后传：次世代数据存储思维与技术 即时配发",
+      "details": "冬瓜哥 （著） | 清华大学出版社 | 9787302464921 | 2017-4-1出版 | 2017-4-5 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5475001-5480000/5478797/zcover.jpg",
+      "price": "￥23.00",
+      "name": "Access2003数据库案例教程",
+      "details": "张瑞英 （著） | 机械工业出版社* | 978711118886 | 2013-8-13出版 | 2017-4-4 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5475001-5480000/5479560/zcover.jpg",
+      "price": "￥33.00",
+      "name": "数据库技术及应用",
+      "details": "陆桂明 （著） | 机械工业出版社* | 978711124749 | 2012-7-17出版 | 2017-4-4 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5480001-5485000/5480446/zcover.jpg",
+      "price": "￥32.00",
+      "name": "SQLServer数据库应用项目化教程",
+      "details": "张福堂主编 （著） | 机械工业出版社* | 978711129503 | 2014-8-25出版 | 2017-4-4 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5480001-5485000/5480683/zcover.jpg",
+      "price": "￥27.00",
+      "name": "SQLServer2005数据库实用教程",
+      "details": "常军林 （著） | 机械工业出版社* | 978711130858 | 2012-7-18出版 | 2017-4-4 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5480001-5485000/5481263/zcover.jpg",
+      "price": "￥30.00",
+      "name": "Oracle数据库设计与实现",
+      "details": "陆云帆 （著） | 机械工业出版社* | 978711133911 | 2011-6-1出版 | 2017-4-4 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5480001-5485000/5481539/zcover.jpg",
+      "price": "￥35.00",
+      "name": "数据库原理与应用",
+      "details": "林小玲 （著） | 机械工业出版社* | 978711134847 | 2013-7-29出版 | 2017-4-4 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5480001-5485000/5482132/zcover.jpg",
+      "price": "￥69.80",
+      "name": "PHP+MySQL+Dreamweaver动态网站建设从入门到精通",
+      "details": "陈益材 （著） | 机械工业出版社* | 978711137947 | 2012-6-25出版 | 2017-4-4 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5485001-5490000/5485971/zcover.jpg",
+      "price": "￥43.00",
+      "name": "Oracle基础教程",
+      "details": "秦婧编著 （著） | 机械工业出版社* | 978711151713 | 2015-11-9出版 | 2017-4-4 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5485001-5490000/5486731/zcover.jpg",
+      "price": "￥69.80",
+      "name": "PHP+MySQL+Dreamweaver网站建设",
+      "details": "李晓斌等编著 （著） | 机械工业出版社* | 978711154914 | 2016-10-18出版 | 2017-4-4 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5485001-5490000/5486965/zcover.jpg",
+      "price": "￥55.00",
+      "name": "Oracle数据库系统教程",
+      "details": "陆鑫张宁编著 （著） | 机械工业出版社* | 978711155776 | 2017-2-6出版 | 2017-4-4 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5475001-5480000/5475771/zcover.jpg",
+      "price": "￥32.00",
+      "name": "数据库原理与应用",
+      "details": "何玉洁 （著） | 机械工业出版社 | 978711119871 | 2006-10-19出版 | 2017-4-3 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5475001-5480000/5476371/zcover.jpg",
+      "price": "￥29.00",
+      "name": "SQLServer2008数据库应用技术",
+      "details": "赵增敏 （著） | 机械工业出版社* | 978711128832 | 2009-12-28出版 | 2017-4-3 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5470001-5475000/5470447/zcover.jpg",
+      "price": "￥59.00",
+      "name": "数据库系统实现",
+      "details": "杨冬青 （著） | 机械工业出版社 | 978711130287 | 2010-5-25出版 | 2017-4-2 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5005001-5010000/5006989/zcover.jpg",
+      "price": "￥99.00",
+      "name": "(特价书)软件工程：实践者的研究方法（原书第8版） 即时配发",
+      "details": "（美）罗杰S. 普莱斯曼（Roger S. Pressman）;（美）布鲁斯 R. 马克西姆（Bruce R. Maxim） （著） | 机械工业出版社 | 9787111548973 | 2016-11-1出版 | 2017-4-17 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5540001-5545000/5544343/zcover.jpg",
+      "price": "￥99.00",
+      "name": "SAFe 4.0参考指南：精益软件与系统工程的规模化敏捷框架 即时配发",
+      "details": "（美）迪恩・莱芬韦尔（Dean Leffingwell） （著） | 机械工业出版社 | 9787111564737 | 2017-4-1出版 | 2017-4-13 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5545001-5550000/5545623/zcover.jpg",
+      "price": "￥24.00",
+      "name": "基于环境的软件近似正确性",
+      "details": "马艳芳 （著） | 中国科技大 | 9787312041020 | 出版 | 2017-4-13 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5540001-5545000/5542888/zcover.jpg",
+      "price": "￥59.00",
+      "name": "图解物联网 即时配发",
+      "details": "［日］ NTT DATA集团 河村雅人/大�V�史/小林佑辅/小山武士/宫崎智也/石黑佑树/小岛康平 （著） | 人民邮电出版社 | 9787115451699 | 2017-4-1出版 | 2017-4-12 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5515001-5520000/5517456/zcover.jpg",
+      "price": "￥26.60",
+      "name": "软件项目管理",
+      "details": "侯红 （著） | 高等教育 | 9787040473018 | 出版 | 2017-4-8 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5500001-5505000/5503032/zcover.jpg",
+      "price": "￥59.00",
+      "name": "软件测试高薪之路 UFT/QTP 面试权威指南 即时配发",
+      "details": "【印度】 拉尔瓦尼 T.(Tarun Lalwani) （著） | 人民邮电出版社 | 9787115444196 | 2017-3-1出版 | 2017-4-6 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5475001-5480000/5478849/zcover.jpg",
+      "price": "￥68.00",
+      "name": "多工位级进模设计与制造",
+      "details": "陈炎嗣 （著） | 机械工业出版社* | 978711119521 | 2011-5-20出版 | 2017-4-4 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5475001-5480000/5479876/zcover.jpg",
+      "price": "￥34.00",
+      "name": "软件开发技术基础第2版",
+      "details": "赵英良 （著） | 机械工业出版社* | 978711126532 | 2014-7-24出版 | 2017-4-4 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5480001-5485000/5480198/zcover.jpg",
+      "price": "￥28.00",
+      "name": "软件项目管理实用教程",
+      "details": "周贺来 （著） | 机械工业出版社* | 978711128097 | 2013-7-25出版 | 2017-4-4 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5480001-5485000/5481273/zcover.jpg",
+      "price": "￥42.00",
+      "name": "软件工程",
+      "details": "瞿中 （著） | 机械工业出版社* | 978711133949 | 2011-5-18出版 | 2017-4-4 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5485001-5490000/5485609/zcover.jpg",
+      "price": "￥45.00",
+      "name": "软件开发技术基础第3版",
+      "details": "赵英良 （著） | 机械工业出版社* | 978711150970 | 2015-10-15出版 | 2017-4-4 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5475001-5480000/5475496/zcover.jpg",
+      "price": "￥35.00",
+      "name": "软件测试（原书第２版）",
+      "details": "（美）PaulC.Jorgensen著 （著） | 机械工业出版社 | 978711112166 | 2004-8-14出版 | 2017-4-3 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5475001-5480000/5475945/zcover.jpg",
+      "price": "￥24.00",
+      "name": "UML系统建模与分析设计课程设计",
+      "details": "刁成嘉 （著） | 机械工业出版社 | 978711122476 | 2007-11-27出版 | 2017-4-3 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5475001-5480000/5476796/zcover.jpg",
+      "price": "￥32.00",
+      "name": "软件测试技术",
+      "details": "田秋成 （著） | 机械工业出版社* | 978711136809 | 2014-12-30出版 | 2017-4-3 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5465001-5470000/5469215/zcover.jpg",
+      "price": "￥30.00",
+      "name": "软件测试（原书第2版）",
+      "details": "美RonPatton张小松译 （著） | 机械工业出版社 | 978711118526 | 2006-4-4出版 | 2017-4-2 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5465001-5470000/5469343/zcover.jpg",
+      "price": "￥29.00",
+      "name": "软件工程案例教程",
+      "details": "韩万江 （著） | 机械工业出版社 | 978711120667 | 2007-4-26出版 | 2017-4-2 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5470001-5475000/5470003/zcover.jpg",
+      "price": "￥36.00",
+      "name": "软件项目管理案例教程第2版",
+      "details": "韩万江 （著） | 机械工业出版社 | 978711126753 | 2009-6-10出版 | 2017-4-2 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5470001-5475000/5470032/zcover.jpg",
+      "price": "￥42.00",
+      "name": "软件的质量",
+      "details": "于芳 （著） | 机械工业出版社* | 978711126981 | 2009-7-13出版 | 2017-4-2 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5470001-5475000/5470598/zcover.jpg",
+      "price": "￥58.00",
+      "name": "软件项目管理（第2版）",
+      "details": "薛四新 （著） | 机械工业出版社* | 978711131624 | 2010-9-29出版 | 2017-4-2 上架"
+    },
+    {
+      "img": "http://images.china-pub.com/ebook5470001-5475000/5470735/zcover.jpg",
+      "price": "￥42.00",
+      "name": "组态软件基础与工程应用(易控INSPEC)",
+      "details": "张贝克 （著） | 机械工业出版社* | 978711133785 | 2017-2-22出版 | 2017-4-2 上架"
+    },
     {
       "img": "http://images.china-pub.com/ebook5005001-5010000/5006987/zcover.jpg",
       "price": "￥129.00",
