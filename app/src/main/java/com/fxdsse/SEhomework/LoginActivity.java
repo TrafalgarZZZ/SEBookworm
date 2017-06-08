@@ -3,6 +3,7 @@ package com.fxdsse.SEhomework;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.View;
@@ -35,6 +36,9 @@ public class LoginActivity extends AppCompatActivity {
         String fonts = "fonts/logoFonts.ttf";
         Typeface typeface = Typeface.createFromAsset(getAssets(), fonts);
         loginLogo.setTypeface(typeface);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setElevation(0);
 
         username = (EditText) findViewById(R.id.et_username);
         password = (EditText) findViewById(R.id.et_pwd);
