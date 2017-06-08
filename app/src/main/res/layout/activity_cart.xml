@@ -66,6 +66,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:background="@color/colorPrimary"
+            android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
             android:text="去结算"
             android:textColor="@color/white"

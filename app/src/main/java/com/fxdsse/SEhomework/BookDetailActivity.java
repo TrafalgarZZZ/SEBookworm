@@ -2,7 +2,6 @@ package com.fxdsse.SEhomework;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -54,7 +53,6 @@ public class BookDetailActivity extends AppCompatActivity {
             user = userDao.queryBuilder().where(UserDao.Properties.Id.eq(((BMApplication) getApplication()).getUserId())).unique();
         }
         bookId = getIntent().getLongExtra("book_id", -1);
-        Log.e(">>", String.valueOf(bookId));
         book = bookDao.queryBuilder().where(BookDao.Properties.Id.eq(bookId)).unique();
         txtTitle.setText(book.getName());
         BookDetail bookDetail = BookDetailDisassembler.disassembleDetail(book.getDetail());
@@ -94,7 +92,7 @@ public class BookDetailActivity extends AppCompatActivity {
                     }
                     Toast.makeText(BookDetailActivity.this, "已成功添加至购物车", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(BookDetailActivity.this, "用户不存在", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(BookDetailActivity.this, "请先登录", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fxdsse.SEhomework.data.model.Book;
 import com.fxdsse.SEhomework.data.model.BookDao;
@@ -42,7 +43,7 @@ public class CartActivity extends AppCompatActivity {
 
         getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
 
-        totalPrice = 0.0f;
+
 
         cartPrice = (TextView) findViewById(R.id.pay_price);
         cartPay = (TextView) findViewById(R.id.pay_btn);
@@ -53,6 +54,25 @@ public class CartActivity extends AppCompatActivity {
         userToBookMapperDao = daoSession.getUserToBookMapperDao();
         user = userDao.queryBuilder().where(UserDao.Properties.Id.eq(((BMApplication) getApplication()).getUserId())).unique();
 
+        refreshCart();
+
+        cartPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (totalPrice != 0.0f) {
+                    Intent intent = new Intent(CartActivity.this, PayActivity.class);
+                    startActivityForResult(intent, 0);
+                } else {
+                    Toast.makeText(CartActivity.this, "无商品可结算", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+    }
+
+    private void refreshCart() {
+        totalPrice = 0.0f;
+        cartLinearLayout.removeAllViews();
         List<UserToBookMapper> cartBookRelations = userToBookMapperDao.queryBuilder().where(UserToBookMapperDao.Properties.UserId.eq(user.getId())).list();
         for (UserToBookMapper relation : cartBookRelations) {
             final Book book = bookDao.queryBuilder().where(BookDao.Properties.Id.eq(relation.getBookId())).unique();
@@ -102,20 +122,14 @@ public class CartActivity extends AppCompatActivity {
             totalPrice += Float.parseFloat(book.getPrice().replace("￥", "")) * relation.getQuantity();
         }
         cartPrice.setText(String.format(Locale.CHINA, "￥ %.2f", totalPrice));
-
-        cartPay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(CartActivity.this, PayActivity.class);
-                startActivityForResult(intent, 9);
-            }
-        });
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 0) {
-
+            if (resultCode == 1) {
+                refreshCart();
+            }
         }
     }
 }

@@ -16,12 +16,14 @@ public class OrderToBookMapper {
 
     private Long orderId;
     private Long bookId;
+    private int quantity;
 
-    @Generated(hash = 965616755)
-    public OrderToBookMapper(Long id, Long orderId, Long bookId) {
+    @Generated(hash = 1360585113)
+    public OrderToBookMapper(Long id, Long orderId, Long bookId, int quantity) {
         this.id = id;
         this.orderId = orderId;
         this.bookId = bookId;
+        this.quantity = quantity;
     }
 
     @Generated(hash = 1904098330)
@@ -50,5 +52,13 @@ public class OrderToBookMapper {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public int getQuantity() {
+        return this.quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

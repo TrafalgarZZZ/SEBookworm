@@ -16,7 +16,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -91,7 +90,6 @@ public class MainActivity extends AppCompatActivity
         imageViewUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e(">>", String.valueOf(((BMApplication) getApplication()).getUserId()));
                 if (((BMApplication) getApplication()).getUserId() < 0) {
                     Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
                     startActivityForResult(loginIntent, 0);
