@@ -38,7 +38,16 @@ public class LoginActivity extends AppCompatActivity {
         loginLogo.setTypeface(typeface);
 
         ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("");
         actionBar.setElevation(0);
+
+        Button cancelButton = (Button) findViewById(R.id.btn_cancel);
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         username = (EditText) findViewById(R.id.et_username);
         password = (EditText) findViewById(R.id.et_pwd);
