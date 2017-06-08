@@ -15,9 +15,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.fxdsse.SEhomework.data.BookDetail;
 import com.fxdsse.SEhomework.data.model.Book;
 import com.fxdsse.SEhomework.data.model.BookDao;
 import com.fxdsse.SEhomework.data.model.DaoSession;
+import com.fxdsse.SEhomework.data.util.BookDetailDisassembler;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -66,12 +68,28 @@ public class SearchActivity extends AppCompatActivity {
                             bookItem.setTag(book.getId());
                             ImageView imgBook = (ImageView) bookItem.findViewById(R.id.book_pic);
                             TextView txtName = (TextView) bookItem.findViewById(R.id.book_name);
-                            TextView txtDescrption = (TextView) bookItem.findViewById(R.id.book_press);
+                            TextView txtPress = (TextView) bookItem.findViewById(R.id.book_press);
                             TextView txtPrice = (TextView) bookItem.findViewById(R.id.book_price);
+                            TextView txtAuthor = (TextView) bookItem.findViewById(R.id.book_author);
+
+                            BookDetail detail = BookDetailDisassembler.disassembleDetail(book.getDetail());
+
+
                             Picasso.with(SearchActivity.this).load(book.getImageURL()).into(imgBook);
                             txtName.setText(book.getName());
-                            txtDescrption.setText(book.getDetail());
+                            txtPress.setText(detail.getPress());
                             txtPrice.setText(book.getPrice());
+
+                            StringBuffer sb = new StringBuffer();
+                            List<String> authors = detail.getAuthors();
+                            int authors_size = authors.size();
+                            for (int i = 0; i < authors_size; i++) {
+                                sb.append(authors.get(i));
+                                if (i != authors_size - 1) {
+                                    sb.append(";");
+                                }
+                            }
+                            txtAuthor.setText(sb);
 
 
                             bookItem.setOnClickListener(new View.OnClickListener() {

@@ -240,8 +240,12 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         } else if (id == R.id.nav_wallet) {
-            Intent intent = new Intent(MainActivity.this, WalletActivity.class);
-            startActivity(intent);
+            if (((BMApplication) getApplication()).getUserId() < 0) {
+                Toast.makeText(MainActivity.this, "请先登录", Toast.LENGTH_SHORT).show();
+            } else {
+                Intent intent = new Intent(MainActivity.this, WalletActivity.class);
+                startActivity(intent);
+            }
 
         } else if (id == R.id.nav_position) {
             Intent intent = new Intent(MainActivity.this, PositionActivity.class);

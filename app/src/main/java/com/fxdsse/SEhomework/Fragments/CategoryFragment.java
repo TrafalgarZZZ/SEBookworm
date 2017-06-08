@@ -1,13 +1,16 @@
 package com.fxdsse.SEhomework.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.fxdsse.SEhomework.CategoryActivity;
 import com.fxdsse.SEhomework.R;
 
 
@@ -66,7 +69,39 @@ public class CategoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_category, container, false);
+        View view = inflater.inflate(R.layout.fragment_category, container, false);
+
+        Button cat_ai = (Button) view.findViewById(R.id.category_ai);
+        cat_ai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), CategoryActivity.class);
+                intent.putExtra("category", "ai");
+                startActivity(intent);
+            }
+        });
+
+        Button cat_se = (Button) view.findViewById(R.id.category_se);
+        cat_se.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), CategoryActivity.class);
+                intent.putExtra("category", "se");
+                startActivity(intent);
+            }
+        });
+
+        Button cat_cs = (Button) view.findViewById(R.id.category_cs);
+        cat_cs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), CategoryActivity.class);
+                intent.putExtra("category", "cs");
+                startActivity(intent);
+            }
+        });
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

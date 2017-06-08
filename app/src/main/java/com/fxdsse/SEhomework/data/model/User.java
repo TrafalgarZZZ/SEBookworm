@@ -26,6 +26,8 @@ public class User {
     @NotNull
     private String passwordHash;
 
+    private float balance;
+
     @NotNull
     @ToMany
     @JoinEntity(
@@ -56,11 +58,13 @@ public class User {
     @Generated(hash = 1507654846)
     private transient UserDao myDao;
 
-    @Generated(hash = 128954706)
-    public User(Long id, @NotNull String username, @NotNull String passwordHash) {
+    @Generated(hash = 2138148897)
+    public User(Long id, @NotNull String username, @NotNull String passwordHash,
+                float balance) {
         this.id = id;
         this.username = username;
         this.passwordHash = passwordHash;
+        this.balance = balance;
     }
 
     @Generated(hash = 586692638)
@@ -185,6 +189,15 @@ public class User {
             throw new DaoException("Entity is detached from DAO context");
         }
         myDao.update(this);
+    }
+
+
+    public float getBalance() {
+        return this.balance;
+    }
+
+    public void setBalance(float balance) {
+        this.balance = balance;
     }
 
     /**

@@ -168,8 +168,6 @@ public class HomeFragment extends Fragment {
             });
 
             homeContainerLinearLayout.addView(bookItem);
-            View v = LayoutInflater.from(getActivity()).inflate(R.layout.splitter, null);
-            homeContainerLinearLayout.addView(v);
         }
         return view;
     }

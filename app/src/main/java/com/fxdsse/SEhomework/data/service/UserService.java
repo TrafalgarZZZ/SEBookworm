@@ -40,6 +40,7 @@ public class UserService {
             User user = new User();
             user.setUsername(username);
             user.setPasswordHash(new String(Hex.encodeHex(DigestUtils.md5(password))));
+            user.setBalance(0.0f);
             userDao.save(user);
             return user;
         } else
