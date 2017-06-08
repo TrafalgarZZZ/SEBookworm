@@ -24,6 +24,7 @@ import com.fxdsse.SEhomework.data.model.UserToOrderMapper;
 import com.fxdsse.SEhomework.data.model.UserToOrderMapperDao;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -86,7 +87,8 @@ public class PayActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Order neworder = new Order();
-                neworder.setDate(Calendar.getInstance().getTime());
+                Date date = new Date(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DATE));
+                neworder.setDate(date);
                 neworder.setAddress("陕西省西安市长安区123号XX小区");
                 neworder.setUserId(((BMApplication) getApplication()).getUserId());
                 orderDao.save(neworder);

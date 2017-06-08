@@ -1,7 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/order_pic"
-    android:layout_width="60dp"
-    android:layout_height="60dp"
-    android:scaleType="fitCenter"
-    android:src="@drawable/introalgorithms" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#2ae7e0e0"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp">
+
+    <View
+        android:id="@+id/splitter"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/darker_gray" />
+
+    <ImageView
+        android:id="@+id/oc_pic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/introalgorithms" />
+
+    <TextView
+        android:id="@+id/oc_book_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/oc_pic"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/oc_pic"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="算法导论"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/oc_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/oc_pic"
+        android:text="¥ 100.50"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/oc_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/oc_price"
+        android:text="x2"
+        android:textSize="10sp" />
+
+
+</RelativeLayout>
