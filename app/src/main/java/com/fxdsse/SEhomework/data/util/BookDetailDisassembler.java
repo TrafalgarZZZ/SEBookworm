@@ -16,16 +16,21 @@ public class BookDetailDisassembler {
 
         return new BookDetail()
                 .setAuthors(readAuthors(details[0]))
-                .setPress(details[1])
-                .setISBN(details[2])
-                .setPublishedDate(readPublishedDate(details[3]))
-                .setStackedDate(readStackedDate(details[4]));
+                .setPress(details[1].trim())
+                .setISBN(details[2].trim())
+                .setPublishedDate(readPublishedDate(details[3]).trim())
+                .setStackedDate(readStackedDate(details[4]).trim());
     }
 
     private static List<String> readAuthors(String authorsString) {
         String authorsStringFormatted = authorsString
                 .substring(0, authorsString.lastIndexOf(" （"));
-        return Arrays.asList(authorsStringFormatted.split("、"));
+        return Arrays.asList(authorsStringFormatted
+                .replace("【", "(")
+                .replace("】", ")")
+                .replace("（", "(")
+                .replace("）", ")")
+                .split("、"));
     }
 
     private static String readPublishedDate(String publishedDateString) {
