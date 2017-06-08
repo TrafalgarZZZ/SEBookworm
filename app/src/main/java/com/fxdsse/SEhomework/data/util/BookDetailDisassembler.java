@@ -13,7 +13,6 @@ public class BookDetailDisassembler {
 
     public static BookDetail disassembleDetail(String detailsString) {
         String[] details = detailsString.split(" \\| ");
-
         return new BookDetail()
                 .setAuthors(readAuthors(details[0]))
                 .setPress(details[1].trim())
