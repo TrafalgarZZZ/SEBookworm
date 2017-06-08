@@ -7,22 +7,32 @@
     android:foreground="?attr/selectableItemBackground"
     android:padding="8dp">
 
+    <View
+        android:id="@+id/splitter"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@android:color/darker_gray" />
+
     <ImageView
         android:id="@+id/book_pic"
         android:layout_width="100dp"
         android:layout_height="120dp"
+        android:layout_below="@+id/splitter"
         android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/headfirst" />
 
     <TextView
         android:id="@+id/book_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/book_pic"
         android:layout_toRightOf="@+id/book_pic"
         android:maxLines="1"
         android:text="深入浅出C#"
         android:textColor="@android:color/black"
-        android:textSize="16sp" />
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/book_press"
@@ -52,9 +62,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/book_pic"
-        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/book_name"
         android:text="¥ 89.50"
         android:textColor="@color/colorPrimary"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

@@ -3,8 +3,10 @@ package com.fxdsse.SEhomework;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.fxdsse.SEhomework.data.model.Book;
@@ -62,17 +64,26 @@ public class OrdersActivity extends AppCompatActivity {
             float price = 0.0f;
             for (OrderToBookMapper order_book : order_books) {
                 Book book = bookDao.queryBuilder().where(BookDao.Properties.Id.eq(order_book.getBookId())).unique();
-                ImageView img_book = (ImageView) LayoutInflater.from(OrdersActivity.this).inflate(R.layout.order_content_item, null);
-                orderContentLinearLayout.addView(img_book);
+                RelativeLayout oc_book = (RelativeLayout) LayoutInflater.from(OrdersActivity.this).inflate(R.layout.order_content_item, null);
+                ImageView img_book = (ImageView) oc_book.findViewById(R.id.oc_pic);
+                TextView oc_name = (TextView) oc_book.findViewById(R.id.oc_book_name);
+                TextView oc_price = (TextView) oc_book.findViewById(R.id.oc_price);
+                TextView oc_quantity = (TextView) oc_book.findViewById(R.id.oc_quantity);
+
+                oc_name.setText(book.getName());
+                oc_price.setText(book.getPrice());
+                oc_quantity.setText(String.format("x%d", order_book.getQuantity()));
+                orderContentLinearLayout.addView(oc_book);
                 Picasso.with(OrdersActivity.this).load(book.getImageURL()).into(img_book);
 
                 quantity += order_book.getQuantity();
                 price += Float.parseFloat(book.getPrice().replace("￥", "")) * order_book.getQuantity();
             }
-
             txtOrderDetail.setText(String.format(Locale.CHINA, "共%d本图书 实付款: ￥ %.2f", quantity, price));
 
-            orderList.addView(orderItem);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            params.setMargins(0, 55, 0, 0);
+            orderList.addView(orderItem, params);
         }
 
         getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));

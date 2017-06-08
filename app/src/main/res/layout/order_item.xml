@@ -7,14 +7,9 @@
     android:layout_below="@+id/order_card1"
     android:layout_marginTop="5dp"
     android:background="#fcf8f8"
-    android:clickable="true"
+    android:clickable="false"
     android:foreground="?attr/selectableItemBackground"
     android:orientation="vertical">
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.2dp"
-        android:background="@color/default_txt_trans" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -63,10 +58,10 @@
         <LinearLayout
             android:id="@+id/order_content_ll"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/order_store"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
         </LinearLayout>
 
@@ -88,8 +83,4 @@
 
         </LinearLayout>
     </RelativeLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.2dp"
-        android:background="@color/default_txt_trans" />
 </LinearLayout>

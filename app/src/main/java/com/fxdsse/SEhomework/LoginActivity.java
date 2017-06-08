@@ -31,6 +31,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
 
+        getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+
         //set fonts.
         TextView loginLogo = (TextView) findViewById(R.id.logo_login);
         String fonts = "fonts/logoFonts.ttf";

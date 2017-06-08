@@ -4,7 +4,7 @@
     android:id="@+id/activity_favorites"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e7e0e0"
+    android:background="#7ae7e0e0"
     tools:context="com.fxdsse.SEhomework.OrdersActivity">
 
 

@@ -29,7 +29,8 @@
             android:maxLines="1"
             android:text="深入浅出C#"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/book_press"
@@ -62,7 +63,8 @@
             android:layout_alignStart="@+id/book_author"
             android:text="¥ 89.50"
             android:textColor="@color/colorPrimary"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/book_quantity"
@@ -79,8 +81,9 @@
     <Button
         android:id="@+id/book_del"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_red_dark"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_red_light"
         android:text="删除"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textSize="16sp" />
 </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
