@@ -71,8 +71,13 @@
             android:name=".PayActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.fxdsse.SEhomework.LoginActivity"
+            android:name=".LoginActivity"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".CategoryActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>

@@ -48,9 +48,7 @@ public class SearchActivity extends AppCompatActivity {
         back_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SearchActivity.this, MainActivity.class);
-                startActivity(intent);
-                finishActivity(0);
+                finish();
             }
         });
 
