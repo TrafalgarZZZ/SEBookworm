@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.fxdsse.SEhomework.data.BookDetail;
 import com.fxdsse.SEhomework.data.model.Book;
 import com.fxdsse.SEhomework.data.model.BookDao;
 import com.fxdsse.SEhomework.data.model.DaoSession;
@@ -19,6 +20,7 @@ import com.fxdsse.SEhomework.data.model.User;
 import com.fxdsse.SEhomework.data.model.UserDao;
 import com.fxdsse.SEhomework.data.model.UserToBookMapper;
 import com.fxdsse.SEhomework.data.model.UserToBookMapperDao;
+import com.fxdsse.SEhomework.data.util.BookDetailDisassembler;
 import com.mcxtzhang.swipemenulib.SwipeMenuLayout;
 import com.squareup.picasso.Picasso;
 
@@ -80,16 +82,31 @@ public class CartActivity extends AppCompatActivity {
             bookItem.setTag(book.getId());
             ImageView imgBook = (ImageView) bookItem.findViewById(R.id.book_pic);
             TextView txtName = (TextView) bookItem.findViewById(R.id.book_name);
-            TextView txtDescrption = (TextView) bookItem.findViewById(R.id.book_description);
+            TextView txtPress = (TextView) bookItem.findViewById(R.id.book_press);
+            TextView txtAuthor = (TextView) bookItem.findViewById(R.id.book_author);
             final TextView txtPrice = (TextView) bookItem.findViewById(R.id.book_price);
             TextView txtQuantity = (TextView) bookItem.findViewById(R.id.book_quantity);
             Button delButton = (Button) bookItem.findViewById(R.id.book_del);
+
+            BookDetail detail = BookDetailDisassembler.disassembleDetail(book.getDetail());
+
             final RelativeLayout relativeLayout = (RelativeLayout) bookItem.findViewById(R.id.book);
             delButton.setTag(relation.getId());
-            Picasso.with(CartActivity.this).load(book.getImageURL()).into(imgBook);
+            Picasso.with(CartActivity.this).load(book.getImageURL()).resize(450, 650).centerCrop().into(imgBook);
             txtName.setText(book.getName());
-            txtDescrption.setText(book.getDetail());
+            txtPress.setText(detail.getPress());
             txtPrice.setText(book.getPrice());
+            StringBuffer sb = new StringBuffer();
+            List<String> authors = detail.getAuthors();
+            int authors_size = authors.size();
+            for (int i = 0; i < authors_size; i++) {
+                sb.append(authors.get(i));
+                if (i != authors_size - 1) {
+                    sb.append(";");
+                }
+            }
+            txtAuthor.setText(sb);
+
             if (relation.getQuantity() > 1) {
                 txtQuantity.setText(String.format(Locale.CHINA, "X %d", relation.getQuantity()));
             } else {
@@ -127,8 +144,13 @@ public class CartActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 0) {
-            if (resultCode == 1) {
-                refreshCart();
+            switch (resultCode) {
+                case 1:
+                    refreshCart();
+                    break;
+                case -1:
+                    finish();
+                    break;
             }
         }
     }

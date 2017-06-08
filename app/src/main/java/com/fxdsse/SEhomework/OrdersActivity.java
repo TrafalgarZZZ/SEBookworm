@@ -73,7 +73,6 @@ public class OrdersActivity extends AppCompatActivity {
             txtOrderDetail.setText(String.format(Locale.CHINA, "共%d本图书 实付款: ￥ %.2f", quantity, price));
 
             orderList.addView(orderItem);
-
         }
 
         getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));

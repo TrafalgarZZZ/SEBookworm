@@ -18,9 +18,11 @@ import com.fxdsse.SEhomework.BMApplication;
 import com.fxdsse.SEhomework.BookDetailActivity;
 import com.fxdsse.SEhomework.R;
 import com.fxdsse.SEhomework.Util.AeolosPicassoImageLoader;
+import com.fxdsse.SEhomework.data.BookDetail;
 import com.fxdsse.SEhomework.data.model.Book;
 import com.fxdsse.SEhomework.data.model.BookDao;
 import com.fxdsse.SEhomework.data.model.DaoSession;
+import com.fxdsse.SEhomework.data.util.BookDetailDisassembler;
 import com.squareup.picasso.Picasso;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -134,12 +136,26 @@ public class HomeFragment extends Fragment {
             bookItem.setTag(book.getId());
             ImageView imgBook = (ImageView) bookItem.findViewById(R.id.book_pic);
             TextView txtName = (TextView) bookItem.findViewById(R.id.book_name);
-            TextView txtDescrption = (TextView) bookItem.findViewById(R.id.book_description);
+            TextView txtPress = (TextView) bookItem.findViewById(R.id.book_press);
             TextView txtPrice = (TextView) bookItem.findViewById(R.id.book_price);
-            Picasso.with(getActivity()).load(book.getImageURL()).into(imgBook);
+            TextView txtAuthor = (TextView) bookItem.findViewById(R.id.book_author);
+
+            BookDetail detail = BookDetailDisassembler.disassembleDetail(book.getDetail());
+
+            Picasso.with(getActivity()).load(book.getImageURL()).resize(450, 650).centerCrop().into(imgBook);
             txtName.setText(book.getName());
-            txtDescrption.setText(book.getDetail());
+            txtPress.setText(detail.getPress());
             txtPrice.setText(book.getPrice());
+            StringBuffer sb = new StringBuffer();
+            List<String> authors = detail.getAuthors();
+            int authors_size = authors.size();
+            for (int i = 0; i < authors_size; i++) {
+                sb.append(authors.get(i));
+                if (i != authors_size - 1) {
+                    sb.append(";");
+                }
+            }
+            txtAuthor.setText(sb);
 
 
             bookItem.setOnClickListener(new View.OnClickListener() {
@@ -152,6 +168,8 @@ public class HomeFragment extends Fragment {
             });
 
             homeContainerLinearLayout.addView(bookItem);
+            View v = LayoutInflater.from(getActivity()).inflate(R.layout.splitter, null);
+            homeContainerLinearLayout.addView(v);
         }
         return view;
     }

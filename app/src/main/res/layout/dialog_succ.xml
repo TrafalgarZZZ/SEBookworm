@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:text="订餐成功"
+        android:text="支付成功"
         android:textColor="@color/black"
         android:textSize="20sp" />
 
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp"
-        android:text="您的订单将于 今日 14:35 准时送达宿舍" />
+        android:text="您已经成功下单" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,18 +39,20 @@
 
 
         <Button
+            android:id="@+id/to_orders_btn"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="再来一单" />
+            android:text="查看订单" />
 
         <Button
+            android:id="@+id/ok_btn"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
 
-            android:text="返回" />
+            android:text="好的" />
 
     </LinearLayout>
 </LinearLayout>

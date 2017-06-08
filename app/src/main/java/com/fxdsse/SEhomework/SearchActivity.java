@@ -68,7 +68,7 @@ public class SearchActivity extends AppCompatActivity {
                             bookItem.setTag(book.getId());
                             ImageView imgBook = (ImageView) bookItem.findViewById(R.id.book_pic);
                             TextView txtName = (TextView) bookItem.findViewById(R.id.book_name);
-                            TextView txtDescrption = (TextView) bookItem.findViewById(R.id.book_description);
+                            TextView txtDescrption = (TextView) bookItem.findViewById(R.id.book_press);
                             TextView txtPrice = (TextView) bookItem.findViewById(R.id.book_price);
                             Picasso.with(SearchActivity.this).load(book.getImageURL()).into(imgBook);
                             txtName.setText(book.getName());
