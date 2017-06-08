@@ -14,6 +14,7 @@
     <color name="colorselectedtext">#ffffff</color>
     <color name="black">#000000</color>
     <color name="default_txt">#FF808080</color>
+    <color name="default_txt_trans">#c5808080</color>
 
     <color name="black_overlay">#66000000</color>
 </resources>
