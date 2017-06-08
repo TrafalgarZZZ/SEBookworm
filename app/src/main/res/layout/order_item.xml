@@ -13,7 +13,8 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="0.1dp" />
+        android:layout_height="0.1dp"
+        android:background="@color/default_txt" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,24 +23,20 @@
         <RelativeLayout
             android:id="@+id/order_store"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingBottom="6dp"
-            android:paddingTop="6dp">
+            android:layout_height="40dp">
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.1dp"
-                android:layout_below="@+id/temp_clock"
-                android:layout_marginTop="4dp" />
+                android:layout_alignParentBottom="true"
+                android:background="@color/default_txt" />
 
             <ImageView
                 android:id="@+id/temp_clock"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_centerVertical="true"
-                android:padding="2dp"
+                android:layout_marginStart="10dp"
                 android:src="@drawable/time" />
 
             <TextView
@@ -47,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="10dp"
                 android:layout_toEndOf="@+id/temp_clock"
                 android:text="2017-4-23" />
 
@@ -56,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="8dp"
+                android:layout_marginEnd="10dp"
                 android:text="交易成功"
                 android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
@@ -74,10 +71,12 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/order_content_ll"
             android:gravity="end|center_vertical"
-            android:paddingEnd="8dp">
+            android:paddingBottom="8dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="8dp">
 
             <TextView
                 android:id="@+id/order_detail"
@@ -91,5 +90,6 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="0.1dp" />
+        android:layout_height="0.1dp"
+        android:background="@color/default_txt" />
 </LinearLayout>
