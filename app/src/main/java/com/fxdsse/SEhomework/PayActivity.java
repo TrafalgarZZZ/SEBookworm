@@ -8,8 +8,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fxdsse.SEhomework.data.model.Book;
 import com.fxdsse.SEhomework.data.model.BookDao;
@@ -18,6 +20,8 @@ import com.fxdsse.SEhomework.data.model.Order;
 import com.fxdsse.SEhomework.data.model.OrderDao;
 import com.fxdsse.SEhomework.data.model.OrderToBookMapper;
 import com.fxdsse.SEhomework.data.model.OrderToBookMapperDao;
+import com.fxdsse.SEhomework.data.model.User;
+import com.fxdsse.SEhomework.data.model.UserDao;
 import com.fxdsse.SEhomework.data.model.UserToBookMapper;
 import com.fxdsse.SEhomework.data.model.UserToBookMapperDao;
 import com.fxdsse.SEhomework.data.model.UserToOrderMapper;
@@ -31,10 +35,12 @@ import java.util.Locale;
 public class PayActivity extends AppCompatActivity {
     private DaoSession daoSession;
     private OrderDao orderDao;
+    private UserDao userDao;
     private UserToBookMapperDao userToBookMapperDao;
     private UserToOrderMapperDao userToOrderMapperDao;
     private OrderToBookMapperDao orderToBookMapperDao;
     private BookDao bookDao;
+    private ImageView back_img;
     private TextView payTime;
     private TextView payConfirmPrice;
     private LinearLayout goodsLinearLayout;
@@ -53,10 +59,19 @@ public class PayActivity extends AppCompatActivity {
         payConfirmPrice = (TextView) findViewById(R.id.pay_confirm_price);
         goodsLinearLayout = (LinearLayout) findViewById(R.id.goods_ll);
         payConfirmLinearLayout = (LinearLayout) findViewById(R.id.pay_confirm_ll);
+        back_img = (ImageView) findViewById(R.id.search_activity_back);
+
+        back_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         daoSession = ((BMApplication) getApplication()).getDaoSession();
         orderDao = daoSession.getOrderDao();
         bookDao = daoSession.getBookDao();
+        userDao = daoSession.getUserDao();
         userToBookMapperDao = daoSession.getUserToBookMapperDao();
         userToOrderMapperDao = daoSession.getUserToOrderMapperDao();
         orderToBookMapperDao = daoSession.getOrderToBookMapperDao();
@@ -86,6 +101,11 @@ public class PayActivity extends AppCompatActivity {
         payConfirmLinearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                User user = userDao.queryBuilder().where(UserDao.Properties.Id.eq(((BMApplication) getApplication()).getUserId())).unique();
+                if (user.getBalance() < totalPrice) {
+                    Toast.makeText(PayActivity.this, "余额不足，请充值", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Order neworder = new Order();
                 Date date = new Date(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DATE));
                 neworder.setDate(date);
@@ -110,6 +130,9 @@ public class PayActivity extends AppCompatActivity {
 
                     userToBookMapperDao.delete(relation);
                 }
+
+                user.setBalance(user.getBalance() - totalPrice);
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(PayActivity.this);
                 LinearLayout paySucceedLinearLayout = (LinearLayout) LayoutInflater.from(PayActivity.this).inflate(R.layout.dialog_succ, null);
                 Button toOrdersButton = (Button) paySucceedLinearLayout.findViewById(R.id.to_orders_btn);

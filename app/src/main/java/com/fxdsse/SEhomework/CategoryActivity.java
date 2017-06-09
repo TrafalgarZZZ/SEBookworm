@@ -35,6 +35,10 @@ public class CategoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
+
+        getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+
+
         categoryBooksLinearLayout = (LinearLayout) findViewById(R.id.category_books_ll);
         searchEditText = (EditText) findViewById(R.id.search_edittxt);
         back_img = (ImageView) findViewById(R.id.search_activity_back);
