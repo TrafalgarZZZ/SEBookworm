@@ -1,110 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context="com.fxdsse.SEhomework.BookDetailActivity">
+    android:fitsSystemWindows="true"
+    tools:context=".BookDetailActivity">
 
-    <ScrollView
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="#43e7e0e0"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <RelativeLayout
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingEnd="20dp"
-            android:paddingStart="20dp"
-            android:paddingTop="20dp">
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <!--android:fitsSystemWindows="true"-->
 
             <ImageView
                 android:id="@+id/bd_img"
-                android:layout_width="160dp"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/headfirst" />
-
-            <TextView
-                android:id="@+id/bd_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/bd_img"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_toRightOf="@+id/bd_img"
-                android:maxLines="2"
-                android:text="深入浅出C#"
-                android:textColor="@android:color/black"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/bd_subtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/bd_title"
-                android:layout_marginLeft="20dp"
-                android:layout_toRightOf="@+id/bd_img"
-                android:maxLines="2"
-                android:text="（Head First系列最新作品）"
-                android:textSize="10sp" />
-
-            <TextView
-                android:id="@+id/bd_author"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/bd_subtitle"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="2dp"
-                android:layout_toRightOf="@id/bd_img"
-                android:maxLines="2"
-                android:text="Stellman, Greene 著" />
-
-            <TextView
-                android:id="@+id/bd_translator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/bd_author"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="2dp"
-                android:layout_toRightOf="@id/bd_img"
-                android:maxLines="2"
-                android:text="林琪，刘晓兵等 译" />
-
-
-            <Button
-                android:id="@+id/bd_buy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/bd_img"
-                android:layout_marginStart="20dp"
-                android:layout_toRightOf="@id/bd_img"
-                android:backgroundTint="@color/white_trans"
-                android:text="添加至购物车" />
-
-            <TextView
-                android:id="@+id/bd_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/bd_buy"
-                android:layout_marginBottom="2dp"
-                android:layout_marginLeft="20dp"
-                android:layout_toRightOf="@id/bd_img"
-                android:text="¥ 68.5"
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
-
-
-            <LinearLayout
-
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-
-    </ScrollView>
+                android:layout_height="wrap_content"
+                android:src="@drawable/introalgorithms"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7" />
 
 
-</FrameLayout>
+            <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--app:layout_collapseMode="pin"-->
+            <!--app:popupTheme="@style/AppTheme.PopupOverlay" >-->
+            <!--</android.support.v7.widget.Toolbar>-->
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_bookdetail" />
+
+</android.support.design.widget.CoordinatorLayout>
+
+

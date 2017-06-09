@@ -29,9 +29,13 @@ public class BookDetailActivity extends AppCompatActivity {
     private UserToBookMapperDao userToBookMapperDao;
     private User user = null;
     private long bookId;
+    private TextView txtPress;
     private TextView txtTitle;
     private TextView txtAuthor;
     private TextView txtPrice;
+    private TextView txtISBN;
+    private TextView txtPubTime;
+    private TextView txtShelfTime;
     private ImageView imgBook;
     private Book book;
 
@@ -43,6 +47,10 @@ public class BookDetailActivity extends AppCompatActivity {
         txtTitle = (TextView) findViewById(R.id.bd_title);
         txtPrice = (TextView) findViewById(R.id.bd_price);
         txtAuthor = (TextView) findViewById(R.id.bd_author);
+        txtPress = (TextView) findViewById(R.id.bd_press);
+        txtISBN = (TextView) findViewById(R.id.bd_isbn);
+        txtPubTime = (TextView) findViewById(R.id.bd_pubtime);
+        txtShelfTime = (TextView) findViewById(R.id.bd_shelftime);
         imgBook = (ImageView) findViewById(R.id.bd_img);
 
         daoSession = ((BMApplication) getApplication()).getDaoSession();
@@ -56,19 +64,16 @@ public class BookDetailActivity extends AppCompatActivity {
         book = bookDao.queryBuilder().where(BookDao.Properties.Id.eq(bookId)).unique();
         txtTitle.setText(book.getName());
         BookDetail bookDetail = BookDetailDisassembler.disassembleDetail(book.getDetail());
-        StringBuilder sb = new StringBuilder();
         List<String> listAuthor = bookDetail.getAuthors();
-        int author_size = listAuthor.size();
-        for (int i = 0; i < author_size; i++) {
-            sb.append(listAuthor.get(i));
-            if (i != author_size - 1) {
-                sb.append(";");
-            }
-        }
-        txtAuthor.setText(sb);
+        txtAuthor.setText(listAuthor.get(0));
         txtPrice.setText(book.getPrice());
         txtTitle.setText(book.getName());
-        Picasso.with(this).load(book.getImageURL()).into(imgBook);
+        txtPress.setText(bookDetail.getPress());
+        txtISBN.setText(bookDetail.getISBN());
+        txtPubTime.setText(bookDetail.getPublishedDate());
+        txtShelfTime.setText(bookDetail.getStackedDate());
+
+        Picasso.with(this).load(book.getImageURL()).resize(540, 780).into(imgBook);
 
         btn_buy = (Button) findViewById(R.id.bd_buy);
         btn_buy.setOnClickListener(new View.OnClickListener() {
