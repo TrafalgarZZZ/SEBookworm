@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +26,7 @@ import com.fxdsse.SEhomework.data.model.UserToBookMapperDao;
 import com.fxdsse.SEhomework.data.model.UserToOrderMapper;
 import com.fxdsse.SEhomework.data.model.UserToOrderMapperDao;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -46,6 +46,7 @@ public class PayActivity extends AppCompatActivity {
     private LinearLayout goodsLinearLayout;
     private LinearLayout payConfirmLinearLayout;
     private float totalPrice = 0.0f;
+    private boolean isBuyFromCart = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,7 @@ public class PayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pay);
 
         PayActivity.this.setResult(0);
+        isBuyFromCart = true;
 
         totalPrice = 0.0f;
         payTime = (TextView) findViewById(R.id.pay_time);
@@ -77,7 +79,21 @@ public class PayActivity extends AppCompatActivity {
         orderToBookMapperDao = daoSession.getOrderToBookMapperDao();
 
         getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
-        List<UserToBookMapper> cart_list = userToBookMapperDao.queryBuilder().where(UserToBookMapperDao.Properties.UserId.eq(((BMApplication) getApplication()).getUserId())).list();
+
+        final List<UserToBookMapper> cart_list;
+        Long bookId = getIntent().getLongExtra("book_id", -1);
+        if (bookId == -1) {
+            cart_list = userToBookMapperDao.queryBuilder().where(UserToBookMapperDao.Properties.UserId.eq(((BMApplication) getApplication()).getUserId())).list();
+        } else {
+            isBuyFromCart = false;
+            cart_list = new ArrayList<>();
+            UserToBookMapper userToBookMapper = new UserToBookMapper();
+            userToBookMapper.setQuantity(1);
+            userToBookMapper.setBookId(bookId);
+            userToBookMapper.setUserId(((BMApplication) getApplication()).getUserId());
+            cart_list.add(userToBookMapper);
+        }
+
         for (UserToBookMapper relation : cart_list) {
             LinearLayout goodItem = (LinearLayout) LayoutInflater.from(PayActivity.this).inflate(R.layout.goods_item, null);
             TextView goods_name = (TextView) goodItem.findViewById(R.id.gi_name);
@@ -88,7 +104,7 @@ public class PayActivity extends AppCompatActivity {
             totalPrice += pbook * relation.getQuantity();
             goods_name.setText(String.format(Locale.CHINA, "%s", goods_book.getName()));
             goods_price.setText(String.format(Locale.CHINA, "￥ %.2f", pbook * relation.getQuantity()));
-            goods_quantity.setText(String.format(Locale.CHINA, "X %d", relation.getQuantity()));
+            goods_quantity.setText(String.format(Locale.CHINA, "x%d", relation.getQuantity()));
 
             goodsLinearLayout.addView(goodItem);
         }
@@ -113,14 +129,12 @@ public class PayActivity extends AppCompatActivity {
                 neworder.setUserId(((BMApplication) getApplication()).getUserId());
                 orderDao.save(neworder);
 
-                Log.e(">>", String.valueOf(neworder.getId()));
-
                 UserToOrderMapper userToOrderMapper = new UserToOrderMapper();
                 userToOrderMapper.setUserId(((BMApplication) getApplication()).getUserId());
                 userToOrderMapper.setOrderId(neworder.getId());
                 userToOrderMapperDao.save(userToOrderMapper);
 
-                List<UserToBookMapper> cart_list = userToBookMapperDao.queryBuilder().where(UserToBookMapperDao.Properties.UserId.eq(((BMApplication) getApplication()).getUserId())).list();
+//                List<UserToBookMapper> cart_list = userToBookMapperDao.queryBuilder().where(UserToBookMapperDao.Properties.UserId.eq(((BMApplication) getApplication()).getUserId())).list();
                 for (UserToBookMapper relation : cart_list) {
                     OrderToBookMapper orderToBookMapper = new OrderToBookMapper();
                     orderToBookMapper.setOrderId(neworder.getId());
@@ -128,7 +142,9 @@ public class PayActivity extends AppCompatActivity {
                     orderToBookMapper.setQuantity(relation.getQuantity());
                     orderToBookMapperDao.save(orderToBookMapper);
 
-                    userToBookMapperDao.delete(relation);
+                    if (isBuyFromCart) {
+                        userToBookMapperDao.delete(relation);
+                    }
                 }
 
                 user.setBalance(user.getBalance() - totalPrice);

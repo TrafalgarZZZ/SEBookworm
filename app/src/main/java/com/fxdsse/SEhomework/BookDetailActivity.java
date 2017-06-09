@@ -1,10 +1,11 @@
 package com.fxdsse.SEhomework;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,15 +21,20 @@ import com.fxdsse.SEhomework.data.util.BookDetailDisassembler;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.Locale;
 
 public class BookDetailActivity extends AppCompatActivity {
-    private Button btn_buy;
     private DaoSession daoSession;
     private BookDao bookDao;
     private UserDao userDao;
     private UserToBookMapperDao userToBookMapperDao;
     private User user = null;
     private long bookId;
+    private RelativeLayout toCartRelativeLayout;
+    private RelativeLayout toSimilarRelativeLayout;
+    private TextView txtCartQuantity;
+    private TextView btn_buy;
+    private TextView btn_buy_now;
     private TextView txtPress;
     private TextView txtTitle;
     private TextView txtAuthor;
@@ -53,6 +59,11 @@ public class BookDetailActivity extends AppCompatActivity {
         txtShelfTime = (TextView) findViewById(R.id.bd_shelftime);
         imgBook = (ImageView) findViewById(R.id.bd_img);
 
+        toCartRelativeLayout = (RelativeLayout) findViewById(R.id.cart_rl);
+        toSimilarRelativeLayout = (RelativeLayout) findViewById(R.id.similar_rl);
+        txtCartQuantity = (TextView) findViewById(R.id.cart_quantity);
+
+
         daoSession = ((BMApplication) getApplication()).getDaoSession();
         bookDao = daoSession.getBookDao();
         userDao = daoSession.getUserDao();
@@ -62,6 +73,10 @@ public class BookDetailActivity extends AppCompatActivity {
         }
         bookId = getIntent().getLongExtra("book_id", -1);
         book = bookDao.queryBuilder().where(BookDao.Properties.Id.eq(bookId)).unique();
+        if (book == null) {
+            Toast.makeText(BookDetailActivity.this, "获取书籍信息失败", Toast.LENGTH_SHORT).show();
+            finish();
+        }
         txtTitle.setText(book.getName());
         BookDetail bookDetail = BookDetailDisassembler.disassembleDetail(book.getDetail());
         List<String> listAuthor = bookDetail.getAuthors();
@@ -73,9 +88,12 @@ public class BookDetailActivity extends AppCompatActivity {
         txtPubTime.setText(bookDetail.getPublishedDate());
         txtShelfTime.setText(bookDetail.getStackedDate());
 
-        Picasso.with(this).load(book.getImageURL()).resize(540, 780).into(imgBook);
+        Picasso.with(this).load(book.getImageURL()).resize(450, 650).into(imgBook);
 
-        btn_buy = (Button) findViewById(R.id.bd_buy);
+        refreshCartQuantity();
+
+        btn_buy = (TextView) findViewById(R.id.bd_buy);
+        btn_buy_now = (TextView) findViewById(R.id.bd_buy_now);
         btn_buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,11 +113,76 @@ public class BookDetailActivity extends AppCompatActivity {
                         relation.setQuantity(relation.getQuantity() + 1);
                         userToBookMapperDao.update(relation);
                     }
+                    refreshCartQuantity();
                     Toast.makeText(BookDetailActivity.this, "已成功添加至购物车", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(BookDetailActivity.this, "请先登录", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
+        btn_buy_now.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (user != null) {
+                    Intent intent = new Intent(BookDetailActivity.this, PayActivity.class);
+                    intent.putExtra("book_id", bookId);
+                    startActivityForResult(intent, 0);
+                } else {
+                    Toast.makeText(BookDetailActivity.this, "请先登录", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+        toCartRelativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (user != null) {
+                    Intent intent = new Intent(BookDetailActivity.this, CartActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(BookDetailActivity.this, "请先登录", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        toSimilarRelativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BookDetailActivity.this, CategoryActivity.class);
+                intent.putExtra("category", book.getCategory());
+                startActivity(intent);
+            }
+        });
+
+    }
+
+    private void refreshCartQuantity() {
+        if (user != null) {
+            List<UserToBookMapper> list = userToBookMapperDao.queryBuilder().where(UserToBookMapperDao.Properties.UserId.eq(user.getId())).list();
+            if (list.size() == 0) {
+                txtCartQuantity.setVisibility(View.INVISIBLE);
+            } else {
+                txtCartQuantity.setVisibility(View.VISIBLE);
+                txtCartQuantity.setText(String.format(Locale.CHINA, "  %d  ", list.size()));
+            }
+        } else {
+            txtCartQuantity.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 0) {
+            switch (resultCode) {
+                case -1:
+                    finish();
+                    break;
+                case 1:
+                    refreshCartQuantity();
+                    break;
+            }
+        }
     }
 }

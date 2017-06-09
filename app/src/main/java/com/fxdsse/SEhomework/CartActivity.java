@@ -108,7 +108,7 @@ public class CartActivity extends AppCompatActivity {
             txtAuthor.setText(sb);
 
             if (relation.getQuantity() > 1) {
-                txtQuantity.setText(String.format(Locale.CHINA, "X %d", relation.getQuantity()));
+                txtQuantity.setText(String.format(Locale.CHINA, "x%d", relation.getQuantity()));
             } else {
                 txtQuantity.setText("");
             }

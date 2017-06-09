@@ -41,6 +41,110 @@
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
+    <RelativeLayout
+        android:id="@+id/pay_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:elevation="20dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/cart_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingEnd="13dp"
+            android:paddingStart="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_cart"
+                android:layout_marginLeft="17dp"
+                android:text="购物车"
+                android:textSize="8sp" />
+
+            <ImageView
+                android:id="@+id/img_cart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="7dp"
+                android:src="@mipmap/cart" />
+
+            <TextView
+                android:id="@+id/cart_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/img_cart"
+                android:layout_marginBottom="-15dp"
+                android:layout_marginLeft="-8dp"
+                android:layout_toRightOf="@+id/img_cart"
+                android:background="@drawable/cart_quantity_shape"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="  3  "
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/similar_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/bd_buy_now"
+            android:layout_toRightOf="@+id/cart_rl"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingStart="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_commodity"
+                android:layout_marginLeft="17dp"
+                android:text="找相似"
+                android:textSize="8sp" />
+
+            <ImageView
+                android:id="@+id/img_commodity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="7dp"
+                android:src="@mipmap/commodity" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bd_buy_now"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/bd_buy"
+            android:background="@color/colorPrimaryDark"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="立即购买"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/bd_buy"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="@color/colorPrimary"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="加入购物车"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
     <include layout="@layout/content_bookdetail" />
 
 </android.support.design.widget.CoordinatorLayout>
