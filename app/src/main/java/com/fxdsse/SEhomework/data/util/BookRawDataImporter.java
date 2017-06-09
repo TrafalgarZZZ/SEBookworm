@@ -52,6 +52,7 @@ public class BookRawDataImporter {
                                 .setImageURL(thisBook.getString("img"))
                                 .setName(thisBook.getString("name"))
                                 .setPrice(thisBook.getString("price"))
+                                .setIntroduction(thisBook.getString("intro"))
                 );
             }
             sharedPreferences.edit().putString("version", version).apply();

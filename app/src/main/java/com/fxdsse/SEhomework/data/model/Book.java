@@ -30,16 +30,20 @@ public class Book {
     @NotNull
     private String imageURL;
 
-    @Generated(hash = 368920840)
+    @NotNull
+    private String introduction;
+
+    @Generated(hash = 490586446)
     public Book(Long id, @NotNull String name, @NotNull String category,
-                @NotNull String detail, @NotNull String price,
-                @NotNull String imageURL) {
+                @NotNull String detail, @NotNull String price, @NotNull String imageURL,
+                @NotNull String introduction) {
         this.id = id;
         this.name = name;
         this.category = category;
         this.detail = detail;
         this.price = price;
         this.imageURL = imageURL;
+        this.introduction = introduction;
     }
 
     @Generated(hash = 1839243756)
@@ -96,6 +100,15 @@ public class Book {
 
     public Book setCategory(String category) {
         this.category = category;
+        return this;
+    }
+
+    public String getIntroduction() {
+        return this.introduction;
+    }
+
+    public Book setIntroduction(String introduction) {
+        this.introduction = introduction;
         return this;
     }
 }
