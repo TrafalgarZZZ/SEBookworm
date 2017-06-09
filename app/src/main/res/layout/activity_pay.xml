@@ -125,7 +125,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="end"
-                        android:text="货到付款"
+                        android:text="在线付款"
                         android:textColor="@color/colorPrimary" />
                 </LinearLayout>
             </LinearLayout>

@@ -109,7 +109,7 @@
                 android:id="@+id/card1_limit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="所有商家可用"
+                android:text="全场图书可用"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
@@ -117,7 +117,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/card1_limit"
-                android:text="满 20 可用"
+                android:text="满 100 可用"
                 android:textColor="@android:color/black"
                 android:textSize="12sp" />
 
@@ -125,7 +125,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:text="有效期至2016-12-31"
+                android:text="有效期至2017-12-31"
                 android:textSize="12sp"
                 android:textStyle="italic" />
 
@@ -134,9 +134,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:text="¥ 5"
+                android:text="¥ 10"
                 android:textColor="@color/colorPrimary"
-                android:textSize="50sp" />
+                android:textSize="30sp" />
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
@@ -169,7 +169,7 @@
                 android:id="@+id/card2_limit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="背包客汉堡可用"
+                android:text="计算机相关书籍可用"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
@@ -185,7 +185,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:text="有效期至2016-12-28"
+                android:text="有效期至2017-6-30"
                 android:textSize="12sp"
                 android:textStyle="italic" />
 
@@ -196,7 +196,7 @@
                 android:layout_centerVertical="true"
                 android:text="¥ 12"
                 android:textColor="@color/colorPrimary"
-                android:textSize="50sp" />
+                android:textSize="30sp" />
         </RelativeLayout>
 
 
