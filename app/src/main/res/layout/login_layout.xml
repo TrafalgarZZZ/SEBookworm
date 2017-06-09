@@ -22,7 +22,7 @@
             android:background="@color/colorPrimary"
             android:gravity="center"
             android:paddingTop="0dp"
-            android:text="SEBookworm"
+            android:text="FirePlace"
             android:textColor="@color/white"
             android:textSize="30sp" />
 
