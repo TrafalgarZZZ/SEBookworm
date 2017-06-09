@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_wv_openInBrowser"
+        android:icon="@mipmap/ic_public_white_24dp"
+        android:orderInCategory="200"
+        android:title="在浏览器中打开"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_wv_shareURL"
+        android:icon="@mipmap/ic_share_white_24dp"
+        android:orderInCategory="100"
+        android:title="分享文章链接"
+        app:showAsAction="ifRoom" />
+</menu>

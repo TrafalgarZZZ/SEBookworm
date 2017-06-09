@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.fxdsse.SEhomework.BMApplication;
 import com.fxdsse.SEhomework.BookDetailActivity;
 import com.fxdsse.SEhomework.R;
+import com.fxdsse.SEhomework.Util.AeolosOnBannerClickListener;
 import com.fxdsse.SEhomework.Util.AeolosPicassoImageLoader;
 import com.fxdsse.SEhomework.data.BookDetail;
 import com.fxdsse.SEhomework.data.model.Book;
@@ -49,6 +50,7 @@ public class HomeFragment extends Fragment {
     private Banner banner;
     private List<String> images;
     private List<String> titles;
+    private List<String> url;
     private LinearLayout homeContainerLinearLayout;
     private BookDao bookDao;
     private DaoSession daoSession;
@@ -112,22 +114,33 @@ public class HomeFragment extends Fragment {
         cardView_banner.setElevation(1);
 
         images = new ArrayList<>();
-        images.add("https://images-cn.ssl-images-amazon.com/images/G/28//img13_audit/bmvd/zzhangli/61/mjn_170511_1280_09._V510610285_.jpg");
-        images.add("https://images-cn.ssl-images-amazon.com/images/G/28/cnbooks/event/2017MayB100G40B200G100/10wbooks1500300._CB510553459_.jpg");
-        images.add("http://img60.ddimg.cn/upload_img/00087/hw/mj_hw170524.jpg");
-        images.add("http://img63.ddimg.cn/upload_img/00478/0920/1200-0522_01.jpg");
+        images.add("http://img63.ddimg.cn/upload_img/00087/hw/750x315_dl_20170602.jpg");
+        images.add("http://img61.ddimg.cn/upload_img/00570/tongshu/750x315_djj_0602.jpg");
+        images.add("http://img61.ddimg.cn/upload_img/00684/zn/dygw750-315.jpg");
+        images.add("http://img61.ddimg.cn/upload_img/00713/pictrue/xjpjgs750315.jpg");
+        images.add("http://img61.ddimg.cn/upload_img/00570/ta/xiexielikai750x315.jpg");
 
-        titles = new ArrayList<>();
-        titles.add("儿童节优选图书");
-        titles.add("10万图书 满200减100");
-        titles.add("六一礼品季 儿童节特价活动");
-        titles.add("促销商品推荐");
-        banner.setBannerStyle(BannerConfig.NUM_INDICATOR_TITLE);
+//        titles = new ArrayList<>();
+//        titles.add("儿童节优选图书");
+//        titles.add("10万图书 满200减100");
+//        titles.add("六一礼品季 儿童节特价活动");
+//        titles.add("促销商品推荐");
+
+        url = new ArrayList<>();
+        url.add("http://book.dangdang.com/20170602_p3lj");
+        url.add("http://baby.dangdang.com/20170602_4hee");
+        url.add("http://book.dangdang.com/20170607_pvwk");
+        url.add("http://book.dangdang.com/20170607_rkr4");
+        url.add("http://book.dangdang.com/20170606_s415");
+
+
+        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);
         banner.setImageLoader(new AeolosPicassoImageLoader());
         banner.setImages(images);
-        banner.setBannerTitles(titles);
+//        banner.setBannerTitles(titles);
+        banner.setOnBannerClickListener(new AeolosOnBannerClickListener(getActivity(), url));
         banner.isAutoPlay(true);
-        banner.setDelayTime(5000);
+        banner.setDelayTime(3000);
         banner.start();
 
         List<Book> newBookList = bookDao.queryBuilder().list();
